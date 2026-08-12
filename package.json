@@ -1,0 +1,17 @@
+{
+  "name": "mitou-slide",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Slidev presentation scaffold",
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build",
+    "export": "slidev export"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "@slidev/cli": "^52.14.1",
+    "slidev-theme-geist": "^0.8.1"
+  }
+}
+

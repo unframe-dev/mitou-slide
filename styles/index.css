@@ -1,0 +1,870 @@
+:root {
+  --c-bg: #f7f7f5;
+  --c-surface: #ececf0;
+  --c-text: #15171d;
+  --c-night: #0b0e14;
+  --c-muted: #747780;
+  --c-line: #dedfe2;
+  --c-blue: #7187f5;
+  --c-purple: #9a80d0;
+  --c-red: #df7b80;
+  --brand-gradient: linear-gradient(100deg, var(--c-blue), var(--c-purple) 48%, var(--c-red));
+  --ease-fluid: cubic-bezier(0.22, 1, 0.36, 1);
+  --slide-x: 3.5rem;
+  --slide-y: 3rem;
+}
+
+html,
+body,
+#slide-content {
+  background: var(--c-bg);
+  color: var(--c-text);
+}
+
+.slidev-layout {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  padding: var(--slide-y) var(--slide-x) !important;
+  color: var(--c-text);
+  font-family: Inter, "Noto Sans CJK JP", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif !important;
+}
+
+.slidev-layout::after {
+  position: absolute;
+  z-index: 0;
+  right: -18rem;
+  bottom: -14rem;
+  width: 48rem;
+  height: 29rem;
+  border: 1px solid rgb(154 128 208 / 12%);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.slidev-layout > * {
+  position: relative;
+  z-index: 1;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  color: var(--c-night) !important;
+  letter-spacing: -0.045em;
+}
+
+.slidev-layout h1 {
+  max-width: 92%;
+  margin: 0;
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1.08;
+}
+
+.slidev-layout h2 {
+  font-size: 1.8rem;
+  font-weight: 450;
+  line-height: 1.18;
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  color: var(--c-muted) !important;
+  font-size: 1.02rem;
+  font-weight: 450;
+  line-height: 1.75;
+}
+
+.slidev-layout ul,
+.slidev-layout ol {
+  margin-top: 1.55rem;
+}
+
+.slidev-layout li + li {
+  margin-top: 0.42rem;
+}
+
+.slidev-layout strong,
+.accent,
+.text-gradient {
+  background: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  font-weight: inherit;
+}
+
+.slidev-layout :not(pre) > code {
+  border-radius: 0.25rem;
+  background: rgb(154 128 208 / 10%) !important;
+  color: var(--c-night) !important;
+  padding: 0.1rem 0.35rem;
+}
+
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.72rem;
+  margin-bottom: 1.65rem;
+  color: var(--c-muted);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section-label::before {
+  width: 1.8rem;
+  height: 1px;
+  background: var(--c-line);
+  content: "";
+}
+
+.section-label::first-letter {
+  color: var(--c-purple);
+}
+
+.slide-note {
+  margin-top: 1.6rem;
+  color: var(--c-muted);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* LPのHeroとPDFの一枚一メッセージを組み合わせた表紙。 */
+.cover-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #fff;
+  padding-right: 42% !important;
+}
+
+.cover-slide::before {
+  display: none;
+}
+
+.cover-slide::after {
+  right: auto;
+  bottom: -13rem;
+  left: -13rem;
+  width: 55rem;
+  height: 34rem;
+  transform: rotate(8deg);
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 2.2rem;
+  color: var(--c-night);
+  font-size: 1rem;
+  font-weight: 350;
+  letter-spacing: -0.04em;
+}
+
+.brand-mark img {
+  width: 1.7rem;
+  height: 1.7rem;
+  object-fit: contain;
+}
+
+.cover-slide h1 {
+  max-width: 100%;
+  font-size: 4.15rem;
+  font-weight: 300;
+  letter-spacing: -0.065em;
+  line-height: 0.94;
+}
+
+.cover-subtitle {
+  max-width: 29rem;
+  margin-top: 1.8rem;
+  color: var(--c-night);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+.cover-visual {
+  position: absolute !important;
+  z-index: 1 !important;
+  top: 12%;
+  right: -3%;
+  width: 51%;
+  height: auto;
+  opacity: 0.86;
+  mix-blend-mode: multiply;
+}
+
+/* LPの非対称グリッドを章扉へ移植。 */
+.chapter-slide {
+  display: grid;
+  grid-template-columns: 0.42fr 1.58fr;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.chapter-wave {
+  position: absolute;
+  z-index: 0 !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.chapter-slide .chapter-number {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  align-self: center;
+  background: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 7rem;
+  font-weight: 300;
+  letter-spacing: -0.08em;
+  line-height: 1;
+}
+
+.chapter-slide .section-label,
+.chapter-slide h1,
+.chapter-slide ul,
+.chapter-slide p {
+  grid-column: 2;
+}
+
+.chapter-slide .section-label {
+  align-self: end;
+  margin-bottom: -1.5rem;
+}
+
+.chapter-slide h1 {
+  max-width: 90%;
+  font-size: 3.35rem;
+  font-weight: 350;
+  line-height: 1.03;
+}
+
+.final-idea-slide h1 {
+  max-width: 100%;
+  font-size: 2.9rem;
+}
+
+.final-idea-slide .finding-stack,
+.final-idea-slide .proposal-transition {
+  grid-column: 2;
+}
+
+.finding-stack {
+  align-self: start;
+  width: 100%;
+  margin-top: -0.55rem;
+}
+
+.finding-item {
+  display: grid;
+  grid-template-columns: 8.2rem 1fr;
+  align-items: baseline;
+  gap: 1.2rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--c-line);
+}
+
+.finding-item:last-child {
+  border-bottom: 1px solid var(--c-line);
+}
+
+.finding-label {
+  color: var(--c-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.finding-text {
+  color: var(--c-night);
+  font-size: 1.2rem;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.final-idea-slide .proposal-transition {
+  align-self: start;
+  margin-top: 0.85rem;
+  color: var(--c-text) !important;
+  font-size: 0.95rem !important;
+  font-weight: 550;
+  line-height: 1.55;
+}
+
+.chapter-slide ul {
+  align-self: start;
+  margin-top: -1.2rem;
+}
+
+/* boost.pdfの自己紹介を、LPの余白と波形に合わせて再構成。 */
+.profile-slide {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-wave {
+  position: absolute !important;
+  z-index: 0 !important;
+  top: -18%;
+  right: -13%;
+  width: 78%;
+  height: 58%;
+  opacity: 0.48;
+  pointer-events: none;
+}
+
+.profile-slide .section-label {
+  margin-bottom: 0.6rem;
+}
+
+.profile-shell {
+  display: grid;
+  grid-template-columns: 0.38fr 1fr;
+  align-items: center;
+  flex: 1;
+  gap: 3.25rem;
+}
+
+.profile-identity {
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 13.5rem;
+  height: 13.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 1.2rem 3rem rgb(11 14 20 / 8%);
+}
+
+.profile-alias {
+  margin-top: 1rem;
+  color: var(--c-night);
+  font-size: 1.1rem;
+  font-weight: 550;
+  letter-spacing: -0.03em;
+}
+
+.profile-links {
+  width: fit-content;
+  margin-top: 0.45rem;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--c-muted);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.38rem;
+}
+
+.profile-link--url {
+  margin-top: 0.05rem;
+}
+
+.profile-content h1 {
+  max-width: 100%;
+  font-size: 3.3rem;
+  font-weight: 350;
+}
+
+.profile-details {
+  margin-top: 1.55rem;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.profile-details > div {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1rem;
+  padding: 0.72rem 0;
+  border-top: 1px solid var(--c-line);
+}
+
+.profile-details dt {
+  color: var(--c-muted);
+  font-size: 0.66rem;
+  font-weight: 650;
+  letter-spacing: 0.12em;
+}
+
+.profile-details dd {
+  margin: 0;
+  color: var(--c-night);
+  font-size: 0.87rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* PDFの一文スライドをLPの左寄せ・大余白へ寄せる。 */
+.statement-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 17% !important;
+}
+
+.statement-slide::before {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: -5rem;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid rgb(113 135 245 / 18%);
+  border-radius: 50%;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.statement-slide h1 {
+  max-width: 88%;
+  font-size: 3.2rem;
+  font-weight: 350;
+  line-height: 1.06;
+}
+
+.statement-slide p,
+.statement-slide ul,
+.statement-slide ol {
+  max-width: 72%;
+}
+
+.statement-slide .section-label {
+  position: absolute;
+  top: var(--slide-y);
+  left: var(--slide-x);
+}
+
+/* 合宿後に残った3つの問いを、同じ重さで見渡せる構成。 */
+.issue-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: var(--slide-x) !important;
+}
+
+.issue-slide::before {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: -5rem;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid rgb(113 135 245 / 18%);
+  border-radius: 50%;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.issue-slide .section-label {
+  position: absolute;
+  top: var(--slide-y);
+  left: var(--slide-x);
+}
+
+.issue-intro,
+.issue-list {
+  position: relative;
+  z-index: 1;
+}
+
+.issue-intro h1 {
+  max-width: 90%;
+  font-size: 3.15rem;
+  font-weight: 350;
+  line-height: 1.08;
+}
+
+.issue-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.6rem;
+  margin: 3.2rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--c-line);
+  counter-reset: issue;
+  list-style: none;
+}
+
+.issue-list li {
+  position: relative;
+  margin: 0 !important;
+  color: var(--c-night) !important;
+  font-size: 1.02rem;
+  font-weight: 550;
+  line-height: 1.55;
+  counter-increment: issue;
+}
+
+.issue-list li::before {
+  display: block;
+  margin-bottom: 0.78rem;
+  background: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 0.76rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  content: "0" counter(issue);
+}
+
+@media (max-width: 900px) {
+  .issue-list {
+    gap: 1rem;
+  }
+
+  .issue-list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* 3軸の組み合わせと、PoCの到達点を一枚で見せる。 */
+.focus-slide {
+  --focus-accent: #5b51a9;
+  --focus-tint: rgb(91 81 169 / 6%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: var(--slide-x) !important;
+}
+
+.focus-slide::before {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  right: -5rem;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid rgb(154 128 208 / 18%);
+  border-radius: 50%;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.focus-slide .section-label {
+  position: absolute;
+  top: var(--slide-y);
+  left: var(--slide-x);
+}
+
+.focus-grid,
+.focus-summary {
+  position: relative;
+  z-index: 1;
+}
+
+.focus-grid {
+  width: 100%;
+  margin-top: 0.8rem;
+}
+
+.focus-grid__head,
+.focus-row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.5fr 0.7fr;
+  column-gap: 1.6rem;
+}
+
+.focus-grid__head {
+  padding: 0 0 0.72rem;
+  border-bottom: 1px solid var(--c-line);
+  color: var(--c-muted);
+  font-size: 0.68rem;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.focus-row {
+  align-items: center;
+  min-height: 4.55rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.focus-conditions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.28rem 0.55rem;
+}
+
+.focus-conditions span {
+  color: var(--c-muted);
+  font-size: 0.84rem;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.focus-conditions span + span::before {
+  margin-right: 0.55rem;
+  color: var(--c-muted);
+  content: "&";
+}
+
+.focus-concept {
+  display: flex;
+  flex-direction: column;
+  gap: 0.18rem;
+}
+
+.focus-concept strong {
+  background: none;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  color: var(--c-night) !important;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.focus-row--poc {
+  padding-left: 1rem;
+  border-left: 3px solid var(--focus-accent);
+  background: var(--focus-tint);
+}
+
+.focus-row--poc .focus-concept strong,
+.focus-row--poc .focus-status {
+  color: var(--focus-accent) !important;
+}
+
+.focus-row--poc .focus-conditions span + span::before {
+  color: var(--focus-accent);
+}
+
+.focus-concept small {
+  color: var(--c-text);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.focus-status {
+  justify-self: start;
+  color: var(--c-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.focus-row--initial .focus-status,
+.focus-row--future .focus-status {
+  color: var(--c-muted);
+}
+
+.focus-summary {
+  margin: 1.35rem 0 0;
+  color: var(--c-text) !important;
+  font-size: 0.9rem !important;
+  font-weight: 550;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .focus-grid__head,
+  .focus-row {
+    grid-template-columns: 1.1fr 1.5fr 0.65fr;
+    column-gap: 1rem;
+  }
+
+  .focus-conditions span {
+    font-size: 0.76rem;
+  }
+
+  .focus-concept strong {
+    font-size: 0.94rem;
+  }
+}
+
+/* boost.pdf pp.22-24の発表風景を、提案の流れを示すビジュアルとして再利用。 */
+.proposal-slide {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  column-gap: 3.25rem;
+  padding-right: var(--slide-x) !important;
+}
+
+.proposal-slide .section-label {
+  position: absolute;
+  top: var(--slide-y);
+  left: var(--slide-x);
+}
+
+.proposal-visual {
+  grid-column: 1;
+  justify-self: center;
+  width: min(100%, 28rem);
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.proposal-copy {
+  grid-column: 2;
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.proposal-copy h1 {
+  max-width: 100%;
+  font-size: 2.9rem;
+  font-weight: 350;
+  line-height: 1.08;
+}
+
+.proposal-copy--first h1 {
+  font-size: 2.75rem;
+}
+
+.proposal-copy p {
+  max-width: 29rem;
+  margin-top: 1.55rem;
+}
+
+@media (max-width: 900px) {
+  .proposal-slide {
+    grid-template-columns: 0.8fr 1.2fr;
+    column-gap: 1.5rem;
+  }
+
+  .proposal-copy h1 {
+    font-size: 2.55rem;
+  }
+}
+
+/* 細い罫線と番号で見せる編集的な進行表現。 */
+.spatial-steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spatial-steps .section-label {
+  position: absolute;
+  top: var(--slide-y);
+  left: var(--slide-x);
+}
+
+.spatial-steps ol {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.15rem;
+  margin: 5.5rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--c-line);
+  counter-reset: spatial-step;
+  list-style: none;
+}
+
+.spatial-steps li {
+  position: relative;
+  margin: 0 !important;
+  padding: 2.2rem 0 0;
+  color: var(--c-night) !important;
+  font-size: 0.94rem;
+  font-weight: 550;
+  line-height: 1.48;
+  counter-increment: spatial-step;
+}
+
+.spatial-steps li::before {
+  position: absolute;
+  top: -0.34rem;
+  left: 0;
+  width: 0.62rem;
+  height: 0.62rem;
+  border: 2px solid var(--c-bg);
+  border-radius: 50%;
+  background: var(--brand-gradient);
+  box-shadow: 0 0 0 1px var(--c-purple);
+  content: "";
+}
+
+.spatial-steps li::after {
+  position: absolute;
+  top: -1.45rem;
+  left: 0;
+  line-height: 1;
+  background: var(--brand-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  content: "0" counter(spatial-step);
+}
+
+.spatial-steps h1 {
+  max-width: 100%;
+  font-size: 2.7rem;
+  font-weight: 350;
+}
+
+.closing-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgb(247 247 245 / 78%), rgb(247 247 245 / 78%)),
+    url("/brand/light-header.png");
+  background-position: center top;
+  background-size: 145% auto;
+  text-align: center;
+}
+
+.closing-slide::after {
+  display: none;
+}
+
+.closing-slide h1 {
+  max-width: 82%;
+  font-size: 4.2rem;
+  font-weight: 300;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.closing-rays {
+  position: absolute !important;
+  inset: 50% auto auto 50%;
+  width: 28rem;
+  height: 28rem;
+  border: 1px solid rgb(113 135 245 / 14%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2.6rem rgb(154 128 208 / 4%), 0 0 0 5.2rem rgb(223 123 128 / 2%);
+  transform: translate(-50%, -50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
