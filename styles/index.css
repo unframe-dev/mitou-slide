@@ -504,6 +504,47 @@ body,
   left: var(--slide-x);
 }
 
+.centered-statement-slide {
+  align-items: center;
+  padding-right: 12% !important;
+  padding-left: 12% !important;
+  text-align: center;
+}
+
+.centered-statement-slide h1 {
+  position: relative;
+  z-index: 2;
+  max-width: 100%;
+}
+
+.statement-rays {
+  position: absolute;
+  z-index: 1;
+  top: 51%;
+  left: 50%;
+  width: 50rem;
+  height: 23rem;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.statement-rays span {
+  position: absolute;
+  top: var(--ray-y);
+  left: var(--ray-x);
+  width: 0.24rem;
+  height: 3.1rem;
+  border-radius: 999px;
+  background: var(--c-red);
+  box-shadow: 0 0 1rem rgb(223 123 128 / 24%);
+  transform: translate(-50%, -50%) rotate(var(--ray-angle));
+}
+
+.centered-statement-slide p {
+  z-index: 2;
+  max-width: 48rem;
+}
+
 .idea-hero-slide {
   padding-right: 39% !important;
 }
@@ -671,6 +712,82 @@ body,
   filter: saturate(0.72) contrast(0.9) brightness(1.08);
   mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 18%, #000 46%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 18%, #000 46%);
+  pointer-events: none;
+}
+
+.attention-confusion-slide {
+  padding-right: 39% !important;
+}
+
+.attention-confusion-slide::after {
+  display: none;
+}
+
+.attention-confusion-slide h1,
+.attention-confusion-slide p {
+  position: relative;
+  z-index: 2;
+}
+
+.attention-confusion-slide h1 {
+  max-width: 100%;
+  font-size: 2.55rem;
+}
+
+.attention-confusion-slide p {
+  max-width: 31rem;
+}
+
+.attention-confusion-visual {
+  position: absolute !important;
+  z-index: 0 !important;
+  inset: 0 0 0 auto;
+  width: 72%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+  opacity: 0.82;
+  filter: saturate(0.76) contrast(0.92) brightness(1.05);
+  mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 22%, #000 48%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 22%, #000 48%);
+  pointer-events: none;
+}
+
+.attention-guidance-slide {
+  padding-right: 39% !important;
+}
+
+.attention-guidance-slide::after {
+  display: none;
+}
+
+.attention-guidance-slide h1,
+.attention-guidance-slide p {
+  position: relative;
+  z-index: 2;
+}
+
+.attention-guidance-slide h1 {
+  max-width: 100%;
+  font-size: 2.55rem;
+}
+
+.attention-guidance-slide p {
+  max-width: 31rem;
+}
+
+.attention-guidance-visual {
+  position: absolute !important;
+  z-index: 0 !important;
+  inset: 0 0 0 auto;
+  width: 72%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+  opacity: 0.84;
+  filter: saturate(0.82) contrast(0.94) brightness(1.04);
+  mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 22%, #000 48%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 22%, #000 48%);
   pointer-events: none;
 }
 

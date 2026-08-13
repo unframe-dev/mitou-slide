@@ -326,7 +326,7 @@ class: statement-slide demo-slide
 
 # 腕を振った先へ、<br><span class="accent">観客の視線を導く</span>
 
-左から右へのジェスチャーに合わせ、その先に注目してほしい要素を表示します。
+体の動きに合わせて要素を表示する
 
 <img
   class="demo-visual"
@@ -342,8 +342,7 @@ class: statement-slide demo-slide demo-slide--landscape
 
 <div class="section-label">06-1 — 発表者の補助</div>
 
-# 発表者にだけ見えるUIが、<br><span class="accent">次の動きを支える</span>
-
+# 体についてくる、<br><span class="accent">相対位置の追尾要素</span>
 身体表現だけに頼らず、立ち位置・次の操作・進行を補助します。
 
 <img
@@ -393,7 +392,7 @@ MRの利点を最初に示し、次のスライドでプレゼンにしたとき
 -->
 
 ---
-class: statement-slide
+class: statement-slide attention-confusion-slide
 ---
 
 <div class="section-label">06-3 — MR プレゼンの課題</div>
@@ -401,6 +400,14 @@ class: statement-slide
 # しかし観客は、<br><span class="accent">どこを見ればよいか迷う</span>
 
 情報を広い範囲に置くほど、発表者が伝えたい順番と観客の視線がずれていきます。
+
+<img class="attention-confusion-visual" src="/proposal/many-infomation-transparent.png" alt="多くの情報が空間に散らばり、観客の視線が分散するイメージ" />
+
+<!--
+[Sources]
+- Image: user-provided many-infomation.png
+- Modification: near-white pixels made transparent with FFmpeg; faded with CSS
+-->
 
 ---
 class: statement-slide
@@ -413,7 +420,7 @@ class: statement-slide
 わかりやすさを優先して表示を前面へ集めると、MRの空間表現を活かせません。
 
 ---
-class: statement-slide
+class: statement-slide attention-guidance-slide
 ---
 
 <div class="section-label">06-3 — 身体による解決</div>
@@ -422,17 +429,40 @@ class: statement-slide
 
 歩く、振り向く、腕を振る。その動きと情報表示を組み合わせ、観客が見る場所と順番を自然に示します。
 
-<!-- スティーブ・ジョブズのiPhone発表を、身体による注意誘導の着想として紹介する。 -->
+<img class="attention-guidance-visual" src="/proposal/mr-presentation-transparent.png" alt="発表者の身体の動きが観客の視線をMR情報へ導くイメージ" />
+
+<!--
+スティーブ・ジョブズのiPhone発表を、身体による注意誘導の着想として紹介する。
+
+[Sources]
+- Image: user-provided mr-presentation.png
+- Modification: near-white pixels made transparent with FFmpeg; faded with CSS
+-->
 
 ---
-class: statement-slide
+class: statement-slide centered-statement-slide
 ---
 
 <div class="section-label">06-4 — ニーズ</div>
 
-# まず、私たち自身が<br><span class="accent">死ぬほど使ってみたい</span>
+<div class="statement-rays" aria-hidden="true">
+  <span style="--ray-angle: 0deg; --ray-x: 50%; --ray-y: 0%"></span>
+  <span style="--ray-angle: 30deg; --ray-x: 70%; --ray-y: 7%"></span>
+  <span style="--ray-angle: 60deg; --ray-x: 90%; --ray-y: 25%"></span>
+  <span style="--ray-angle: 90deg; --ray-x: 100%; --ray-y: 50%"></span>
+  <span style="--ray-angle: 120deg; --ray-x: 90%; --ray-y: 75%"></span>
+  <span style="--ray-angle: 150deg; --ray-x: 70%; --ray-y: 93%"></span>
+  <span style="--ray-angle: 180deg; --ray-x: 50%; --ray-y: 100%"></span>
+  <span style="--ray-angle: 210deg; --ray-x: 30%; --ray-y: 93%"></span>
+  <span style="--ray-angle: 240deg; --ray-x: 10%; --ray-y: 75%"></span>
+  <span style="--ray-angle: 270deg; --ray-x: 0%; --ray-y: 50%"></span>
+  <span style="--ray-angle: 300deg; --ray-x: 10%; --ray-y: 25%"></span>
+  <span style="--ray-angle: 330deg; --ray-x: 30%; --ray-y: 7%"></span>
+</div>
 
-効率化だけを起点にせず、自分たちが本当に体験したいものからニーズを考え直しました。
+# まず、私たち自身が<br><span class="accent">一番使ってみたい</span>
+
+万人受けする、最もニーズのある物を模索していたが、それをやめ、 <br/> 自分たちが本当に体験したいものからニーズを考え直しました。
 
 ---
 class: statement-slide
