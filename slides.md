@@ -550,7 +550,7 @@ class: statement-slide reference-demo-slide
 指示に合わせて身体を動かすことと、 <br/> 画面上の表現が結びつく体験を参考にします。
 
 <div class="reference-media">
-  <img src="/reference/a_ten-neo.gif" alt="デザインあ展のDO IT!で、画面の指示に合わせて身体を動かす体験" />
+  <img src="https://raw.githubusercontent.com/unframe-dev/mitou-slide/main/media/demos/a_ten-neo.gif" alt="デザインあ展のDO IT!で、画面の指示に合わせて身体を動かす体験" />
   <div class="reference-media-caption">ref — デザインあ展「DO IT!」</div>
   <div class="reference-media-caption">https://www.youtube.com/watch?v=TP6L3JbJLZQ</div>
 </div>
