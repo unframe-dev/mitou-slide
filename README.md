@@ -1,7 +1,5 @@
 # MITOU Slide
 
-参照元の [cf-wrks-kyoto-2](https://github.com/T4ko0522/cf-wrks-kyoto-2) と同じく、Slidev と Geist テーマを使うスライドの scaffold です。
-
 ## 開発
 
 ```bash
@@ -17,6 +15,14 @@ pnpm export
 ```
 
 発表内容は `slides.md`、共通スタイルは `styles/index.css` を編集してください。
+
+## アセット
+
+- `public/`: Workers に同梱する配信用アセット。スライドから `/brand/...`、`/profile/...`、`/proposal/...` のように参照します。
+- `media/demos/`: Workers の25 MiB/ファイル制限を避けるため、公開リポジトリの GitHub Raw から参照する大容量デモ素材です。
+- `media/source/`: GIF の元動画や、ビルドで直接使わない元画像を置きます。
+
+デモ GIF を Raw URL で参照するため、GitHub リポジトリは公開設定にしてください。現在のスライドは `main` ブランチを参照しています。発表内容を固定する場合は、URL の `main` を対象コミット SHA に置き換えてください。
 
 ## テーマ
 

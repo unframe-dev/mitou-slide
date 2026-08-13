@@ -178,11 +178,11 @@ class: issue-slide
   <h1>合宿を終えて、<br><span class="accent">考え直すべき課題</span>が見えてきた</h1>
 </div>
 
-<ol class="issue-list">
+<ul class="issue-list">
   <li>本当にニーズがあるのか</li>
   <li>どのようなユースケースで使われるのか</li>
   <li>なぜ MR である必要があるのか</li>
-</ol>
+</ul>
 
 <!--
 合宿で受けたフィードバックを、課題として整理して話す。
@@ -220,19 +220,19 @@ class: focus-slide
   <div class="focus-row focus-row--future">
     <div class="focus-conditions"><span>場所依存</span><span>集まる</span><span>非同期</span></div>
     <div class="focus-concept"><strong>展示会MR</strong><small>展示空間で体験する</small></div>
-    <div class="focus-status">試作済み</div>
+    <div class="focus-status">試作・PoC</div>
   </div>
 
   <div class="focus-row focus-row--poc">
     <div class="focus-conditions"><span>場所非依存</span><span>散らばる</span><span>非同期</span></div>
     <div class="focus-concept"><strong>資料表示系プレゼン</strong><small>資料表示モード</small></div>
-    <div class="focus-status">今回のPoC</div>
+    <div class="focus-status">試作・PoC</div>
   </div>
 
   <div class="focus-row focus-row--poc">
     <div class="focus-conditions"><span>場所非依存</span><span>散らばる</span><span>同期</span></div>
     <div class="focus-concept"><strong>資料表示系プレゼン</strong><small>発表モード</small></div>
-    <div class="focus-status">今回のPoC</div>
+    <div class="focus-status">試作・PoC</div>
   </div>
 </div>
 
@@ -243,14 +243,10 @@ Source: /home/t4ko/Project/github.com/unframe-dev/unframe/docs/Unframe_Scrapbox_
 -->
 
 ---
-class: chapter-slide final-idea-slide
+class: statement-slide poc-conclusion-slide
 ---
 
-<GradientWave id="chapter-wave-05" class="chapter-wave" flip />
-
-<div class="chapter-number">05</div>
-
-<div class="section-label">05 — 最終アイデア</div>
+<div class="section-label">04 — PoCの結論</div>
 
 # PoCの結果、<br><span class="accent">MRの強みと限界が見えました</span>
 
@@ -267,33 +263,101 @@ class: chapter-slide final-idea-slide
 
 <p class="proposal-transition">この気づきをもとに、情報の見せ方を変える新提案を紹介します。</p>
 
-<!-- 最終アイデアの名称と一文の説明を追加する。 -->
-
 ---
-class: statement-slide
+class: chapter-slide final-idea-slide
 ---
 
-<div class="section-label">06 — 新提案</div>
+<GradientWave id="chapter-wave-05" class="chapter-wave" flip />
 
-# <span class="accent">新しい提案</span>を紹介します
+<div class="chapter-number">05</div>
 
-ここからは、最終的にまとまったアイデアについて説明します。
+<div class="section-label">05 — 最終アイデア</div>
+
+# 身体の動きで、<br><span class="accent">観客の視線を導くMRプレゼン</span>
+
+<div class="final-idea-summary">
+  <div><strong>身体で操作する</strong><span>移動やジェスチャーで情報を展開する</span></div>
+  <div><strong>空間に配置する</strong><span>モニターの外まで伝える範囲を広げる</span></div>
+  <div><strong>観客を導く</strong><span>発表者の動きを視線の手がかりにする</span></div>
+</div>
+
+<!-- 新提案の詳細は06章で説明する。 -->
 
 ---
-class: statement-slide
+class: statement-slide idea-hero-slide
 ---
 
 <div class="section-label">06-1 — 概要</div>
 
-# このプロジェクトは何をするものか
+# <span class="accent">身体を使った</span><br>MRプレゼンテーションアプリ
 
-新提案の概要を、次の3点で説明します。
+従来の操作に身体の移動やジェスチャーを組み合わせ、MR空間に置いた情報へ観客の注意を導きます。
 
-- 誰が使うのか
-- どのような場面で使うのか
-- 何ができるようになるのか
+<img class="idea-hero-visual" src="/people/steve-jobs-presenting-user.png" alt="ステージ上でプレゼンテーションするスティーブ・ジョブズ" />
 
-<!-- 新提案を一文で言い切る。必要なら利用シーンの図を置く。 -->
+<!--
+この一文を新提案の定義として扱う。
+正式なプロジェクト名が決まったら見出しを差し替える。
+
+[Sources]
+- Photo: user-provided image
+- Modification: cropped and faded with CSS
+-->
+
+---
+class: statement-slide walking-visual-slide
+---
+
+<div class="section-label">06-1 — 身体を使った表現</div>
+
+# 移動した軌跡に沿って、<br><span class="accent">情報が現れる</span>
+
+位置Aから位置Bへ歩く動きに合わせて、通った空間へ要素を順番に表示します。
+
+<img class="walking-visual" src="/walking-with-infomation-transparent.png" alt="歩いた軌跡に沿って情報が現れるイメージ" />
+
+<!-- Source: user-provided walking-with-infomation.png; background removed mechanically -->
+
+---
+class: statement-slide demo-slide
+---
+
+<div class="section-label">06-1 — 身体を使った表現</div>
+
+# 腕を振った先へ、<br><span class="accent">観客の視線を導く</span>
+
+左から右へのジェスチャーに合わせ、その先に注目してほしい要素を表示します。
+
+<img
+  class="demo-visual"
+  src="https://raw.githubusercontent.com/unframe-dev/mitou-slide/main/media/demos/demo.gif"
+  alt="身体の動きに合わせて情報を表示するデモ"
+/>
+
+<!-- Source: media/demos/demo.gif; served from the public repository via GitHub Raw -->
+
+---
+class: statement-slide demo-slide demo-slide--landscape
+---
+
+<div class="section-label">06-1 — 発表者の補助</div>
+
+# 発表者にだけ見えるUIが、<br><span class="accent">次の動きを支える</span>
+
+身体表現だけに頼らず、立ち位置・次の操作・進行を補助します。
+
+<img
+  class="demo-visual"
+  src="https://raw.githubusercontent.com/unframe-dev/mitou-slide/main/media/demos/demo_1.gif"
+  alt="発表者向けUIが次の動きを補助するデモ"
+/>
+
+<!--
+補助UIに何を表示するかはPoCを通じて決める。
+
+[Sources]
+- Demo source: `media/source/demo_1.mp4`; converted to `media/demos/demo_1.gif` with FFmpeg
+-->
 
 ---
 class: statement-slide
@@ -301,12 +365,32 @@ class: statement-slide
 
 <div class="section-label">06-2 — 提案にまとまった理由</div>
 
-# このアイデアを選んだ<span class="accent">理由は二つ</span>あります
+# この提案を選んだ<span class="accent">二つの理由</span>
 
-1. MR でプレゼンを行うときの課題を解決できる
-2. 実際に使いたいと思えるニーズがある
+1. MRプレゼン特有の注意誘導の課題に向き合える
+2. 自分たちが実際に使いたいと思える
 
-この二つが、提案を最終的に絞り込む軸になりました。
+解決すべき課題と、作りたい体験の両方が重なる方向を選びました。
+
+---
+class: statement-slide spatial-capacity-slide
+---
+
+<div class="section-label">06-3 — MR プレゼンの課題</div>
+
+# MRは、情報を置ける場所を<br><span class="accent">360度へ広げられる</span>
+
+- モニターの枠にとらわれず、空間全体を使える
+- 実際の物体に重ねて情報を表示できる
+
+<img class="spatial-capacity-visual" src="/presentation.png" alt="空間全体へ情報を配置したプレゼンテーションのイメージ" />
+
+<!--
+MRの利点を最初に示し、次のスライドでプレゼンにしたときの問題へつなぐ。
+
+[Sources]
+- Image: user-provided presentation.png
+-->
 
 ---
 class: statement-slide
@@ -314,31 +398,31 @@ class: statement-slide
 
 <div class="section-label">06-3 — MR プレゼンの課題</div>
 
-# 情報を増やすほど、プレゼンは<span class="accent">わかりづらくなる</span>
+# しかし観客は、<br><span class="accent">どこを見ればよいか迷う</span>
 
-- 情報を広げて表示すると、全体を把握しづらい
-- 情報を狭い範囲にまとめると、MR である意味が薄くなる
-- 表示量とわかりやすさの両立が難しい
-
-<!--
-実際の MR プレゼンで起こる状況を、画面例や短いデモで示す。
--->
+情報を広い範囲に置くほど、発表者が伝えたい順番と観客の視線がずれていきます。
 
 ---
 class: statement-slide
 ---
 
-<div class="section-label">06-3 — 課題の解決</div>
+<div class="section-label">06-3 — MR プレゼンの課題</div>
 
-# 新提案は、<span class="accent">情報の見せ方</span>そのものを変えます
+# 正面に固定するなら、<br><span class="accent">普通のプレゼンでよい</span>
 
-新提案では、MR 空間の広さを活かしながら、見る人が必要な情報を追えるようにします。
+わかりやすさを優先して表示を前面へ集めると、MRの空間表現を活かせません。
 
-- 情報を置く場所に意味を持たせる
-- 見る順番を自然に誘導する
-- 必要な情報と補助情報を分ける
+---
+class: statement-slide
+---
 
-<!-- 解決方法の具体的な動き・画面・インタラクションを追加する。 -->
+<div class="section-label">06-3 — 身体による解決</div>
+
+# 発表者の身体を、<br><span class="accent">注意誘導の手がかり</span>にする
+
+歩く、振り向く、腕を振る。その動きと情報表示を組み合わせ、観客が見る場所と順番を自然に示します。
+
+<!-- スティーブ・ジョブズのiPhone発表を、身体による注意誘導の着想として紹介する。 -->
 
 ---
 class: statement-slide
@@ -346,15 +430,33 @@ class: statement-slide
 
 <div class="section-label">06-4 — ニーズ</div>
 
-# 使いたいと思える場面から、ニーズを考えました
+# まず、私たち自身が<br><span class="accent">死ぬほど使ってみたい</span>
 
-- どのような人が困っているのか
-- いまは何で代替しているのか
-- この提案によって何が楽になるのか
+効率化だけを起点にせず、自分たちが本当に体験したいものからニーズを考え直しました。
+
+---
+class: statement-slide
+---
+
+<div class="section-label">06-4 — ニーズ</div>
+
+# 身体で情報を操る体験には、<br><span class="accent">SF的なロマン</span>がある
+
+サイバーパンク作品のような情報表現を、自分の身体で疑似体験できること自体に価値があると考えています。
+
+---
+class: statement-slide
+---
+
+<div class="section-label">06-4 — 将来像</div>
+
+# MRが普及した未来の、<br><span class="accent">かっこいいプレゼン</span>をつくる
+
+5年後、10年後にMRが広がったとき、空間と身体を使って伝えるためのサービスを目指します。
 
 <!--
-想定ユーザー、利用シーン、既存の代替手段を具体化する。
-ニーズが一時的な興味ではなく、継続して使う理由になるかを確認する。
+「1万人に1人なら使いたい人がいる」という考え方は、
+市場規模の根拠ではなく、ニーズ仮説を立てる姿勢としてナレーションで扱う。
 -->
 
 ---
@@ -363,12 +465,38 @@ class: statement-slide
 
 <div class="section-label">07 — 補足事項</div>
 
-# 誤解されやすい点を補足します
+# 身体の動きを、<br><span class="accent">自動認識する前提ではない</span>
 
-- モーションの読み取りは必要ない
-- 本人にしか見えない補助 UI がある
+現時点では、カメラでモーションを読み取ることを必須にせず、発表操作と身体表現を組み合わせる想定です。
 
-<!-- 質問を受けそうな点を追加して、先回りして説明する。 -->
+<!--
+表示を進める具体的な入力方法は要確認。
+「身体の動きをトリガーにする」という表現との違いをナレーションで補足する。
+-->
+
+---
+class: statement-slide
+---
+
+<div class="section-label">07 — 補足事項</div>
+
+# 補助UIは、<br><span class="accent">発表者にだけ見える</span>
+
+観客の体験を邪魔せず、立ち位置・次に見せる情報・進行のタイミングを案内します。
+
+<!-- 補助UIの最小構成をPoCで検証する。 -->
+
+---
+class: statement-slide
+---
+
+<div class="section-label">07 — 体験のイメージ</div>
+
+# 完成形に近い感覚は、<br>デザインあ展の<span class="accent">「DO IT!」</span>
+
+指示に合わせて身体を動かすことと、画面上の表現が結びつく体験を参考にします。
+
+<!-- Reference: https://www.youtube.com/watch?v=TP6L3JbJLZQ -->
 
 ---
 class: statement-slide
@@ -376,34 +504,45 @@ class: statement-slide
 
 <div class="section-label">08 — 今後の開発</div>
 
-# ここからは、<span class="accent">体験の確かさ</span>を検証していきます
+# まず、体験の核を<br><span class="accent">小さく試作する</span>
 
-- まず何を試作するか
-- どの利用シーンを検証するか
-- 何を基準に改善するか
+- 移動に合わせて情報を展開する
+- ジェスチャーの先へ視線を誘導する
+- 発表者用の補助UIで進行を支える
 
-重視するのは、表現の面白さだけでなく、使う人が迷わず理解できることです。
+<!-- 実装順序と、最初に検証する利用シーンは要決定。 -->
 
 ---
 class: statement-slide
 ---
 
-<div class="section-label">09 — 課題</div>
+<div class="section-label">08 — 検証すること</div>
 
-# まだ、解決すべき課題が残っています
+# 面白さとわかりやすさを、<br><span class="accent">同時に確かめる</span>
 
-- 表現の多彩さと、わかりやすい UI のバランス
-- 提案した体験を、実装と検証で確かめること
+- 観客は次に見る場所を迷わないか
+- 発表者は無理なく進行できるか
+- 身体を使う表現にMRならではの魅力があるか
+
+---
+class: statement-slide
+---
+
+<div class="section-label">09 — 課題・聞きたいこと</div>
+
+# 皆さんと一緒に、<br><span class="accent">この体験を磨きたい</span>
+
+- 表現の多彩さと、わかりやすいUIをどう両立するか
+- 皆さんが思う「SF的なかっこよさ」とは何か
+- この体験を使ってみたい場面はあるか
 
 <!--
-二つ目以降の課題は、試作とレビューを通じて具体化していく。
+回答を求める問いとして読み上げ、レビューにつなげる。
 -->
 
 ---
 class: closing-slide
 ---
-
-<div class="closing-rays"></div>
 
 # From slides to <span class="text-gradient">spaces.</span>
 
