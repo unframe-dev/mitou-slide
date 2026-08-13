@@ -410,7 +410,7 @@ class: statement-slide attention-confusion-slide
 -->
 
 ---
-class: statement-slide
+class: statement-slide front-fixed-slide
 ---
 
 <div class="section-label">06-3 — MR プレゼンの課題</div>
@@ -465,7 +465,7 @@ class: statement-slide centered-statement-slide
 万人受けする、最もニーズのある物を模索していたが、それをやめ、 <br/> 自分たちが本当に体験したいものからニーズを考え直しました。
 
 ---
-class: statement-slide
+class: statement-slide sf-romance-visual-slide
 ---
 
 <div class="section-label">06-4 — ニーズ</div>
@@ -474,8 +474,17 @@ class: statement-slide
 
 サイバーパンク作品のような情報表現を、自分の身体で疑似体験できること自体に価値があると考えています。
 
+<div class="visual-reference">ref: movie <cite>Minority Report</cite></div>
+
+<img class="sf-romance-visual" src="/proposal/minority-reprot.png" alt="空間に広がる情報を身体で操作するSF的なインターフェースのイメージ" />
+
+<!--
+[Sources]
+- Image: user-provided minority-reprot.png
+-->
+
 ---
-class: statement-slide
+class: statement-slide centered-emphasis-slide
 ---
 
 <div class="section-label">06-4 — 将来像</div>
@@ -490,10 +499,12 @@ class: statement-slide
 -->
 
 ---
-class: statement-slide
+class: statement-slide supplement-slide
 ---
 
 <div class="section-label">07 — 補足事項</div>
+
+<div class="supplement-marker"><span>SUPPLEMENT</span><small>01 / 02</small></div>
 
 # 身体の動きを、<br><span class="accent">自動認識する前提ではない</span>
 
@@ -505,10 +516,12 @@ class: statement-slide
 -->
 
 ---
-class: statement-slide
+class: statement-slide supplement-slide
 ---
 
 <div class="section-label">07 — 補足事項</div>
+
+<div class="supplement-marker"><span>SUPPLEMENT</span><small>02 / 02</small></div>
 
 # 補助UIは、<br><span class="accent">発表者にだけ見える</span>
 

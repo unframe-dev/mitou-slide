@@ -545,6 +545,208 @@ body,
   max-width: 48rem;
 }
 
+/* 「正面へ固定する」制約を、1枚のスクリーン枠として見せる。 */
+.front-fixed-slide {
+  padding-right: 12% !important;
+  padding-left: 12% !important;
+  text-align: center;
+}
+
+.front-fixed-slide::before {
+  z-index: 0;
+  top: 52%;
+  right: auto;
+  left: 50%;
+  width: 43rem;
+  height: 19rem;
+  border: 1px solid rgb(21 23 29 / 14%);
+  border-radius: 0.35rem;
+  background: linear-gradient(135deg, rgb(255 255 255 / 78%), rgb(236 236 240 / 34%));
+  box-shadow: 0 1.8rem 4.5rem rgb(21 23 29 / 7%);
+  transform: translate(-50%, -50%);
+}
+
+.front-fixed-slide::after {
+  display: none;
+}
+
+.front-fixed-slide h1 {
+  position: relative;
+  z-index: 2;
+  width: 37.5rem;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 3.35rem;
+  line-height: 1.03;
+}
+
+.front-fixed-slide p {
+  position: relative;
+  z-index: 2;
+  max-width: 40rem;
+  margin: 2rem auto 0;
+  font-size: 0.96rem;
+}
+
+/* 結論の強調語を、中央で一段強く見せる。 */
+.centered-emphasis-slide {
+  padding-right: 11% !important;
+  padding-left: 11% !important;
+  text-align: center;
+}
+
+.centered-emphasis-slide::before {
+  display: none;
+}
+
+.centered-emphasis-slide::after {
+  display: none;
+}
+
+.centered-emphasis-slide h1 {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 3.15rem;
+  line-height: 1.08;
+}
+
+.centered-emphasis-slide h1 .accent {
+  display: inline-block;
+  margin-top: 0.18em;
+  padding-bottom: 0.08em;
+  font-size: 1.28em;
+  font-weight: 520;
+  line-height: 1.08;
+}
+
+.centered-emphasis-slide p {
+  position: relative;
+  z-index: 2;
+  max-width: 50rem;
+  margin: 2.15rem auto 0;
+}
+
+.sf-romance-visual-slide {
+  padding-right: 43% !important;
+}
+
+.sf-romance-visual-slide::before,
+.sf-romance-visual-slide::after {
+  display: none;
+}
+
+.sf-romance-visual-slide h1,
+.sf-romance-visual-slide p {
+  position: relative;
+  z-index: 2;
+}
+
+.sf-romance-visual-slide h1 {
+  max-width: 100%;
+  font-size: 2.3rem;
+}
+
+.sf-romance-visual-slide h1 .accent {
+  font-size: 1.15em;
+}
+
+.sf-romance-visual-slide p {
+  max-width: 29.5rem;
+  font-size: 0.96rem;
+}
+
+.sf-romance-visual-slide .visual-reference {
+  position: relative;
+  z-index: 2;
+  margin-top: 1.05rem;
+  color: rgb(116 119 128 / 78%);
+  font-size: 0.68rem;
+  font-weight: 560;
+  letter-spacing: 0.09em;
+}
+
+.sf-romance-visual-slide .visual-reference cite {
+  color: var(--c-purple);
+  font-style: normal;
+}
+
+.sf-romance-visual {
+  position: absolute !important;
+  z-index: 0 !important;
+  inset: 0 0 0 auto;
+  width: 67%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 59% center;
+  opacity: 0.92;
+  filter: saturate(0.82) brightness(1.05);
+  mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 12%) 18%, #000 43%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 12%) 18%, #000 43%);
+  pointer-events: none;
+}
+
+/* 本編の結論と区別し、前提を補うページだと一目で伝える。 */
+.supplement-slide {
+  padding-right: 15% !important;
+  padding-left: 9rem !important;
+  background: linear-gradient(90deg, rgb(236 236 240 / 58%) 0%, rgb(247 247 245 / 0%) 42%);
+}
+
+.supplement-slide::before {
+  top: 50%;
+  right: auto;
+  left: 5.9rem;
+  width: 0.22rem;
+  height: 17rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(to bottom, var(--c-blue), var(--c-purple) 52%, var(--c-red));
+  opacity: 0.78;
+  transform: translateY(-42%);
+}
+
+.supplement-slide::after {
+  display: none;
+}
+
+.supplement-slide .section-label {
+  color: rgb(116 119 128 / 74%);
+}
+
+.supplement-marker {
+  position: absolute !important;
+  top: 8.1rem;
+  left: 9rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  color: var(--c-purple);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.16em;
+}
+
+.supplement-marker small {
+  color: rgb(116 119 128 / 68%);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+}
+
+.supplement-slide h1 {
+  max-width: 88%;
+  font-size: 2.85rem;
+}
+
+.supplement-slide p {
+  max-width: 68%;
+  margin-top: 1.7rem;
+}
+
 .idea-hero-slide {
   padding-right: 39% !important;
 }
