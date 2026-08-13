@@ -691,6 +691,15 @@ body,
 }
 
 /* 本編の結論と区別し、前提を補うページだと一目で伝える。 */
+.supplement-chapter-slide h1 {
+  max-width: 100%;
+}
+
+.supplement-chapter-slide p {
+  max-width: 34rem;
+  margin-top: -0.8rem;
+}
+
 .supplement-slide {
   padding-right: 15% !important;
   padding-left: 9rem !important;
@@ -718,25 +727,6 @@ body,
   color: rgb(116 119 128 / 74%);
 }
 
-.supplement-marker {
-  position: absolute !important;
-  top: 8.1rem;
-  left: 9rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.85rem;
-  color: var(--c-purple);
-  font-size: 0.72rem;
-  font-weight: 650;
-  letter-spacing: 0.16em;
-}
-
-.supplement-marker small {
-  color: rgb(116 119 128 / 68%);
-  font-size: 0.58rem;
-  letter-spacing: 0.08em;
-}
-
 .supplement-slide h1 {
   max-width: 88%;
   font-size: 2.85rem;
@@ -745,6 +735,56 @@ body,
 .supplement-slide p {
   max-width: 68%;
   margin-top: 1.7rem;
+}
+
+.reference-demo-slide {
+  padding-right: 51% !important;
+}
+
+.reference-demo-slide::before,
+.reference-demo-slide::after {
+  display: none;
+}
+
+.reference-demo-slide h1 {
+  max-width: 100%;
+  font-size: 2.35rem;
+}
+
+.reference-demo-slide h1 .accent {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.reference-demo-slide p {
+  max-width: 29rem;
+}
+
+.reference-media {
+  position: absolute !important;
+  z-index: 1 !important;
+  top: 50%;
+  right: var(--slide-x);
+  width: 45%;
+  transform: translateY(-48%);
+}
+
+.reference-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgb(21 23 29 / 10%);
+  border-radius: 0.65rem;
+  box-shadow: 0 1.4rem 3.4rem rgb(21 23 29 / 14%);
+}
+
+.reference-media-caption {
+  margin-top: 0.72rem;
+  color: rgb(116 119 128 / 76%);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-align: right;
 }
 
 .idea-hero-slide {

@@ -499,12 +499,24 @@ class: statement-slide centered-emphasis-slide
 -->
 
 ---
+class: chapter-slide supplement-chapter-slide
+---
+
+<GradientWave id="chapter-wave-07" class="chapter-wave" flip />
+
+<div class="chapter-number">07</div>
+
+<div class="section-label">07 — 補足事項</div>
+
+# 提案の前提を、<br><span class="accent">補足します</span>
+
+実装や体験設計について、誤解されやすい2点を整理します。
+
+---
 class: statement-slide supplement-slide
 ---
 
 <div class="section-label">07 — 補足事項</div>
-
-<div class="supplement-marker"><span>SUPPLEMENT</span><small>01 / 02</small></div>
 
 # 身体の動きを、<br><span class="accent">自動認識する前提ではない</span>
 
@@ -521,8 +533,6 @@ class: statement-slide supplement-slide
 
 <div class="section-label">07 — 補足事項</div>
 
-<div class="supplement-marker"><span>SUPPLEMENT</span><small>02 / 02</small></div>
-
 # 補助UIは、<br><span class="accent">発表者にだけ見える</span>
 
 観客の体験を邪魔せず、立ち位置・次に見せる情報・進行のタイミングを案内します。
@@ -530,16 +540,26 @@ class: statement-slide supplement-slide
 <!-- 補助UIの最小構成をPoCで検証する。 -->
 
 ---
-class: statement-slide
+class: statement-slide reference-demo-slide
 ---
 
 <div class="section-label">07 — 体験のイメージ</div>
 
 # 完成形に近い感覚は、<br>デザインあ展の<span class="accent">「DO IT!」</span>
 
-指示に合わせて身体を動かすことと、画面上の表現が結びつく体験を参考にします。
+指示に合わせて身体を動かすことと、 <br/> 画面上の表現が結びつく体験を参考にします。
 
-<!-- Reference: https://www.youtube.com/watch?v=TP6L3JbJLZQ -->
+<div class="reference-media">
+  <img src="/reference/a_ten-neo.gif" alt="デザインあ展のDO IT!で、画面の指示に合わせて身体を動かす体験" />
+  <div class="reference-media-caption">ref — デザインあ展「DO IT!」</div>
+  <div class="reference-media-caption">https://www.youtube.com/watch?v=TP6L3JbJLZQ</div>
+</div>
+
+<!--
+[Sources]
+- Reference: https://www.youtube.com/watch?v=TP6L3JbJLZQ
+- GIF: user-provided a_ten-neo.gif
+-->
 
 ---
 class: statement-slide
