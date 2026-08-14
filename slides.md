@@ -319,7 +319,7 @@ class: statement-slide idea-hero-slide
 
 # プレゼンターの動きを、<br><span class="accent">ツールがアシストする</span>
 
-立ち位置・方向・タイミングを案内し、動きと情報表示を同期させるMRプレゼンテーションツールです。
+立ち位置・方向・タイミングを案内し、 <br/> 動きと情報表示を同期させる
 
 <img class="idea-hero-visual" src="/people/steve-jobs-presenting-user.png" alt="ステージ上でプレゼンテーションするスティーブ・ジョブズ" />
 
@@ -387,15 +387,15 @@ class: statement-slide demo-slide demo-slide--landscape
 -->
 
 ---
-class: statement-slide
+class: statement-slide proposal-reasons-slide
 ---
 
 <div class="section-label">06-2 — 提案にまとまった理由</div>
 
 # この提案を選んだ<span class="accent">二つの理由</span>
 
-1. MRプレゼン特有の注意誘導の課題に向き合える
-2. 自分たちが実際に使いたいと思える
+- MRプレゼン特有の注意誘導の課題に向き合える
+- 自分たちが実際に使いたいと思える
 
 解決すべき課題と、作りたい体験の両方が重なる方向を選びました。
 
@@ -455,7 +455,7 @@ class: statement-slide attention-guidance-slide
 
 # 発表者の身体を、<br><span class="accent">注意誘導の手がかり</span>にする
 
-歩く、振り向く、腕を振る。身体の動きと情報表示を合わせ、観客の視線を導きます。
+歩く、振り向く、腕を振る。 <br/> 身体の動きと情報表示を合わせ、観客の視線を導きます。
 
 <img class="attention-guidance-visual" src="/proposal/mr-presentation-transparent.png" alt="発表者の身体の動きが観客の視線をMR情報へ導くイメージ" />
 
@@ -541,14 +541,14 @@ class: chapter-slide supplement-chapter-slide
 新提案を成立させる、入力・進行・発表者向けUIの仕組みを説明します。
 
 ---
-class: statement-slide supplement-slide
+class: statement-slide supplement-slide supplement-slide--single-line
 ---
 
 <div class="section-label">07 — 実現方法</div>
 
-# 汎用的な動作認識には、<br><span class="accent">依存しない</span>
+# 汎用的な動作認識には、<span class="accent">依存しない</span>
 
-進行ごとに定義した位置・コントローラ移動・ボタン入力だけを有効にし、意図しない動作による誤進行を抑えます。
+進行ごとに定義した位置・コントローラ移動・ボタン入力だけを有効にし、<br>意図しない動作による誤進行を抑えます。
 
 <div class="implementation-boundary">
   <div><strong>使う</strong><span>進行ごとに定義した入力と動き</span></div>
@@ -560,7 +560,7 @@ Source: /home/t4ko/Project/github.com/unframe-dev/unframe/docs/decisions/0005-sp
 -->
 
 ---
-class: statement-slide supplement-slide
+class: statement-slide supplement-slide centered-statement-slide
 ---
 
 <div class="section-label">07 — 実現方法</div>

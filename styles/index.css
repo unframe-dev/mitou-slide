@@ -522,6 +522,21 @@ body,
   left: var(--slide-x);
 }
 
+.proposal-reasons-slide ul {
+  padding-left: 1.35rem;
+  list-style: disc;
+}
+
+.proposal-reasons-slide li,
+.proposal-reasons-slide li::marker,
+.proposal-reasons-slide > p {
+  color: var(--c-night) !important;
+}
+
+.proposal-reasons-slide li {
+  font-weight: 550;
+}
+
 .centered-statement-slide {
   align-items: center;
   padding-right: 12% !important;
@@ -721,20 +736,18 @@ body,
 .supplement-slide {
   padding-right: 15% !important;
   padding-left: 9rem !important;
-  background: linear-gradient(90deg, rgb(236 236 240 / 58%) 0%, rgb(247 247 245 / 0%) 42%);
+  background: none;
+}
+
+.supplement-slide.centered-statement-slide {
+  align-items: center;
+  padding-right: 12% !important;
+  padding-left: 12% !important;
+  text-align: center;
 }
 
 .supplement-slide::before {
-  top: 50%;
-  right: auto;
-  left: 5.9rem;
-  width: 0.22rem;
-  height: 17rem;
-  border: 0;
-  border-radius: 999px;
-  background: linear-gradient(to bottom, var(--c-blue), var(--c-purple) 52%, var(--c-red));
-  opacity: 0.78;
-  transform: translateY(-42%);
+  display: none;
 }
 
 .supplement-slide::after {
@@ -750,6 +763,17 @@ body,
   font-size: 2.85rem;
 }
 
+.supplement-slide--single-line h1 {
+  max-width: none;
+  font-size: 2.45rem;
+  white-space: nowrap;
+}
+
+.supplement-slide--single-line p {
+  max-width: 88%;
+  white-space: nowrap;
+}
+
 .supplement-slide p {
   max-width: 75%;
   margin-top: 1.7rem;
@@ -758,18 +782,44 @@ body,
 .implementation-boundary {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2.5rem;
-  width: 76%;
-  margin-top: 2.25rem;
+  gap: 1rem;
+  width: 88%;
+  margin-top: 2rem;
 }
 
 .implementation-boundary > div {
-  padding-top: 0.9rem;
-  border-top: 2px solid var(--c-line);
+  position: relative;
+  min-height: 4.5rem;
+  padding: 0.45rem 1rem 0.45rem 1.8rem;
+  border: 0;
+  border-radius: 0;
+  background: none;
 }
 
 .implementation-boundary > div:first-child {
-  border-color: var(--c-purple);
+  border-color: transparent;
+  background: none;
+}
+
+.implementation-boundary > div::before {
+  position: absolute;
+  top: 0.55rem;
+  left: 0;
+  display: block;
+  width: auto;
+  height: auto;
+  place-items: center;
+  border: 0;
+  border-radius: 0;
+  color: var(--c-purple);
+  content: "✓";
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.implementation-boundary > div:last-child::before {
+  color: var(--c-muted);
+  content: "×";
 }
 
 .implementation-boundary strong,
@@ -782,12 +832,12 @@ body,
   background-clip: border-box;
   -webkit-background-clip: border-box;
   color: var(--c-night) !important;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: 700;
 }
 
 .implementation-boundary span {
-  margin-top: 0.5rem;
+  margin-top: 0.42rem;
   color: var(--c-muted);
   font-size: 0.82rem;
   line-height: 1.5;
