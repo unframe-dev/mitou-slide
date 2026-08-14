@@ -210,13 +210,13 @@ class: focus-slide activity-map-slide
   <div class="focus-row focus-row--future">
     <div class="focus-conditions"><span>場所依存</span><span>集まる</span><span>非同期</span></div>
     <div class="focus-concept"><strong>展示MR</strong><small>作った空間を歩いて見る</small></div>
-    <div class="focus-status">旧PoC</div>
+    <div class="focus-status">PoC</div>
   </div>
 
   <div class="focus-row">
     <div class="focus-conditions"><span>場所非依存</span><span>散らばる</span><span>非同期</span></div>
     <div class="focus-concept"><strong>円状の資料表示</strong><small>視点や腕で順に資料を見る</small></div>
-    <div class="focus-status">旧PoC</div>
+    <div class="focus-status">PoC</div>
   </div>
 
 </div>
