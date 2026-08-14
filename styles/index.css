@@ -303,6 +303,16 @@ body,
   line-height: 1.4;
 }
 
+.finding-item--strength {
+  border-left: 3px solid var(--c-red);
+  background: linear-gradient(90deg, rgb(221 83 91 / 8%), transparent 72%);
+  padding-left: 1rem;
+}
+
+.finding-item--strength .finding-label {
+  color: var(--c-red);
+}
+
 .poc-conclusion-slide .proposal-transition {
   align-self: start;
   margin-top: 1.35rem;
@@ -310,6 +320,14 @@ body,
   font-size: 0.95rem !important;
   font-weight: 550;
   line-height: 1.55;
+}
+
+.poc-conclusion-slide .finding-evidence {
+  align-self: start;
+  margin-top: 0.55rem;
+  color: var(--c-muted);
+  font-size: 0.58rem;
+  letter-spacing: 0.02em;
 }
 
 .final-idea-slide h1 {
@@ -656,7 +674,7 @@ body,
 }
 
 .sf-romance-visual-slide p {
-  max-width: 29.5rem;
+  max-width: 33rem;
   font-size: 0.96rem;
 }
 
@@ -685,8 +703,8 @@ body,
   object-position: 59% center;
   opacity: 0.92;
   filter: saturate(0.82) brightness(1.05);
-  mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 12%) 18%, #000 43%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 12%) 18%, #000 43%);
+  mask-image: linear-gradient(to right, transparent 0 24%, rgb(0 0 0 / 8%) 40%, #000 60%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0 24%, rgb(0 0 0 / 8%) 40%, #000 60%);
   pointer-events: none;
 }
 
@@ -733,8 +751,46 @@ body,
 }
 
 .supplement-slide p {
-  max-width: 68%;
+  max-width: 75%;
   margin-top: 1.7rem;
+}
+
+.implementation-boundary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  width: 76%;
+  margin-top: 2.25rem;
+}
+
+.implementation-boundary > div {
+  padding-top: 0.9rem;
+  border-top: 2px solid var(--c-line);
+}
+
+.implementation-boundary > div:first-child {
+  border-color: var(--c-purple);
+}
+
+.implementation-boundary strong,
+.implementation-boundary span {
+  display: block;
+}
+
+.implementation-boundary strong {
+  background: none;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  color: var(--c-night) !important;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.implementation-boundary span {
+  margin-top: 0.5rem;
+  color: var(--c-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
 }
 
 .reference-demo-slide {
@@ -1034,7 +1090,7 @@ body,
 
 .audience-questions > div {
   min-height: 7.5rem;
-  padding: 0 2rem;
+  padding: 0 1.35rem;
   border-left: 1px solid var(--c-line);
 }
 
@@ -1094,13 +1150,13 @@ body,
   object-position: 60% center;
   opacity: 0.82;
   filter: saturate(0.72) contrast(0.9) brightness(1.08);
-  mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 18%, #000 46%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 18%, #000 46%);
+  mask-image: linear-gradient(to right, transparent 0 20%, rgb(0 0 0 / 10%) 36%, #000 58%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0 20%, rgb(0 0 0 / 10%) 36%, #000 58%);
   pointer-events: none;
 }
 
 .walking-visual-slide {
-  padding-right: 52% !important;
+  padding-right: 43% !important;
 }
 
 .walking-visual-slide h1,
@@ -1116,7 +1172,7 @@ body,
 }
 
 .walking-visual-slide p {
-  max-width: 28rem;
+  max-width: 34rem;
 }
 
 .walking-visual {
@@ -1134,10 +1190,10 @@ body,
 
 .demo-slide {
   display: grid;
-  grid-template-columns: minmax(0, 52%) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 48%) minmax(0, 1fr);
   grid-template-rows: auto minmax(0, 1fr);
   align-content: stretch;
-  gap: 1rem 3%;
+  gap: 1rem 2%;
   padding: 4.4rem var(--slide-x) 2.8rem !important;
 }
 
@@ -1226,8 +1282,8 @@ body,
   object-position: 52% center;
   opacity: 0.8;
   filter: saturate(0.72) contrast(0.9) brightness(1.08);
-  mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 18%, #000 46%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 18%, #000 46%);
+  mask-image: linear-gradient(to right, transparent 0 24%, rgb(0 0 0 / 10%) 40%, #000 60%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0 24%, rgb(0 0 0 / 10%) 40%, #000 60%);
   pointer-events: none;
 }
 
@@ -1264,8 +1320,8 @@ body,
   object-position: 60% center;
   opacity: 0.82;
   filter: saturate(0.76) contrast(0.92) brightness(1.05);
-  mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 22%, #000 48%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 22%, #000 48%);
+  mask-image: linear-gradient(to right, transparent 0 26%, rgb(0 0 0 / 10%) 42%, #000 62%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0 26%, rgb(0 0 0 / 10%) 42%, #000 62%);
   pointer-events: none;
 }
 
@@ -1289,7 +1345,7 @@ body,
 }
 
 .attention-guidance-slide p {
-  max-width: 31rem;
+  max-width: 36rem;
 }
 
 .attention-guidance-visual {
@@ -1302,8 +1358,8 @@ body,
   object-position: 60% center;
   opacity: 0.84;
   filter: saturate(0.82) contrast(0.94) brightness(1.04);
-  mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 22%, #000 48%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgb(0 0 0 / 18%) 22%, #000 48%);
+  mask-image: linear-gradient(to right, transparent 0 26%, rgb(0 0 0 / 10%) 42%, #000 62%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0 26%, rgb(0 0 0 / 10%) 42%, #000 62%);
   pointer-events: none;
 }
 
@@ -1381,6 +1437,72 @@ body,
   transform: translateY(-50%);
 }
 
+/* 合宿後に広げた3方向を、探索の順序として見せる。 */
+.exploration-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exploration-slide .section-label {
+  position: absolute;
+  top: var(--slide-y);
+  left: var(--slide-x);
+}
+
+.exploration-slide h1 {
+  max-width: 86%;
+  font-size: 2.75rem;
+}
+
+.exploration-paths {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.2rem;
+  width: 100%;
+  margin-top: 2.8rem;
+}
+
+.exploration-paths > div {
+  position: relative;
+  padding-top: 1.05rem;
+  border-top: 2px solid var(--c-line);
+}
+
+.exploration-paths > div:last-child {
+  border-color: var(--c-red);
+}
+
+.exploration-paths span,
+.exploration-paths strong,
+.exploration-paths small {
+  display: block;
+}
+
+.exploration-paths span {
+  color: var(--c-muted);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.exploration-paths strong {
+  margin-top: 0.55rem;
+  background: none;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  color: var(--c-night) !important;
+  font-size: 1.3rem;
+  font-weight: 650;
+}
+
+.exploration-paths small {
+  margin-top: 0.5rem;
+  color: var(--c-muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
 /* 3軸の組み合わせと、PoCの到達点を一枚で見せる。 */
 .focus-slide {
   --focus-accent: #5b51a9;
@@ -1409,6 +1531,97 @@ body,
   position: absolute;
   top: var(--slide-y);
   left: var(--slide-x);
+}
+
+.activity-map-slide h1 {
+  position: relative;
+  z-index: 1;
+  max-width: 100%;
+  margin: 0 0 0.5rem;
+  font-size: 1.85rem;
+  font-weight: 500;
+}
+
+.activity-map-slide .focus-grid {
+  margin-top: 0.35rem;
+}
+
+.activity-map-slide .focus-row {
+  min-height: 4.15rem;
+}
+
+/* 三つのPoCを、目的と技術課題まで一続きで記録する。 */
+.poc-ledger-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.poc-ledger-slide .section-label {
+  position: absolute;
+  top: var(--slide-y);
+  left: var(--slide-x);
+}
+
+.poc-ledger-slide h1 {
+  max-width: 100%;
+  font-size: 2.55rem;
+}
+
+.poc-ledger {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.poc-ledger__head,
+.poc-ledger__row {
+  display: grid;
+  grid-template-columns: 0.78fr 1.35fr 1.25fr 1.55fr;
+  align-items: center;
+  column-gap: 1.2rem;
+}
+
+.poc-ledger__head {
+  padding: 0 1rem 0.7rem;
+  border-bottom: 1px solid var(--c-line);
+  color: var(--c-muted);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.poc-ledger__row {
+  min-height: 4.4rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--c-line);
+}
+
+.poc-ledger__row--selected {
+  border-left: 3px solid var(--c-red);
+  background: linear-gradient(90deg, rgb(221 83 91 / 8%), transparent 72%);
+}
+
+.poc-ledger__row strong {
+  background: none;
+  background-clip: border-box;
+  -webkit-background-clip: border-box;
+  color: var(--c-night) !important;
+  font-size: 0.95rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.poc-ledger__row span {
+  color: var(--c-text);
+  font-size: 0.74rem;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+.poc-ledger__row small {
+  color: var(--c-muted);
+  font-size: 0.7rem;
+  line-height: 1.5;
 }
 
 .focus-grid,
@@ -1582,6 +1795,32 @@ body,
   mix-blend-mode: multiply;
 }
 
+.boost-demo-slide {
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  column-gap: 1.75rem;
+}
+
+.proposal-visual--boost {
+  width: 100%;
+  border: 1px solid rgb(20 20 20 / 10%);
+  border-radius: 0.35rem;
+  box-shadow: 0 1.25rem 3rem rgb(20 20 20 / 12%);
+  mix-blend-mode: normal;
+}
+
+.boost-demo-slide .proposal-copy--first h1 {
+  font-size: 2.15rem;
+}
+
+.boost-demo-slide .proposal-copy--first .accent {
+  white-space: nowrap;
+}
+
+.boost-demo-slide .proposal-copy {
+  width: 23rem;
+  max-width: none;
+}
+
 .proposal-copy {
   grid-column: 2;
   max-width: 100%;
@@ -1596,12 +1835,46 @@ body,
 }
 
 .proposal-copy--first h1 {
-  font-size: 2.75rem;
+  font-size: 2.4rem;
+}
+
+.initial-solution-slide .proposal-copy p {
+  max-width: 34rem;
 }
 
 .proposal-copy p {
   max-width: 29rem;
   margin-top: 1.55rem;
+}
+
+.backstory-flow,
+.solution-points {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.4rem;
+}
+
+.backstory-flow span,
+.solution-points span {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--c-line);
+  border-radius: 999px;
+  color: var(--c-text);
+  font-size: 0.68rem;
+  font-weight: 600;
+}
+
+.backstory-flow i {
+  color: var(--c-muted);
+  font-size: 0.72rem;
+  font-style: normal;
+}
+
+.solution-points span:last-child {
+  border-color: rgb(221 83 91 / 38%);
+  color: var(--c-red);
 }
 
 @media (max-width: 900px) {
@@ -1610,8 +1883,17 @@ body,
     column-gap: 1.5rem;
   }
 
+  .proposal-slide.boost-demo-slide {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    column-gap: 1.75rem;
+  }
+
   .proposal-copy h1 {
     font-size: 2.55rem;
+  }
+
+  .boost-demo-slide .proposal-copy--first h1 {
+    font-size: 1.9rem;
   }
 }
 

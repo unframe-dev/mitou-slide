@@ -106,162 +106,190 @@ class: profile-slide
 <!-- Source: /home/t4ko/Project/github.com/unframe-dev/unframe/assets/boost.pdf p.7 -->
 
 ---
-class: spatial-steps
+class: proposal-slide backstory-slide
 ---
 
-<div class="section-label">02 — 動画の流れ</div>
+<div class="section-label">02 — 事前の経緯</div>
 
-# プロジェクトが変わった経緯から話します
+<img class="proposal-visual proposal-visual--screen" src="/proposal/proposal-editor.png" alt="3Dモデルを扱う編集画面" />
 
-1. もともとの提案
-2. ブースト合宿後に見えた課題
-3. 合宿後のアイデア探索
-4. 最終的にまとまった新提案
-5. これからの開発と課題
+<div class="proposal-copy">
+  <h1>立体物を説明するたび、<br><span class="accent">プレゼンが止まっていた</span></h1>
+  <p>構造や形を見せるには、スライドを離れてCADや動画を開き、操作してから戻る必要がありました。</p>
+  <div class="backstory-flow" aria-label="従来の説明の流れ">
+    <span>スライド</span><i>→</i><span>CAD・動画</span><i>→</i><span>スライドへ戻る</span>
+  </div>
+</div>
 
-<!--
-最初にこの順番を示しておくと、プロジェクトの大幅な変更が追いやすくなる。
--->
+<!-- Source: /home/t4ko/Project/github.com/unframe-dev/unframe/assets/boost.pdf pp.22-24 -->
 
 ---
-class: proposal-slide
+class: proposal-slide boost-demo-slide
 ---
 
-<div class="section-label">02 — もともとの提案</div>
+<div class="section-label">02 — 最初の提案</div>
 
-<img class="proposal-visual proposal-visual--screen" src="/proposal/proposal-3d-model.png" alt="3Dモデルを配置したプレゼン画面" />
+<img class="proposal-visual proposal-visual--boost" src="/proposal/boost.gif" alt="3Dモデルを使ったMRプレゼンの試作デモ" />
 
 <div class="proposal-copy proposal-copy--first">
-  <h1>最初の提案は、<br><span class="accent">3Dモデルを使うプレゼン</span></h1>
-  <p>プレゼンの流れの中に、3Dモデルを組み込む構想でした。</p>
+  <h1>そこで考えたのが、<br><span class="accent">3Dモデルを使うMRプレゼン</span></h1>
+  <p>立体物の説明を、プレゼンの流れから切り離さないための提案でした。</p>
 </div>
 
 <!-- Source: /home/t4ko/Project/github.com/unframe-dev/unframe/assets/boost.pdf pp.22-24 -->
 
 ---
-class: proposal-slide
+class: proposal-slide initial-solution-slide
 ---
 
-<div class="section-label">02 — もともとの提案</div>
+<div class="section-label">02 — 最初のソリューション</div>
 
-<img class="proposal-visual proposal-visual--screen" src="/proposal/proposal-editor.png" alt="3D編集画面" />
+<img class="proposal-visual" src="/proposal/presentation-scene.png" alt="発表者がプレゼン内で3Dモデルを見せるイメージ" />
 
 <div class="proposal-copy">
-  <h1>説明のたびに、<br><span class="accent">CADや動画に戻っていた</span></h1>
-  <p>立体物を説明するたびに、別の資料を開いて補足する必要がありました。</p>
+  <h1>プレゼンの中で、<br><span class="accent">3Dモデルを直接見せる</span></h1>
+  <p>別のツールへ移らず、その場で立体物を見せ、説明を続けられる形を目指しました。</p>
+  <div class="solution-points"><span>説明を止めない</span><span>立体のまま見せる</span></div>
 </div>
 
 <!-- Source: /home/t4ko/Project/github.com/unframe-dev/unframe/assets/boost.pdf pp.22-24 -->
 
 ---
-class: proposal-slide
----
-
-<div class="section-label">02 — もともとの提案</div>
-
-<img class="proposal-visual" src="/proposal/presentation-scene.png" alt="発表者と聴衆のイラスト" />
-
-<div class="proposal-copy">
-  <h1>プレゼンの一部として、<br><span class="accent">3Dモデルを出せれば？</span></h1>
-  <p>説明を止めずに、その場で立体物を見せられるプレゼンを目指しました。</p>
-</div>
-
-<!-- Source: /home/t4ko/Project/github.com/unframe-dev/unframe/assets/boost.pdf pp.22-24 -->
-
----
-class: issue-slide
+class: issue-slide review-issue-slide
 ---
 
 <div class="section-label">03 — ブースト合宿後の課題</div>
 
 <div class="issue-intro">
-  <h1>合宿を終えて、<br><span class="accent">考え直すべき課題</span>が見えてきた</h1>
+  <h1>面白い。けれど、<br><span class="accent">「なぜMR？」</span>が残った</h1>
 </div>
 
 <ul class="issue-list">
-  <li>本当にニーズがあるのか</li>
-  <li>どのようなユースケースで使われるのか</li>
-  <li>なぜ MR である必要があるのか</li>
+  <li>3D表示だけなら既存ツールでもできる</li>
+  <li>誰が、どこで、何人で使うのかが曖昧</li>
+  <li>MRの空間を使う必然性がまだ弱い</li>
 </ul>
 
-<!--
-合宿で受けたフィードバックを、課題として整理して話す。
--->
+<!-- Source: /home/t4ko/Project/github.com/unframe-dev/unframe/docs/Unframe_Scrapbox_reactions_summary.md -->
 
 ---
-class: statement-slide
----
-
-<div class="section-label">04 — 合宿後に行ったこと</div>
-
-# 機能追加よりも、<br><span class="accent">アイデア探し</span>を優先してみた
-
-課題を解消するため、いったん実装の追加から離れました。
-
----
-class: focus-slide
+class: statement-slide exploration-slide centered-statement-slide
 ---
 
 <div class="section-label">04 — アイデア探索</div>
 
+# <span class="accent">「なぜMR？」</span>に答えるため、<br>アイデア探索を始めた
+
+<!--
+Sources:
+- /home/t4ko/Project/github.com/unframe-dev/unframe/docs/notion/雑多タスクリスト/プロダクト案だし(615~).md
+- /home/t4ko/Project/github.com/unframe-dev/unframe/docs/Unframe_Scrapbox_reactions_summary.md
+-->
+
+---
+class: focus-slide activity-map-slide
+---
+
+<div class="section-label">04 — MRアクティビティーの整理</div>
+
+<h1>場所 × 参加形態 × 時間で整理</h1>
+
 <div class="focus-grid">
   <div class="focus-grid__head" aria-hidden="true">
     <span>条件</span>
-    <span>方向性</span>
-    <span>状態</span>
+    <span>MRで行う活動</span>
+    <span>検証</span>
   </div>
 
   <div class="focus-row focus-row--initial">
     <div class="focus-conditions"><span>場所依存</span><span>集まる</span><span>同期</span></div>
-    <div class="focus-concept"><strong>初期提案（MRプレゼン）</strong><small>今まで作っていたもの</small></div>
-    <div class="focus-status">これまで</div>
+    <div class="focus-concept"><strong>初期提案</strong><small>3Dモデルを使うMRプレゼン</small></div>
+    <div class="focus-status">出発点</div>
   </div>
 
   <div class="focus-row focus-row--future">
     <div class="focus-conditions"><span>場所依存</span><span>集まる</span><span>非同期</span></div>
-    <div class="focus-concept"><strong>展示会MR</strong><small>展示空間で体験する</small></div>
-    <div class="focus-status">試作・PoC</div>
+    <div class="focus-concept"><strong>展示MR</strong><small>作った空間を歩いて見る</small></div>
+    <div class="focus-status">旧PoC</div>
   </div>
 
   <div class="focus-row focus-row--poc">
     <div class="focus-conditions"><span>場所非依存</span><span>散らばる</span><span>非同期</span></div>
-    <div class="focus-concept"><strong>資料表示系プレゼン</strong><small>資料表示モード</small></div>
-    <div class="focus-status">試作・PoC</div>
+    <div class="focus-concept"><strong>円状の資料表示</strong><small>視点や腕で順に資料を見る</small></div>
+    <div class="focus-status">旧PoC</div>
   </div>
 
   <div class="focus-row focus-row--poc">
     <div class="focus-conditions"><span>場所非依存</span><span>散らばる</span><span>同期</span></div>
-    <div class="focus-concept"><strong>資料表示系プレゼン</strong><small>発表モード</small></div>
-    <div class="focus-status">試作・PoC</div>
+    <div class="focus-concept"><strong>身体を使う発表モード</strong><small>発表者の進行と情報を同期する</small></div>
+    <div class="focus-status">現PoC</div>
   </div>
 </div>
 
-<p class="focus-summary">この4つの方向を軸に、試作のPoCを繰り返して現在の形を見つけました。</p>
+<p class="focus-summary">比較だけで終わらせず、三つの方向をすべて試作しました。</p>
+
+---
+class: statement-slide poc-ledger-slide
+---
+
+<div class="section-label">04 — 全試作</div>
+
+# 三つの方向で、<span class="accent">作ったPoCを比較した</span>
+
+<div class="poc-ledger">
+  <div class="poc-ledger__head"><span>試作</span><span>確かめたこと</span><span>できたこと</span><span>残った技術課題</span></div>
+  <div class="poc-ledger__row">
+    <strong>展示MR</strong>
+    <span>空間そのものを資料にできるか</span>
+    <span>資料を中心点の周囲へ円状配置</span>
+    <small>共有する空間原点・端末間の同期</small>
+  </div>
+  <div class="poc-ledger__row">
+    <strong>円状の資料表示</strong>
+    <span>視点移動で順に読み進められるか</span>
+    <span>回転量に応じた段階表示と逆走防止</span>
+    <small>情報の重なり・視界・自然な操作</small>
+  </div>
+  <div class="poc-ledger__row poc-ledger__row--selected">
+    <strong>身体を使う発表</strong>
+    <span>指定した動きを進行に使えるか</span>
+    <span>コントローラ移動で現在のStepを進行</span>
+    <small>誤発火・追跡喪失・全身認識の分離</small>
+  </div>
+</div>
 
 <!--
-Source: /home/t4ko/Project/github.com/unframe-dev/unframe/docs/Unframe_Scrapbox_reactions_summary.md
+Sources:
+- /home/t4ko/Project/github.com/unframe-dev/unframe/docs/notion/雑多タスクリスト/プロダクト案だし(615~).md
+- /home/t4ko/Project/github.com/unframe-dev/unframe/docs/decisions/0005-spatial-presentation-domain-model.md
+- Archived circular-view PoC: unframe commit 7545c1e
 -->
 
 ---
 class: statement-slide poc-conclusion-slide
 ---
 
-<div class="section-label">04 — PoCの結論</div>
+<div class="section-label">04 — 検証結果</div>
 
-# PoCの結果、<br><span class="accent">MRの強みと限界が見えました</span>
+# PoCと合宿レビューから、<br><span class="accent">MRの弱みと強みが分かれた</span>
 
 <div class="finding-stack">
   <div class="finding-item">
-    <span class="finding-label">情報量を落とすと</span>
-    <span class="finding-text">MRでなくてもよくなる</span>
+    <span class="finding-label">情報を減らすと</span>
+    <span class="finding-text">MRである必然性が薄くなる</span>
   </div>
   <div class="finding-item">
-    <span class="finding-label">情報量を増やすと</span>
-    <span class="finding-text">認識の妨げになり、MRの強みが消える</span>
+    <span class="finding-label">情報を増やすと</span>
+    <span class="finding-text">視界を塞ぎ、観客の視線が散らばる</span>
+  </div>
+  <div class="finding-item finding-item--strength">
+    <span class="finding-label">身体と空間を使うと</span>
+    <span class="finding-text">発表者自身が、観客の注意を導ける</span>
   </div>
 </div>
 
-<p class="proposal-transition">この気づきをもとに、情報の見せ方を変える新提案を紹介します。</p>
+<p class="proposal-transition">弱みを補うのではなく、MRの強みを中心に新提案を組み立てました。</p>
+<p class="finding-evidence">合宿で得た反応と各PoCの観察をもとにした、定性的な整理</p>
 
 ---
 class: chapter-slide final-idea-slide
@@ -276,9 +304,9 @@ class: chapter-slide final-idea-slide
 # 身体の動きで、<br><span class="accent">観客の視線を導くMRプレゼン</span>
 
 <div class="final-idea-summary">
-  <div><strong>身体で操作する</strong><span>移動やジェスチャーで情報を展開する</span></div>
-  <div><strong>空間に配置する</strong><span>モニターの外まで伝える範囲を広げる</span></div>
-  <div><strong>観客を導く</strong><span>発表者の動きを視線の手がかりにする</span></div>
+  <div><strong>動きを設計する</strong><span>発言に立ち位置・方向・タイミングを組み込む</span></div>
+  <div><strong>発表者を支える</strong><span>次の動きと進行を本人だけに案内する</span></div>
+  <div><strong>観客を導く</strong><span>発表者の動きと情報表示を同期させる</span></div>
 </div>
 
 <!-- 新提案の詳細は06章で説明する。 -->
@@ -289,9 +317,9 @@ class: statement-slide idea-hero-slide
 
 <div class="section-label">06-1 — 概要</div>
 
-# <span class="accent">身体を使った</span><br>MRプレゼンテーションアプリ
+# プレゼンターの動きを、<br><span class="accent">ツールがアシストする</span>
 
-従来の操作に身体の移動やジェスチャーを組み合わせ、MR空間に置いた情報へ観客の注意を導きます。
+立ち位置・方向・タイミングを案内し、動きと情報表示を同期させるMRプレゼンテーションツールです。
 
 <img class="idea-hero-visual" src="/people/steve-jobs-presenting-user.png" alt="ステージ上でプレゼンテーションするスティーブ・ジョブズ" />
 
@@ -308,11 +336,11 @@ class: statement-slide idea-hero-slide
 class: statement-slide walking-visual-slide
 ---
 
-<div class="section-label">06-1 — 身体を使った表現</div>
+<div class="section-label">06-1 — 発表の設計</div>
 
-# 移動した軌跡に沿って、<br><span class="accent">情報が現れる</span>
+# 発言だけでなく、<br><span class="accent">動く位置とタイミングまで設計する</span>
 
-位置Aから位置Bへ歩く動きに合わせて、通った空間へ要素を順番に表示します。
+新提案では、スピーカーノートに移動先とタイミングを組み込み、発表者の動きに合わせて情報を順番に表示します。
 
 <img class="walking-visual" src="/walking-with-infomation-transparent.png" alt="歩いた軌跡に沿って情報が現れるイメージ" />
 
@@ -322,16 +350,16 @@ class: statement-slide walking-visual-slide
 class: statement-slide demo-slide
 ---
 
-<div class="section-label">06-1 — 身体を使った表現</div>
+<div class="section-label">06-1 — 観客への見せ方</div>
 
-# 腕を振った先へ、<br><span class="accent">観客の視線を導く</span>
+# 指定した動きに合わせて、<br><span class="accent">情報を展開する</span>
 
-体の動きに合わせて要素を表示する
+現状のPoCでは、ボタンを押しながらコントローラを直線移動したときだけ、表示を順番に切り替えます。
 
 <img
   class="demo-visual"
   src="https://raw.githubusercontent.com/unframe-dev/mitou-slide/main/media/demos/demo.gif"
-  alt="身体の動きに合わせて情報を表示するデモ"
+  alt="指定したコントローラ入力に合わせて情報を表示するデモ"
 />
 
 <!-- Source: media/demos/demo.gif; served from the public repository via GitHub Raw -->
@@ -340,10 +368,10 @@ class: statement-slide demo-slide
 class: statement-slide demo-slide demo-slide--landscape
 ---
 
-<div class="section-label">06-1 — 発表者の補助</div>
+<div class="section-label">06-1 — 実現方法</div>
 
-# 体についてくる、<br><span class="accent">相対位置の追尾要素</span>
-身体表現だけに頼らず、立ち位置・次の操作・進行を補助します。
+# 次の立ち位置と進行を、<br><span class="accent">発表者だけに表示する</span>
+追随表示の見え方を足がかりに、身体表現を繰り返せる中心機能として試作します。
 
 <img
   class="demo-visual"
@@ -352,7 +380,7 @@ class: statement-slide demo-slide demo-slide--landscape
 />
 
 <!--
-補助UIに何を表示するかはPoCを通じて決める。
+発表者向けUIに表示する最小情報はPoCを通じて決める。
 
 [Sources]
 - Demo source: `media/source/demo_1.mp4`; converted to `media/demos/demo_1.gif` with FFmpeg
@@ -427,7 +455,7 @@ class: statement-slide attention-guidance-slide
 
 # 発表者の身体を、<br><span class="accent">注意誘導の手がかり</span>にする
 
-歩く、振り向く、腕を振る。その動きと情報表示を組み合わせ、観客が見る場所と順番を自然に示します。
+歩く、振り向く、腕を振る。身体の動きと情報表示を合わせ、観客の視線を導きます。
 
 <img class="attention-guidance-visual" src="/proposal/mr-presentation-transparent.png" alt="発表者の身体の動きが観客の視線をMR情報へ導くイメージ" />
 
@@ -506,38 +534,48 @@ class: chapter-slide supplement-chapter-slide
 
 <div class="chapter-number">07</div>
 
-<div class="section-label">07 — 補足事項</div>
+<div class="section-label">07 — 実現方法</div>
 
-# 提案の前提を、<br><span class="accent">補足します</span>
+# 身体表現を、<br><span class="accent">プレゼンの進行に組み込む</span>
 
-実装や体験設計について、誤解されやすい2点を整理します。
+新提案を成立させる、入力・進行・発表者向けUIの仕組みを説明します。
 
 ---
 class: statement-slide supplement-slide
 ---
 
-<div class="section-label">07 — 補足事項</div>
+<div class="section-label">07 — 実現方法</div>
 
-# 身体の動きを、<br><span class="accent">自動認識する前提ではない</span>
+# 汎用的な動作認識には、<br><span class="accent">依存しない</span>
 
-現時点では、カメラでモーションを読み取ることを必須にせず、発表操作と身体表現を組み合わせる想定です。
+進行ごとに定義した位置・コントローラ移動・ボタン入力だけを有効にし、意図しない動作による誤進行を抑えます。
+
+<div class="implementation-boundary">
+  <div><strong>使う</strong><span>進行ごとに定義した入力と動き</span></div>
+  <div><strong>使わない</strong><span>カメラ任せの汎用モーション認識</span></div>
+</div>
 
 <!--
-表示を進める具体的な入力方法は要確認。
-「身体の動きをトリガーにする」という表現との違いをナレーションで補足する。
+Source: /home/t4ko/Project/github.com/unframe-dev/unframe/docs/decisions/0005-spatial-presentation-domain-model.md
 -->
 
 ---
 class: statement-slide supplement-slide
 ---
 
-<div class="section-label">07 — 補足事項</div>
+<div class="section-label">07 — 実現方法</div>
 
-# 補助UIは、<br><span class="accent">発表者にだけ見える</span>
+# スピーカーノートを、<br><span class="accent">動きの設計図にする</span>
 
-観客の体験を邪魔せず、立ち位置・次に見せる情報・進行のタイミングを案内します。
+発言と立ち位置・方向・表示タイミングを記録。発表中は必要な指示だけを表示します。
 
-<!-- 補助UIの最小構成をPoCで検証する。 -->
+<!--
+発表者向けUIは補足機能ではなく、身体表現を再現可能にする中心機能として説明する。
+
+Sources:
+- /home/t4ko/Project/github.com/unframe-dev/unframe/docs/Unframe_Scrapbox_reactions_summary.md
+- /home/t4ko/Project/github.com/unframe-dev/unframe/docs/decisions/0005-spatial-presentation-domain-model.md
+-->
 
 ---
 class: statement-slide reference-demo-slide
