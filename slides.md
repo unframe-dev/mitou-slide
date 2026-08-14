@@ -1,6 +1,6 @@
 ---
 theme: geist
-title: Unframe 中間合宿用動画 草案
+title: 未踏ジュニア 中間合宿用資料
 info: プロジェクトが変わった理由と、新しい提案
 author: Unframe
 keywords: [Unframe, MR, プロジェクト, 中間合宿]
@@ -562,42 +562,64 @@ class: statement-slide reference-demo-slide
 -->
 
 ---
-class: statement-slide
+class: statement-slide prototype-roadmap-slide
 ---
 
 <div class="section-label">08 — 今後の開発</div>
 
 # まず、体験の核を<br><span class="accent">小さく試作する</span>
 
-- 移動に合わせて情報を展開する
-- ジェスチャーの先へ視線を誘導する
-- 発表者用の補助UIで進行を支える
+<div class="prototype-roadmap">
+  <div class="prototype-step prototype-step--move">
+    <span class="prototype-step-number">01</span>
+    <div><strong>移動</strong><span>歩いた軌跡に合わせて、空間へ情報を展開する</span></div>
+  </div>
+  <div class="prototype-step prototype-step--guide">
+    <span class="prototype-step-number">02</span>
+    <div><strong>視線誘導</strong><span>ジェスチャーの先へ、観客の注意を自然に導く</span></div>
+  </div>
+  <div class="prototype-step prototype-step--assist">
+    <span class="prototype-step-number">03</span>
+    <div><strong>補助UI</strong><span>発表者だけに進行と次の操作を案内する</span></div>
+  </div>
+</div>
 
 <!-- 実装順序と、最初に検証する利用シーンは要決定。 -->
 
 ---
-class: statement-slide
+class: statement-slide validation-balance-slide
 ---
 
 <div class="section-label">08 — 検証すること</div>
 
 # 面白さとわかりやすさを、<br><span class="accent">同時に確かめる</span>
 
-- 観客は次に見る場所を迷わないか
-- 発表者は無理なく進行できるか
-- 身体を使う表現にMRならではの魅力があるか
+<div class="validation-balance">
+  <div class="validation-axis">
+    <span class="validation-axis-label">わかりやすさ</span>
+    <span class="validation-axis-center">両立</span>
+    <span class="validation-axis-label">面白さ</span>
+  </div>
+  <div class="validation-checks">
+    <div><span>01</span><strong>観客</strong><small>次に見る場所を迷わないか</small></div>
+    <div><span>02</span><strong>発表者</strong><small>無理なく進行できるか</small></div>
+    <div><span>03</span><strong>MR体験</strong><small>身体を使う表現にMRならではの魅力があるか</small></div>
+  </div>
+</div>
 
 ---
-class: statement-slide
+class: statement-slide audience-questions-slide
 ---
 
 <div class="section-label">09 — 課題・聞きたいこと</div>
 
 # 皆さんと一緒に、<br><span class="accent">この体験を磨きたい</span>
 
-- 表現の多彩さと、わかりやすいUIをどう両立するか
-- 皆さんが思う「SF的なかっこよさ」とは何か
-- この体験を使ってみたい場面はあるか
+<div class="audience-questions">
+  <div><span>01</span><p>表現の多彩さと、<br>わかりやすいUIをどう両立するか</p></div>
+  <div><span>02</span><p>皆さんが思う<br>「SF的なかっこよさ」とは何か</p></div>
+  <div><span>03</span><p>この体験を<br>使ってみたい場面はあるか</p></div>
+</div>
 
 <!--
 回答を求める問いとして読み上げ、レビューにつなげる。
@@ -607,11 +629,10 @@ class: statement-slide
 class: closing-slide
 ---
 
-# From slides to <span class="text-gradient">spaces.</span>
+<img class="closing-brand-image" src="/brand/light-header.png" alt="Unframe" />
 
-<div class="slide-note">動いて伝えるプレゼンへ。MRだからこそ成立する体験を検証する。</div>
+<div class="slide-note">ご視聴ありがとうございました。</div>
 
 <!--
-最後に、プロジェクトが変わったこと自体ではなく、
-課題を踏まえて提案を更新できたことを伝える。
+Unframeのブランドと、今回検証する体験を短く残して締める。
 -->
