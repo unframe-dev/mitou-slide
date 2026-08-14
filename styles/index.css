@@ -1600,80 +1600,6 @@ body,
   min-height: 4.15rem;
 }
 
-/* 三つのPoCを、目的と技術課題まで一続きで記録する。 */
-.poc-ledger-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.poc-ledger-slide .section-label {
-  position: absolute;
-  top: var(--slide-y);
-  left: var(--slide-x);
-}
-
-.poc-ledger-slide h1 {
-  max-width: 100%;
-  font-size: 2.55rem;
-}
-
-.poc-ledger {
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.poc-ledger__head,
-.poc-ledger__row {
-  display: grid;
-  grid-template-columns: 0.78fr 1.35fr 1.25fr 1.55fr;
-  align-items: center;
-  column-gap: 1.2rem;
-}
-
-.poc-ledger__head {
-  padding: 0 1rem 0.7rem;
-  border-bottom: 1px solid var(--c-line);
-  color: var(--c-muted);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-}
-
-.poc-ledger__row {
-  min-height: 4.4rem;
-  padding: 0.8rem 1rem;
-  border-bottom: 1px solid var(--c-line);
-}
-
-.poc-ledger__row--selected {
-  border-left: 3px solid var(--c-red);
-  background: linear-gradient(90deg, rgb(221 83 91 / 8%), transparent 72%);
-}
-
-.poc-ledger__row strong {
-  background: none;
-  background-clip: border-box;
-  -webkit-background-clip: border-box;
-  color: var(--c-night) !important;
-  font-size: 0.95rem;
-  font-weight: 650;
-  white-space: nowrap;
-}
-
-.poc-ledger__row span {
-  color: var(--c-text);
-  font-size: 0.74rem;
-  font-weight: 550;
-  line-height: 1.45;
-}
-
-.poc-ledger__row small {
-  color: var(--c-muted);
-  font-size: 0.7rem;
-  line-height: 1.5;
-}
-
 .focus-grid,
 .focus-summary {
   position: relative;
@@ -2055,6 +1981,197 @@ body,
   font-size: 1rem;
   letter-spacing: 0.035em;
   transform: translateX(-50%);
+}
+
+/* 概要の後に追加した、新提案の説明ページ群。 */
+.new-proposal-difference-slide,
+.new-proposal-motion-slide {
+  padding-right: 9% !important;
+}
+
+.new-proposal-difference-slide::before,
+.new-proposal-motion-slide::before,
+.new-proposal-difference-slide::after,
+.new-proposal-motion-slide::after {
+  display: none;
+}
+
+.new-proposal-difference-slide h1,
+.new-proposal-motion-slide h1 {
+  max-width: 100%;
+  font-size: 2.8rem;
+}
+
+.new-proposal-difference-slide > p,
+.new-proposal-motion-slide > p {
+  max-width: 88%;
+}
+
+.difference-diagram {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 2.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.7rem;
+  width: 94%;
+  margin-top: 1.45rem;
+}
+
+.difference-diagram__panel {
+  min-height: 10.2rem;
+  padding: 0.8rem 1rem 0.7rem;
+  border: 1px solid var(--c-line);
+  background: rgb(255 255 255 / 28%);
+}
+
+.difference-diagram__panel--proposal {
+  background: rgb(255 255 255 / 28%);
+}
+
+.difference-diagram__eyebrow {
+  color: var(--c-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.difference-diagram__panel--proposal .difference-diagram__eyebrow {
+  color: var(--c-purple);
+}
+
+.difference-diagram__visual {
+  position: relative;
+  height: 4.25rem;
+  margin: 0.55rem 0 0.6rem;
+}
+
+.difference-page-card {
+  position: absolute;
+  top: 0.15rem;
+  display: grid;
+  width: 3rem;
+  height: 3.65rem;
+  place-items: center;
+  border: 1px solid var(--c-line);
+  border-radius: 0.18rem;
+  background: var(--c-bg);
+  box-shadow: 0 0.3rem 0.55rem rgb(21 23 29 / 9%);
+  color: var(--c-muted);
+  font-size: 0.72rem;
+}
+
+.difference-page-card--back {
+  left: 27%;
+  transform: rotate(-8deg);
+}
+
+.difference-page-card--middle {
+  left: 39%;
+  transform: rotate(0deg);
+}
+
+.difference-page-card--front {
+  left: 51%;
+  border-color: rgb(113 135 245 / 55%);
+  transform: rotate(8deg);
+}
+
+.difference-space-card {
+  position: absolute;
+  display: grid;
+  width: 3.3rem;
+  height: 1.95rem;
+  place-items: center;
+  border-top: 2px solid var(--c-purple);
+  border-bottom: 1px solid rgb(154 128 208 / 45%);
+  background: rgb(255 255 255 / 58%);
+  color: var(--c-purple);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.difference-space-card--a {
+  top: 0.05rem;
+  left: 26%;
+  transform: rotate(-5deg);
+}
+
+.difference-space-card--b {
+  top: 1.22rem;
+  left: 44%;
+  border-color: var(--c-red);
+  color: var(--c-red);
+  transform: rotate(3deg);
+}
+
+.difference-space-card--c {
+  top: 0.2rem;
+  left: 63%;
+  transform: rotate(7deg);
+}
+
+.difference-space-route {
+  position: absolute;
+  top: 2.05rem;
+  left: 18%;
+  width: 67%;
+  border-top: 1px dashed var(--c-red);
+  opacity: 0.8;
+  transform: rotate(-8deg);
+}
+
+.difference-presenter {
+  position: absolute;
+  bottom: 0.05rem;
+  left: 5%;
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border: 1px solid var(--c-red);
+  border-radius: 50%;
+  background: rgb(223 123 128 / 8%);
+  color: var(--c-red);
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.difference-diagram__panel > strong {
+  display: block;
+  color: var(--c-night);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.difference-diagram__panel > small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--c-muted);
+  font-size: 0.65rem;
+  line-height: 1.35;
+}
+
+.difference-diagram__connector {
+  display: grid;
+  place-items: center;
+  color: var(--c-red);
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.new-proposal-motion-slide ul {
+  max-width: 88%;
+  margin-top: 1.7rem;
+}
+
+.new-proposal-motion-slide > p {
+  margin-top: 1.15rem;
+}
+
+.technical-questions-slide {
+  padding-right: 7% !important;
+  padding-left: 7% !important;
 }
 
 @media (prefers-reduced-motion: reduce) {

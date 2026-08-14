@@ -213,50 +213,15 @@ class: focus-slide activity-map-slide
     <div class="focus-status">旧PoC</div>
   </div>
 
-  <div class="focus-row focus-row--poc">
+  <div class="focus-row">
     <div class="focus-conditions"><span>場所非依存</span><span>散らばる</span><span>非同期</span></div>
     <div class="focus-concept"><strong>円状の資料表示</strong><small>視点や腕で順に資料を見る</small></div>
     <div class="focus-status">旧PoC</div>
   </div>
 
-  <div class="focus-row focus-row--poc">
-    <div class="focus-conditions"><span>場所非依存</span><span>散らばる</span><span>同期</span></div>
-    <div class="focus-concept"><strong>身体を使う発表モード</strong><small>発表者の進行と情報を同期する</small></div>
-    <div class="focus-status">現PoC</div>
-  </div>
 </div>
 
 <p class="focus-summary">比較だけで終わらせず、三つの方向をすべて試作しました。</p>
-
----
-class: statement-slide poc-ledger-slide
----
-
-<div class="section-label">04 — 全試作</div>
-
-# 三つの方向で、<span class="accent">作ったPoCを比較した</span>
-
-<div class="poc-ledger">
-  <div class="poc-ledger__head"><span>試作</span><span>確かめたこと</span><span>できたこと</span><span>残った技術課題</span></div>
-  <div class="poc-ledger__row">
-    <strong>展示MR</strong>
-    <span>空間そのものを資料にできるか</span>
-    <span>資料を中心点の周囲へ円状配置</span>
-    <small>共有する空間原点・端末間の同期</small>
-  </div>
-  <div class="poc-ledger__row">
-    <strong>円状の資料表示</strong>
-    <span>視点移動で順に読み進められるか</span>
-    <span>回転量に応じた段階表示と逆走防止</span>
-    <small>情報の重なり・視界・自然な操作</small>
-  </div>
-  <div class="poc-ledger__row poc-ledger__row--selected">
-    <strong>身体を使う発表</strong>
-    <span>指定した動きを進行に使えるか</span>
-    <span>コントローラ移動で現在のStepを進行</span>
-    <small>誤発火・追跡喪失・全身認識の分離</small>
-  </div>
-</div>
 
 <!--
 Sources:
@@ -271,7 +236,7 @@ class: statement-slide poc-conclusion-slide
 
 <div class="section-label">04 — 検証結果</div>
 
-# PoCと合宿レビューから、<br><span class="accent">MRの弱みと強みが分かれた</span>
+# PoCと合宿レビューから、<br><span class="accent">MRの弱みが見えてきた</span>
 
 <div class="finding-stack">
   <div class="finding-item">
@@ -282,13 +247,9 @@ class: statement-slide poc-conclusion-slide
     <span class="finding-label">情報を増やすと</span>
     <span class="finding-text">視界を塞ぎ、観客の視線が散らばる</span>
   </div>
-  <div class="finding-item finding-item--strength">
-    <span class="finding-label">身体と空間を使うと</span>
-    <span class="finding-text">発表者自身が、観客の注意を導ける</span>
-  </div>
 </div>
 
-<p class="proposal-transition">弱みを補うのではなく、MRの強みを中心に新提案を組み立てました。</p>
+<p class="proposal-transition">この課題を出発点に、MRでしかできない体験を改めて探します。</p>
 <p class="finding-evidence">合宿で得た反応と各PoCの観察をもとにした、定性的な整理</p>
 
 ---
@@ -332,6 +293,44 @@ class: statement-slide idea-hero-slide
 - Modification: cropped and faded with CSS
 -->
 
+<!-- 概要の後に、新提案の違いと実現方法を追加で説明する。 -->
+
+---
+class: statement-slide new-proposal-difference-slide
+---
+
+<div class="section-label">06-1 — 今までとの違い</div>
+
+# 情報を減らさず、<br><span class="accent">身体の動きで視線を導く</span>
+
+従来のプレゼンは情報を1ページずつ切り分けます。本提案は情報量を保ったまま、身体の動きで注目点を順に導きます。
+
+<div class="difference-diagram" aria-label="従来のプレゼンと新提案の比較">
+  <div class="difference-diagram__panel difference-diagram__panel--traditional">
+    <div class="difference-diagram__eyebrow">従来のプレゼン</div>
+    <div class="difference-diagram__visual difference-diagram__visual--pages" aria-hidden="true">
+      <span class="difference-page-card difference-page-card--back">C</span>
+      <span class="difference-page-card difference-page-card--middle">B</span>
+      <span class="difference-page-card difference-page-card--front">A</span>
+    </div>
+    <strong>情報を1ページずつ提示</strong>
+    <small>ページを切り替えて、注目点を分ける</small>
+  </div>
+  <div class="difference-diagram__connector" aria-hidden="true"><span>→</span></div>
+  <div class="difference-diagram__panel difference-diagram__panel--proposal">
+    <div class="difference-diagram__eyebrow">このプロジェクト</div>
+    <div class="difference-diagram__visual difference-diagram__visual--space" aria-hidden="true">
+      <span class="difference-space-card difference-space-card--a">A</span>
+      <span class="difference-space-card difference-space-card--b">B</span>
+      <span class="difference-space-card difference-space-card--c">C</span>
+      <span class="difference-space-route"></span>
+      <span class="difference-presenter">YOU</span>
+    </div>
+    <strong>同じ空間で情報を展開</strong>
+    <small>動きと表示を同期し、視線を導く</small>
+  </div>
+</div>
+
 ---
 class: statement-slide walking-visual-slide
 ---
@@ -345,6 +344,19 @@ class: statement-slide walking-visual-slide
 <img class="walking-visual" src="/walking-with-infomation-transparent.png" alt="歩いた軌跡に沿って情報が現れるイメージ" />
 
 <!-- Source: user-provided walking-with-infomation.png; background removed mechanically -->
+
+---
+class: statement-slide proposal-reasons-slide new-proposal-motion-slide
+---
+
+<div class="section-label">06-1 — 動作認識の範囲</div>
+
+# 動作認識は、<br><span class="accent">進行トリガーだけを見る</span>
+
+- 詳細な腕の振り方やジェスチャーは認識しない
+- ここからここまでの移動と、次へ進む入力だけを判定する
+
+汎用的な動作認識を作り込むのではなく、プレゼンテーションツール側を作り込みます。次の表示へ進むトリガーが分かれば、プレゼンは成立します。
 
 ---
 class: statement-slide demo-slide
@@ -649,19 +661,33 @@ class: statement-slide validation-balance-slide
 class: statement-slide audience-questions-slide
 ---
 
-<div class="section-label">09 — 課題・聞きたいこと</div>
+<div class="section-label">09 — みなさんへの質問 1</div>
 
-# 皆さんと一緒に、<br><span class="accent">この体験を磨きたい</span>
+# この体験について、<br><span class="accent">どう思うか</span>
 
 <div class="audience-questions">
-  <div><span>01</span><p>表現の多彩さと、<br>わかりやすいUIをどう両立するか</p></div>
-  <div><span>02</span><p>皆さんが思う<br>「SF的なかっこよさ」とは何か</p></div>
+  <div><span>01</span><p>皆さんが思う<br>「SF的なかっこよさ」とは何か</p></div>
+  <div><span>02</span><p>簡単になるなら試したい、<br>SF的な表現は何か</p></div>
   <div><span>03</span><p>この体験を<br>使ってみたい場面はあるか</p></div>
 </div>
 
 <!--
 回答を求める問いとして読み上げ、レビューにつなげる。
 -->
+
+---
+class: statement-slide audience-questions-slide technical-questions-slide
+---
+
+<div class="section-label">09 — みなさんへの質問 2</div>
+
+# この提案を、<br><span class="accent">どう実現していくか</span>
+
+<div class="audience-questions">
+  <div><span>04</span><p>表現の自由さと、<br>UIの複雑化をどう両立するか</p></div>
+  <div><span>05</span><p>p2pやCloud Anchorで、<br>現実空間の原点をどう同期するか</p></div>
+  <div><span>06</span><p>表現の多彩さと、<br>わかりやすいUIをどう両立するか</p></div>
+</div>
 
 ---
 class: closing-slide
