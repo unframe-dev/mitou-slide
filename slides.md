@@ -106,6 +106,22 @@ class: profile-slide
 <!-- Source: /home/t4ko/Project/github.com/unframe-dev/unframe/assets/boost.pdf p.7 -->
 
 ---
+class: chapter-slide
+---
+
+<GradientWave id="chapter-wave-02" class="chapter-wave" flip />
+
+<div class="chapter-number">02</div>
+
+<div class="section-label">02 — 最初の提案</div>
+
+# 最初の提案から、<br>方向転換まで
+
+- 解決したかった課題
+- 3Dモデルを使うMRプレゼン
+- 合宿後に見えた課題
+
+---
 class: proposal-slide backstory-slide
 ---
 
@@ -346,19 +362,6 @@ class: statement-slide walking-visual-slide
 <!-- Source: user-provided walking-with-infomation.png; background removed mechanically -->
 
 ---
-class: statement-slide proposal-reasons-slide new-proposal-motion-slide
----
-
-<div class="section-label">06-1 — 動作認識の範囲</div>
-
-# 動作認識は、<br><span class="accent">進行トリガーだけを見る</span>
-
-- 詳細な腕の振り方やジェスチャーは認識しない
-- ここからここまでの移動と、次へ進む入力だけを判定する
-
-汎用的な動作認識を作り込むのではなく、プレゼンテーションツール側を作り込みます。次の表示へ進むトリガーが分かれば、プレゼンは成立します。
-
----
 class: statement-slide demo-slide
 ---
 
@@ -478,6 +481,22 @@ class: statement-slide attention-guidance-slide
 - Image: user-provided mr-presentation.png
 - Modification: near-white pixels made transparent with FFmpeg; faded with CSS
 -->
+
+---
+class: chapter-slide
+---
+
+<GradientWave id="chapter-wave-06-needs" class="chapter-wave" />
+
+<div class="chapter-number">06</div>
+
+<div class="section-label">06-4 — ニーズ</div>
+
+# 自分たちが<br/>使いたい体験から、 <br/><span class="accent">ニーズを考える</span>
+
+- 自分たちが本当に体験したいもの
+- 身体で情報を操るSF的なロマン
+- MRが普及した未来のプレゼン
 
 ---
 class: statement-slide centered-statement-slide
