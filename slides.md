@@ -21,11 +21,6 @@ class: cover-slide
 
 <img class="cover-visual" src="/brand/hero.png" alt="" />
 
-<!--
-この動画では、最終的な提案だけでなく、そこに至るまでの流れも伝える。
-初めて見る人にもわかるように、最初の提案から説明する。
--->
-
 ---
 class: chapter-slide
 ---
@@ -41,8 +36,6 @@ class: chapter-slide
 - メンバーと役割
 - 前回から取り組んできたこと
 - 今回のプロジェクト
-
-<!-- 前回の自己紹介スライドをベースに内容を差し替える。 -->
 
 ---
 class: profile-slide
@@ -286,8 +279,6 @@ class: chapter-slide final-idea-slide
   <div><strong>観客を導く</strong><span>発表者の動きと情報表示を同期させる</span></div>
 </div>
 
-<!-- 新提案の詳細は06章で説明する。 -->
-
 ---
 class: statement-slide idea-hero-slide
 ---
@@ -301,15 +292,10 @@ class: statement-slide idea-hero-slide
 <img class="idea-hero-visual" src="/people/steve-jobs-presenting-user.png" alt="ステージ上でプレゼンテーションするスティーブ・ジョブズ" />
 
 <!--
-この一文を新提案の定義として扱う。
-正式なプロジェクト名が決まったら見出しを差し替える。
-
 [Sources]
 - Photo: user-provided image
 - Modification: cropped and faded with CSS
 -->
-
-<!-- 概要の後に、新提案の違いと実現方法を追加で説明する。 -->
 
 ---
 class: statement-slide new-proposal-difference-slide
@@ -395,8 +381,6 @@ class: statement-slide demo-slide demo-slide--landscape
 />
 
 <!--
-発表者向けUIに表示する最小情報はPoCを通じて決める。
-
 [Sources]
 - Demo source: `media/source/demo_1.mp4`; converted to `media/demos/demo_1.gif` with FFmpeg
 -->
@@ -428,8 +412,6 @@ class: statement-slide spatial-capacity-slide
 <img class="spatial-capacity-visual" src="/presentation.png" alt="空間全体へ情報を配置したプレゼンテーションのイメージ" />
 
 <!--
-MRの利点を最初に示し、次のスライドでプレゼンにしたときの問題へつなぐ。
-
 [Sources]
 - Image: user-provided presentation.png
 -->
@@ -475,8 +457,6 @@ class: statement-slide attention-guidance-slide
 <img class="attention-guidance-visual" src="/proposal/mr-presentation-transparent.png" alt="発表者の身体の動きが観客の視線をMR情報へ導くイメージ" />
 
 <!--
-スティーブ・ジョブズのiPhone発表を、身体による注意誘導の着想として紹介する。
-
 [Sources]
 - Image: user-provided mr-presentation.png
 - Modification: near-white pixels made transparent with FFmpeg; faded with CSS
@@ -552,11 +532,6 @@ class: statement-slide centered-emphasis-slide
 
 5年後、10年後にMRが広がったとき、空間と身体を使って伝えるためのサービスを目指します。
 
-<!--
-「1万人に1人なら使いたい人がいる」という考え方は、
-市場規模の根拠ではなく、ニーズ仮説を立てる姿勢としてナレーションで扱う。
--->
-
 ---
 class: chapter-slide supplement-chapter-slide
 ---
@@ -601,8 +576,6 @@ class: statement-slide supplement-slide centered-statement-slide
 発言と立ち位置・方向・表示タイミングを記録。発表中は必要な指示だけを表示します。
 
 <!--
-発表者向けUIは補足機能ではなく、身体表現を再現可能にする中心機能として説明する。
-
 Sources:
 - /home/t4ko/Project/github.com/unframe-dev/unframe/docs/Unframe_Scrapbox_reactions_summary.md
 - /home/t4ko/Project/github.com/unframe-dev/unframe/docs/decisions/0005-spatial-presentation-domain-model.md
@@ -653,8 +626,6 @@ class: statement-slide prototype-roadmap-slide
   </div>
 </div>
 
-<!-- 実装順序と、最初に検証する利用シーンは要決定。 -->
-
 ---
 class: statement-slide validation-balance-slide
 ---
@@ -690,10 +661,6 @@ class: statement-slide audience-questions-slide
   <div><span>03</span><p>この体験を<br>使ってみたい場面はあるか</p></div>
 </div>
 
-<!--
-回答を求める問いとして読み上げ、レビューにつなげる。
--->
-
 ---
 class: statement-slide audience-questions-slide technical-questions-slide
 ---
@@ -715,6 +682,3 @@ class: closing-slide
 
 <div class="slide-note">ご視聴ありがとうございました。</div>
 
-<!--
-Unframeのブランドと、今回検証する体験を短く残して締める。
--->
