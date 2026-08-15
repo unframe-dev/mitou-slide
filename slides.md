@@ -686,7 +686,6 @@ class: statement-slide audience-questions-slide technical-questions-slide
 <div class="audience-questions">
   <div><span>04</span><p>表現の自由さと、<br>UIの複雑化をどう両立するか</p></div>
   <div><span>05</span><p>p2pやCloud Anchorで、<br>現実空間の原点をどう同期するか</p></div>
-  <div><span>06</span><p>表現の多彩さと、<br>わかりやすいUIをどう両立するか</p></div>
 </div>
 
 ---

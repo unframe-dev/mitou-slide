@@ -1111,7 +1111,7 @@ body,
   line-height: 1.45;
 }
 
-/* 最後の議論へつなぐ3つの問いを、会場へ向けて並べる。 */
+/* 最後の議論へつなぐ問いを、会場へ向けて並べる。 */
 .audience-questions-slide {
   align-items: center;
   padding-right: 7% !important;
@@ -1136,6 +1136,10 @@ body,
   width: 100%;
   margin-top: 3rem;
   text-align: left;
+}
+
+.technical-questions-slide .audience-questions {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .audience-questions > div {
