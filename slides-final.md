@@ -118,8 +118,8 @@ class: final-prelude
   <div class="profile-content">
     <h1>佐藤 和貴</h1>
     <dl class="profile-details">
-      <div><dt>担当</dt><dd>MR部分</dd></div>
-      <div><dt>技術</dt><dd>Vulkan / Metal ・ HLSL / GLSL ・ C# / C++</dd></div>
+      <div><dt>今回の担当</dt><dd>MR部分</dd></div>
+      <div><dt>技術スタック</dt><dd>Vulkan / Metal ・ HLSL / GLSL ・ C# / C++</dd></div>
       <div><dt>趣味</dt><dd>ゲーム ・ TRPG ・ 写真</dd></div>
       <div><dt>関心分野</dt><dd>グラフィックス・シェーダー</dd></div>
     </dl>
@@ -162,18 +162,15 @@ class: final-prelude
   <div class="profile-content">
     <h1>権代 颯士</h1>
     <dl class="profile-details">
-      <div><dt>担当</dt><dd>Web / Infra / Backend</dd></div>
-      <div><dt>好きな技術</dt><dd>Nix / TypeScript / Go | Hono / Cloudflare</dd></div>
-      <div><dt>趣味</dt><dd>モータースポーツ観戦 / VRC / FPSゲーム</dd></div>
-      <div><dt>関心分野</dt><dd>Nixによる開発環境の構築</dd></div>
+      <div><dt>今回の担当</dt><dd>Web / Infra / Backend</dd></div>
+      <div><dt>好きな技術</dt><dd>Nix / TypeScript | Hono / Cloudflare</dd></div>
+      <div><dt>趣味</dt><dd>モータースポーツ観戦（F1, SF） / VRC / FPSゲーム</dd></div>
+      <div><dt>関心分野</dt><dd>Nix, Architecture, Linux</dd></div>
     </dl>
   </div>
 </div>
   </div>
 </div>
-
-<!-- Source: /home/t4ko/Project/github.com/unframe-dev/unframe/assets/boost.pdf p.7 -->
-
 
 ---
 layout: none
@@ -217,8 +214,8 @@ class: final-prelude
 <div class="final-label">02 — Unframeの概要</div>
 <h1>身体を使う<br><span class="final-accent">MRプレゼンテーション</span></h1>
 <div class="final-overview-points">
-  <section><h2>身体による操作</h2><p>移動・ジェスチャーによる<br>進行の制御</p></section>
-  <section><h2>空間的な表現</h2><p>モニターの平面に限定せず、<br>文字・画像・3Dモデルを空間に配置</p></section>
+  <section><h2>身体に連動した操作</h2><p>移動・ジェスチャーによる<br>進行の制御</p></section>
+  <section><h2>空間的な表現</h2><p>従来通りのモニターの平面に限定せず、<br>文字・画像・3Dモデルを空間的に配置</p></section>
 </div>
   </div>
 </div>
@@ -239,7 +236,7 @@ class: final-prelude
 <div class="final-prelude-stage">
   <div class="slidev-layout default final-deck final-shared">
 <div class="final-label">02 — Unframeの概要</div>
-<h1>機器を通じたMR空間の共有</h1>
+<h1>MR空間の共有</h1>
 <div class="final-role-row">
   <div class="final-role-block"><h2>プレゼンテイター</h2><p>MRヘッドセットで操作・表示</p></div>
   <div class="final-role-orbit">同じ<br>MR空間</div>
@@ -313,7 +310,7 @@ class: final-prelude
 <h1>当初の目標と課題</h1>
 <div class="final-goal-origin">
   <section><h2>当初の目標</h2><p>一つのプレゼンテーションアプリとしての完成</p></section>
-  <section><h2>開発を通じて明らかになった課題</h2><p>従来の手法で完結する場面の多さ<br>MRの特長を活かす表現設計の難しさ</p></section>
+  <section><h2>開発を通じて明らかになった課題</h2><p>従来の手法で完結する場面の多さ<br>MRの特長を活かす表現設計の難しさ<br/>ユーザーがプレゼンを作りやすい体験の提供</p></section>
 </div>
   </div>
 </div>
