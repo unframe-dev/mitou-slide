@@ -23,7 +23,7 @@ try {
     const result = spawnSync(browser, [
       '--headless', '--disable-gpu', '--hide-scrollbars', '--no-first-run',
       '--no-default-browser-check', '--disable-background-networking',
-      `--user-data-dir=${profile}`, '--window-size=1768,650',
+      `--user-data-dir=${profile}`, `--window-size=1768,${['backend', 'web', 'framework'].includes(name) ? 800 : 650}`,
       '--force-device-scale-factor=2', '--virtual-time-budget=1500',
       '--run-all-compositor-stages-before-draw', `--screenshot=${png}`, page.href,
     ], { encoding: 'utf8', timeout: 30_000 });

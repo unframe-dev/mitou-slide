@@ -50,7 +50,6 @@ html, body { margin: 0; width: 1768px; height: 650px; background: var(--bg); }
 .compact .description { margin-top: 8px; font-size: 23px; line-height: 1.4; }
 .overview .card:first-of-type .description { font-size: 22px; }
 .mr .title { font-size: 32px; }
-.backend .description { font-size: 27px; }
 .backend .tech-row { gap: 30px; margin-top: 24px; }
 .backend .tech { font-size: 26px; }
 .backend .tech .logo { width: 36px; height: 36px; }
@@ -64,3 +63,38 @@ html, body { margin: 0; width: 1768px; height: 650px; background: var(--bg); }
 .framework .brand-title { gap: 14px; }
 .framework .brand-title .logo { width: 37px; height: 37px; }
 .framework .files { font-size: 20px; line-height: 1.45; }
+
+.tech .logo.tailscale { object-fit: cover; object-position: center; transform: scale(1.25); clip-path: inset(10%); }
+
+ .backend .card { padding: 20px 24px; }
+.backend .title { font-size: 30px; }
+.backend .description { font-size: 23px; line-height: 1.5; }
+.backend .label { font-size: 21px; }
+.backend .brand-title { gap: 12px; }
+.backend .logo { width: 35px; height: 35px; }
+.backend .logo.go { width: 54px; }
+
+
+
+body:has(#diagram.backend), #diagram.backend { height: 800px; }
+.backend .title { font-size: 32px; }
+.backend .description { font-size: 25px; }
+
+body:has(#diagram.web), #diagram.web { height: 800px; }
+.web .card { padding: 20px 24px; }
+.web .title { font-size: 30px; }
+.web .description { font-size: 23px; line-height: 1.5; }
+.web .label { font-size: 21px; }
+.web .brand-title { gap: 12px; }
+.web .logo { width: 35px; height: 35px; }
+.web .logo.go { width: 54px; }
+
+.backend .group-heading { font-size: 25px; gap: 10px; }
+
+body:has(#diagram.framework), #diagram.framework { height: 800px; }
+.framework .title { font-size: 29px; }
+.framework .description { font-size: 23px; line-height: 1.6; }
+.framework .framework-artifacts { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 30px; margin-top: 24px; font-size: 25px; color: var(--ink); }
+.framework .framework-artifacts span { font-size: 22px; color: var(--muted); }
+
+.framework .card { padding: 20px 24px; }

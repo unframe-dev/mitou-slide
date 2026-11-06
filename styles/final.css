@@ -105,3 +105,34 @@
 :global(.final-goal-origin section + section) { margin-top: 38px; }
 :global(.final-goal-origin h2) { margin: 0 0 14px; font-size: 20px; font-weight: 450; color: #81729e !important; }
 :global(.final-goal-origin p) { font-size: 29px; line-height: 1.65; color: #15171d !important; }
+
+:global(.final-tech-server .final-tech-diagram) { height: 400px; }
+:global(.final-tech-server h1) { margin-bottom: 16px; }
+
+:global(.final-tech-web .final-tech-diagram) { height: 400px; }
+:global(.final-tech-web h1) { margin-bottom: 16px; }
+
+:global(.final-tech-framework .final-tech-diagram) { height: 400px; }
+:global(.final-tech-framework h1) { margin-bottom: 16px; }
+
+:global(.final-creation h1) { margin: 0 0 14px; font-size: 37px; }
+:global(.final-creation-caption) { margin: 0 0 24px; font-size: 20px; color: #646877; }
+
+:global(.final-creation-screenshot) { display: block; width: 100%; height: 345px; object-fit: contain; border-radius: 8px; }
+
+:global(.final-ai-edit) { display: grid; grid-template-columns: 310px 40px 1fr; gap: 18px; align-items: center; margin-top: 66px; }
+:global(.final-ai-request) { transform: translateY(-24px); }
+:global(.final-ai-context) { margin: 0 0 14px; font-size: 17px; color: #646877; }
+:global(.final-ai-icons) { display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+:global(.final-ai-icons img) { width: 56px; height: 56px; object-fit: contain; border-radius: 12px; }
+:global(.final-ai-request blockquote) { margin: 0; padding: 0; border: 0; font-size: 29px; line-height: 1.65; font-weight: 450; color: #252733; }
+:global(.final-ai-arrow) { font-size: 30px; color: #8c70bf; text-align: center; }
+:global(.final-ai-code) { transform: translateY(-24px); border: 1px solid #dcdce4; border-radius: 12px; background: white; overflow: hidden; }
+:global(.final-ai-filename) { padding: 16px 20px; border-bottom: 1px solid #e7e7ed; font: 15px ui-monospace, monospace; color: #646877; }
+:global(.final-ai-code pre) { margin: 0; padding: 20px; background: transparent; font: 16px/1.65 ui-monospace, monospace; color: #252733; white-space: pre; }
+:global(.final-ai-removed) { color: #9b6871; }
+:global(.final-ai-added) { color: #5269c2; font-weight: 600; }
+:global(.final-code-tag) { color: #8250a4; }
+:global(.final-code-property) { color: #0550ae; }
+:global(.final-code-string) { color: #116329; }
+:global(.final-ai-next) { margin-top: 38px; font-size: 20px; color: #646877; }

@@ -371,15 +371,9 @@ class: final-deck final-tech
 
 <style src="./styles/final.css"></style>
 
-<h1>05 技術構成 <span class="final-accent">全体図</span></h1>
+<h1>05 技術構成 <span class="final-accent">全体図(簡略版)</span></h1>
 
-<img class="final-tech-diagram" src="/diagrams/tech-overview.png" alt="編集・公開からControl Plane、D1・R2へ接続。QuestとAudienceはRealtimeへ接続し、Realtimeが進行状態を保存する全体構成。" />
-
-<div class="final-tech-facts">
-  <p><strong>HTTPS</strong><br>認証・参加・配信情報の取得</p>
-  <p><strong>gRPC / WebSocket</strong><br>操作入力と共有状態の同期</p>
-  <p><strong>R2</strong><br>端末への素材配信</p>
-</div>
+<img class="final-tech-diagram" src="/diagrams/tech-overview.png" alt="編集・公開からCloudflare WorkersのControl Plane、D1・R2へ接続。MRとAudience WebはTailscale Funnel経由で自宅サーバーのRealtimeに接続し、Realtimeが進行状態を保存する全体構成。" />
 
 <!--
 根拠: app/server/control-plane/src、app/server/realtime/ARCHITECTURE.md、app/web各package.json、app/unity/README.md。
@@ -398,7 +392,6 @@ class: final-deck final-tech
 
 <div class="final-tech-facts">
   <p><strong>Meta Quest / Unity 6 / C#</strong><br>OpenXR・Meta XR SDK</p>
-  <p><strong>入力と描画の分離</strong><br>端末で認識し、サーバーで進行を確定</p>
 </div>
 
 <!--
@@ -414,56 +407,39 @@ class: final-deck final-tech final-tech-web
 
 <h1>技術構成 <span class="final-accent">Web</span></h1>
 
-<img class="final-tech-diagram" src="/diagrams/tech-web.png" alt="独立した3つのReactアプリ。ConsoleはControl Plane、Local EditorはCLI Host、AudienceはRealtimeと接続。AudienceはThree.js・8th Wall・AprilTagを使用。" />
-
-<div class="final-tech-facts">
-  <p><strong>React 19</strong><br>用途別に独立した3つのWebアプリ</p>
-  <p><strong>Audience</strong><br>マーカーで空間校正、SLAMで位置を保持</p>
-</div>
+<img class="final-tech-diagram" src="/diagrams/tech-web.png" alt="ConsoleはControl Planeで資料とSessionを管理。Audienceは参加コードで参加し、配信情報・接続URL・認証情報を取得。素材読み込みとRealtimeから受信した共有状態をThree.jsに反映し、AprilTagによる会場との位置合わせと8th Wall SLAMによる端末位置追跡を使って空間描画する。" />
 
 <!--
-根拠: app/web/console/package.json、app/web/local-editor/package.json、app/web/audience/package.json、app/web/audience/README.md。
-AudienceはWebSocketでRealtimeに接続し、Runtime状態に従ってThree.jsで描画。ConsoleはTanStack Query / Router、AudienceはZustandを使用。
+根拠: app/web/audience/src/connection/join-controller.ts、connection/realtime-client.ts、experience/viewing-session.ts、experience/presentation-session.ts、tracking/adapter.ts、experience/anchor-session.ts。
 -->
 
 ---
-class: final-deck final-tech
+class: final-deck final-tech final-tech-server
 ---
 
 <style src="./styles/final.css"></style>
 
-<h1>技術構成 <span class="final-accent">バックエンド</span></h1>
+<h1>技術構成 <span class="final-accent">Server</span></h1>
 
-<img class="final-tech-diagram" src="/diagrams/tech-backend.png" alt="TypeScript・Hono・Cloudflare WorkersのControl PlaneがD1・R2を管理。GoのRealtimeが状態同期を処理し、Checkpointと完了通知をControl Planeへ送信。" />
-
-<div class="final-tech-facts">
-  <p><strong>Control Plane</strong><br>認証・権限・資料・Sessionの管理</p>
-  <p><strong>Realtime</strong><br>進行の確定・Snapshot・再接続時の復元</p>
-</div>
+<img class="final-tech-diagram" src="/diagrams/tech-backend.png" alt="Cloudflare Workers上のControl PlaneはTypeScript・Honoで実装。Better Authでメール・Google認証と二要素認証を扱い、Resendで確認・再設定メールを送信。D1に管理情報と進行状態、R2に公開資料と素材を保存。参加権限を確認してRealtimeの接続URL・認証情報と素材取得用URLを発行。自宅サーバー上のGo製Realtimeは演出評価・状態配信・再接続時の復元を行い、進行状態と終了通知をControl Planeへ送信。" />
 
 <!--
-根拠: app/server/control-plane/package.json、app/server/realtime/go.mod、app/server/realtime/ARCHITECTURE.md。
-Control PlaneとRealtimeは独立プロセス。高頻度の共有状態処理はRealtime内で完結し、Control Planeへの保存と分離。Fly.io配備・Machine lifecycleは未実装。
+根拠: app/server/control-plane/src/app.ts、auth/identity.ts、auth/options.ts、auth/mail.ts、modules/sessions/routes.ts、modules/publications/service.ts、app/server/realtime/cmd/server/main.go。
+Realtimeの自宅サーバー配置は現行の運用構成。
 -->
 
 ---
-class: final-deck final-tech
+class: final-deck final-tech final-tech-framework
 ---
 
 <style src="./styles/final.css"></style>
 
-<h1>技術構成 <span class="final-accent">フレームワーク</span></h1>
+<h1>技術構成 <span class="final-accent">記述・ビルド・配信</span></h1>
 
-<img class="final-tech-diagram" src="/diagrams/tech-framework.png" alt="TSX SourceをCompilerで検証してDistへ変換し、CLIで公開。Unity・Webが共通成果物を描画・再生。CompilerはCoreの意味モデルと検証機能に依存。" />
-
-<div class="final-tech-facts">
-  <p><strong>Unframe独自の記述・コンパイル基盤</strong><br>空間配置・入力条件・演出をTSXで定義</p>
-  <p><strong>実行環境との分離</strong><br>共通の成果物を各クライアントで利用</p>
-</div>
+<img class="final-tech-diagram" src="/diagrams/tech-framework.png" alt="Authoring APIで記述したTSX DSLをBuild・CompilerがAST解析・意味検証し、Definition・RenderBundle・AssetSet・BuildManifestを生成。CompilerはPresentationの意味モデル・検証を利用。Dev buildをLocal Editor内のUnity WebGLでプレビューし、確認してTSXの修正に戻る。CLIで成果物を公開し、Unity・Webが共通成果物を描画・再生する。" />
 
 <!--
-根拠: packages/unframe-core/ARCHITECTURE.md、packages/unframe-compiler/ARCHITECTURE.md、packages/unframe-compiler/src/index.ts、packages/unframe-cli/package.json、examples/presentation/presentation.unframe.tsx。
-CompilerはDefinition / RenderBundle / AssetSet / BuildManifestを生成。Coreは実行環境非依存の型・意味検証・Cue / Timeline純粋実行を提供。TSXは静的にコンパイルし、Reactの画面をQuestでそのまま実行する構成ではない。
+根拠: packages/unframe/authoring/package.json、compiler/src/api/check-declaration-project.ts、compiler/src/api/compile-plan.ts、presentation/src/index.ts、build/src/build-execution/api/compile-declaration-project.ts、cli/src/application/run-presentation-cli.ts、example/src/presentation.unframe.tsx。
 -->
 
 ---
@@ -476,6 +452,60 @@ class: chapter-slide final-section
 <div class="chapter-number">06</div>
 <div class="final-section-copy">
   <div class="section-label">SECTION 06</div>
+  <h1>プレゼンテーションの<br>作成方法</h1>
+</div>
+
+---
+class: final-deck final-creation
+---
+
+<style src="./styles/final.css"></style>
+
+<h1>AIと一緒に編集</h1>
+
+<div class="final-ai-edit">
+  <div class="final-ai-request">
+    <p class="final-ai-context">AIを通して編集</p>
+    <div class="final-ai-icons">
+      <img src="/brand/codex-color.png" alt="Codex" />
+      <img src="/brand/claude.jpg" alt="Claude" />
+    </div>
+    <blockquote>上にスワイプしたら、<br>文字が浮かび上がる<br>演出を再生して。</blockquote>
+  </div>
+  <div class="final-ai-arrow" aria-hidden="true">→</div>
+  <div class="final-ai-code">
+    <div class="final-ai-filename">reaction.flow.ts</div>
+    <pre v-pre aria-label="上スワイプをきっかけに浮かび上がる演出を再生するフローの抜粋"><span><span class="final-code-property">trigger</span>: {</span>
+<span>  <span class="final-code-property">kind</span>: <span class="final-code-string">"gesture"</span>, <span class="final-code-property">gesture</span>: <span class="final-code-string">"swipeUp"</span>,</span>
+<span>},</span>
+<span><span class="final-code-property">actions</span>: [{</span>
+<span>  <span class="final-code-property">kind</span>: <span class="final-code-string">"timeline.play"</span>,</span>
+<span>  <span class="final-code-property">timelineId</span>: <span class="final-code-string">"reaction-float-enter"</span>,</span>
+<span>}],</span></pre>
+  </div>
+</div>
+<p class="final-ai-next">編集した結果を、Local Editorで確認する</p>
+
+---
+class: final-deck final-creation
+---
+
+<style src="./styles/final.css"></style>
+
+<h1>Local Editorでプレビュー</h1>
+<p class="final-creation-caption">表示・動き・演出をプレビューで確認</p>
+<img class="final-creation-screenshot" src="/screenshots/local-editor-preview.png" alt="Local Editorの公開前確認。中央にUnity WebGLのプレビュー、左に進行、下にCue、右に詳細を表示。" />
+
+---
+class: chapter-slide final-section
+---
+
+<style src="./styles/final.css"></style>
+
+<GradientWave id="final-chapter-07" class="chapter-wave" />
+<div class="chapter-number">07</div>
+<div class="final-section-copy">
+  <div class="section-label">SECTION 07</div>
   <h1>プレゼンテイターの<br>視点</h1>
 </div>
 
@@ -497,10 +527,10 @@ class: chapter-slide final-section
 
 <style src="./styles/final.css"></style>
 
-<GradientWave id="final-chapter-07" class="chapter-wave" flip />
-<div class="chapter-number">07</div>
+<GradientWave id="final-chapter-08" class="chapter-wave" flip />
+<div class="chapter-number">08</div>
 <div class="final-section-copy">
-  <div class="section-label">SECTION 07</div>
+  <div class="section-label">SECTION 08</div>
   <h1>振り返り</h1>
 </div>
 
@@ -510,7 +540,7 @@ class: final-deck final-learning
 
 <style src="./styles/final.css"></style>
 
-<div class="final-label">07 — 振り返り</div>
+<div class="final-label">08 — 振り返り</div>
 <h1><span class="final-accent">プロダクトとマネジメントの学び</span></h1>
 <div class="final-learning-grid">
   <section><h2>プロダクト</h2><p>利用者と利用場面の明確化<br>体験全体の設計</p></section>
@@ -525,7 +555,7 @@ class: final-deck final-statement final-user
 <style src="./styles/final.css"></style>
 
 <GradientWave id="final-user-centered" class="final-wave" />
-<div class="final-label">07 — 振り返り</div>
+<div class="final-label">08 — 振り返り</div>
 <h1><span class="final-accent">ユーザー中心設計</span></h1>
 <p class="final-user-question">操作負荷の低減と、<br>発表内容に集中できる体験の設計</p>
 
@@ -536,10 +566,10 @@ class: chapter-slide final-section
 
 <style src="./styles/final.css"></style>
 
-<GradientWave id="final-chapter-08" class="chapter-wave" />
-<div class="chapter-number">08</div>
+<GradientWave id="final-chapter-09" class="chapter-wave" />
+<div class="chapter-number">09</div>
 <div class="final-section-copy">
-  <div class="section-label">SECTION 08</div>
+  <div class="section-label">SECTION 09</div>
   <h1>今後の展望</h1>
 </div>
 
@@ -550,7 +580,7 @@ class: final-deck final-statement final-future
 <style src="./styles/final.css"></style>
 
 <GradientWave id="final-future" class="final-wave" flip />
-<div class="final-label">08 — 今後の展望</div>
+<div class="final-label">09 — 今後の展望</div>
 <h1><span class="final-accent">空間編集エディターの設計</span></h1>
 <p class="final-future-note">空間編集の操作性と学習負荷の改善<br>未踏などの支援プログラムへの挑戦と継続開発</p>
 
