@@ -1,0 +1,66 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f7f5;
+  --ink: #252733;
+  --muted: #646877;
+  --purple: #8c70bf;
+  --blue: #647cdd;
+  --line: #c9c8d6;
+  font-family: Inter, "Noto Sans JP", "Hiragino Sans", sans-serif;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1768px; height: 650px; background: var(--bg); }
+#diagram { width: 1768px; height: 650px; position: relative; isolation: isolate; }
+.wires { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; overflow: visible; }
+.wire { fill: none; stroke: #a59bb9; stroke-width: 2.5; stroke-linejoin: round; }
+.wire.blue { stroke: var(--blue); }
+.wire.dashed { stroke-dasharray: 8 8; }
+.label { position: absolute; transform: translate(-50%, -50%); padding: 5px 14px; color: var(--muted); background: var(--bg); font-size: 24px; font-weight: 500; line-height: 1.35; white-space: nowrap; }
+.label.purple { color: var(--purple); }
+.label.blue { color: var(--blue); }
+.card { position: absolute; padding: 26px 30px; border: 1.5px solid #dcdce4; border-radius: 22px; background: #fff; }
+.card.purple { background: #f0ebf7; border-color: #d6cbe8; }
+.card.blue { background: #edf0fc; border-color: #cbd4f1; }
+.card.warm { background: #f9eeeb; border-color: #ead6cf; }
+.card.flat { background: #f3f3f1; }
+.eyebrow { margin-bottom: 12px; color: var(--purple); font-size: 20px; font-weight: 600; letter-spacing: .10em; }
+.title { color: var(--ink); font-size: 36px; font-weight: 600; line-height: 1.25; letter-spacing: -.035em; }
+.description { margin-top: 12px; color: var(--muted); font-size: 26px; line-height: 1.55; letter-spacing: -.025em; }
+.brand-title { display: flex; align-items: center; gap: 18px; }
+.logo { display: block; width: 45px; height: 45px; object-fit: contain; flex-shrink: 0; }
+.logo.go { width: 74px; }
+.logo.meta { width: 58px; }
+.logo.unframe { border-radius: 8px; }
+.tech-row { display: flex; align-items: center; gap: 24px; margin-top: 20px; }
+.tech { display: flex; align-items: center; gap: 10px; color: #555b6c; font-size: 23px; white-space: nowrap; }
+.tech .logo { width: 29px; height: 29px; }
+.tech .logo.go { width: 48px; }
+.group { position: absolute; border: 1.5px solid #d9d7e4; border-radius: 28px; background: rgb(255 255 255 / 28%); z-index: -2; }
+.group-heading { position: absolute; display: flex; align-items: center; gap: 15px; color: var(--ink); font-size: 29px; font-weight: 600; }
+.group-heading .logo { width: 36px; height: 36px; }
+.group-heading span { color: var(--muted); font-size: 24px; font-weight: 400; margin-left: 10px; }
+.note { position: absolute; color: #747780; font-size: 22px; line-height: 1.5; }
+.files { margin-top: 16px; color: #62667a; font: 22px/1.65 ui-monospace, SFMono-Regular, monospace; }
+.step { margin-bottom: 24px; color: var(--purple); font: 500 21px/1 ui-monospace, SFMono-Regular, monospace; }
+.compact .title { font-size: 32px; }
+.compact .description { font-size: 24px; }
+.compact { padding: 18px 24px; }
+.compact .logo { width: 32px; height: 32px; }
+.compact .description { margin-top: 8px; font-size: 23px; line-height: 1.4; }
+.overview .card:first-of-type .description { font-size: 22px; }
+.mr .title { font-size: 32px; }
+.backend .description { font-size: 27px; }
+.backend .tech-row { gap: 30px; margin-top: 24px; }
+.backend .tech { font-size: 26px; }
+.backend .tech .logo { width: 36px; height: 36px; }
+.backend .tech .logo.go { width: 64px; }
+.web .title { font-size: 36px; }
+.web .description { font-size: 27px; }
+.web .tech-row { padding-top: 22px; margin-top: 22px; border-top: 1px solid #dedee5; }
+.framework .card { padding: 28px 24px; }
+.framework .title { font-size: 32px; }
+.framework .description { font-size: 25px; }
+.framework .brand-title { gap: 14px; }
+.framework .brand-title .logo { width: 37px; height: 37px; }
+.framework .files { font-size: 20px; line-height: 1.45; }

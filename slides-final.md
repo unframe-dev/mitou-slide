@@ -11,21 +11,6 @@ highlighter: shiki
 lineNumbers: false
 aspectRatio: 16/9
 canvasWidth: 980
-mermaid:
-  theme: base
-  themeVariables:
-    fontFamily: 'Inter, Noto Sans JP, sans-serif'
-    fontSize: '20px'
-    primaryColor: '#eeeaf5'
-    primaryTextColor: '#252733'
-    primaryBorderColor: '#9a80d0'
-    lineColor: '#85899b'
-    secondaryColor: '#e9edfc'
-    tertiaryColor: '#f7f7f5'
-  flowchart:
-    curve: linear
-    nodeSpacing: 32
-    rankSpacing: 40
 themeConfig:
   default: light
 class: final-deck final-cover
@@ -388,15 +373,7 @@ class: final-deck final-tech
 
 <h1>05 技術構成 <span class="final-accent">全体図</span></h1>
 
-```mermaid
-flowchart LR
-  Edit["編集・公開<br/>Local Editor / CLI / Console"] -->|HTTPS| CP["Control Plane<br/>管理・永続化"]
-  CP --> D1[("D1<br/>資料・Session")]
-  CP --> R2[("R2<br/>配信用素材")]
-  Quest["MR<br/>Unity / Meta Quest"] <-->|gRPC| RT["Realtime<br/>進行・状態同期"]
-  Web["Audience Web<br/>React / Three.js"] <-->|WebSocket| RT
-  RT -->|進行状態の保存| CP
-```
+<img class="final-tech-diagram" src="/diagrams/tech-overview.png" alt="編集・公開からControl Plane、D1・R2へ接続。QuestとAudienceはRealtimeへ接続し、Realtimeが進行状態を保存する全体構成。" />
 
 <div class="final-tech-facts">
   <p><strong>HTTPS</strong><br>認証・参加・配信情報の取得</p>
@@ -417,13 +394,7 @@ class: final-deck final-tech
 
 <h1>技術構成 <span class="final-accent">MR</span></h1>
 
-```mermaid
-flowchart LR
-  Body["頭・手・身体<br/>トラッキング"] --> Input["Gesture / Zone<br/>入力認識"]
-  Input -->|gRPC| RT["Realtime<br/>共有状態の確定"]
-  RT --> View["Unity<br/>空間描画"]
-  Tag["AprilTag<br/>会場座標の校正"] --> View
-```
+<img class="final-tech-diagram" src="/diagrams/tech-mr.png" alt="Quest内のトラッキングとGesture・Zone認識からRealtimeへ操作入力を送り、確定した共有状態をUnityで描画。AprilTagで共通座標を校正。" />
 
 <div class="final-tech-facts">
   <p><strong>Meta Quest / Unity 6 / C#</strong><br>OpenXR・Meta XR SDK</p>
@@ -443,12 +414,7 @@ class: final-deck final-tech final-tech-web
 
 <h1>技術構成 <span class="final-accent">Web</span></h1>
 
-```mermaid
-flowchart LR
-  Console["Console<br/>資料・Session管理"] -->|HTTPS| CP["Control Plane"]
-  Editor["Local Editor<br/>Source編集・Unity Preview"] --> CLI["CLI Host<br/>保存・ビルド・公開"]
-  Audience["Audience<br/>スマートフォンでの視聴"] --> Render["Three.js<br/>8th Wall / AprilTag"]
-```
+<img class="final-tech-diagram" src="/diagrams/tech-web.png" alt="独立した3つのReactアプリ。ConsoleはControl Plane、Local EditorはCLI Host、AudienceはRealtimeと接続。AudienceはThree.js・8th Wall・AprilTagを使用。" />
 
 <div class="final-tech-facts">
   <p><strong>React 19</strong><br>用途別に独立した3つのWebアプリ</p>
@@ -468,14 +434,7 @@ class: final-deck final-tech
 
 <h1>技術構成 <span class="final-accent">バックエンド</span></h1>
 
-```mermaid
-flowchart LR
-  HTTP["HTTPS<br/>管理・参加・配信情報"] --> CP["Control Plane<br/>TypeScript / Hono<br/>Cloudflare Workers"]
-  CP --> D1[("D1<br/>永続データ")]
-  CP --> R2[("R2<br/>配信用素材")]
-  Stream["gRPC / WebSocket<br/>操作入力・状態配信"] <--> RT["Realtime<br/>Go / gRPC"]
-  RT -->|Checkpoint・完了通知| CP
-```
+<img class="final-tech-diagram" src="/diagrams/tech-backend.png" alt="TypeScript・Hono・Cloudflare WorkersのControl PlaneがD1・R2を管理。GoのRealtimeが状態同期を処理し、Checkpointと完了通知をControl Planeへ送信。" />
 
 <div class="final-tech-facts">
   <p><strong>Control Plane</strong><br>認証・権限・資料・Sessionの管理</p>
@@ -495,14 +454,7 @@ class: final-deck final-tech
 
 <h1>技術構成 <span class="final-accent">フレームワーク</span></h1>
 
-```mermaid
-flowchart LR
-  Source["TSX Source<br/>型付きDSL"] --> Compiler["Compiler<br/>静的解析・意味検証"]
-  Core["Core<br/>意味モデル・実行ロジック"] -.-> Compiler
-  Compiler --> Dist["Dist<br/>定義・描画素材"]
-  Dist --> Publish["CLI<br/>アップロード・公開"]
-  Publish --> Client["Unity / Web<br/>描画・再生"]
-```
+<img class="final-tech-diagram" src="/diagrams/tech-framework.png" alt="TSX SourceをCompilerで検証してDistへ変換し、CLIで公開。Unity・Webが共通成果物を描画・再生。CompilerはCoreの意味モデルと検証機能に依存。" />
 
 <div class="final-tech-facts">
   <p><strong>Unframe独自の記述・コンパイル基盤</strong><br>空間配置・入力条件・演出をTSXで定義</p>
