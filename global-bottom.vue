@@ -6,8 +6,7 @@
   >
     <span style="display: flex; align-items: center; gap: 0.45rem">
       <img src="/brand/icon.png" alt="" style="width: 0.9rem; height: 0.9rem; object-fit: contain" />
-      <span style="font-weight: 500; letter-spacing: -0.02em">Unframe</span>
-      <span style="margin-left: 0.25rem; letter-spacing: 0.12em">Mitou</span>
+      <a href="https://un-fra.me" target="_blank" rel="noopener noreferrer" style="font-weight: 500; letter-spacing: -0.02em; color: inherit; text-decoration: none">un-fra.me</a>
     </span>
     <span style="display: flex; align-items: center; gap: 0.65rem">
       <i style="display: block; width: 1.8rem; height: 1px; background: linear-gradient(90deg, #7187f5, #9a80d0 48%, #df7b80)" />

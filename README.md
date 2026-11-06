@@ -14,7 +14,25 @@ pnpm build
 pnpm export
 ```
 
-発表内容は `slides.md`、共通スタイルは `styles/index.css` を編集してください。
+従来版は `slides.md`、成果発表版は `slides-final.md` を編集してください。共通スタイルは `styles/index.css`、成果発表版の追加スタイルは `styles/final.css` に配置しています。
+
+## 成果発表版
+
+```bash
+pnpm dev slides-final.md
+pnpm build slides-final.md
+pnpm export slides-final.md
+```
+
+`pnpm dev`・`pnpm build`・`pnpm export` の引数を省略すると、従来版の `slides.md` が対象になります。成果発表版を配信する場合は、`pnpm build slides-final.md` で `dist/` を生成してください。
+
+成果発表版は、概要・目標・デモ・技術構成・振り返りで構成しています。技術構成図は `slides-final.md` 内のMermaidで編集できます。
+
+発表前の確認事項：
+
+- プレゼンテイター視点の動画欄はプレースホルダーです。使用する動画を挿入してください。
+- Questインストール用QR（`public/qr/quest-install.png`）: `https://qr.link/6vqlYK`
+- WebXR視聴用QR（`public/qr/webxr-viewer.png`）: `https://qr.link/7DROyc`
 
 ## アセット
 
