@@ -636,15 +636,18 @@ class: chapter-slide final-section
 </div>
 
 ---
-class: final-deck final-statement final-future
+class: final-deck final-learning final-future
 ---
 
 <style src="./styles/final.css"></style>
 
 <GradientWave id="final-future" class="final-wave" flip />
 <div class="final-label">08 — 今後の展望</div>
-<h1><span class="final-accent">誰でも作りやすい<br>編集エディターの作成</span></h1>
-<p class="final-future-note">空間を伴うプレゼンの使いやすさと表現力を<br>どう両立させるか</p>
+<h1><span class="final-accent">より作りやすい環境へ</span></h1>
+<div class="final-learning-grid">
+  <section><h2>直感的に作る</h2><p>コードと画面、<br>どちらからでも編集できるように。</p></section>
+  <section><h2>作成しやすい環境作成</h2><p>編集ツールや制作の流れを整え、<br>表現づくりに集中できるように。</p></section>
+</div>
 
 
 ---
