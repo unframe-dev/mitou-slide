@@ -134,3 +134,62 @@
 :global(.final-code-property) { color: #0550ae; }
 :global(.final-code-string) { color: #116329; }
 :global(.final-ai-next) { margin-top: 38px; font-size: 20px; color: #646877; }
+
+:global(.final-inspiration-slide .final-inspiration) { position: relative; background: transparent; }
+:global(.final-inspiration h1) { margin: 0; font-size: 42px; line-height: 1.5; }
+:global(.final-inspiration .final-label) { position: relative; z-index: 1; margin-bottom: 24px; }
+:global(.final-inspiration-layout) { display: flex; align-items: center; min-height: 380px; }
+:global(.final-inspiration-copy) { position: relative; z-index: 1; width: 60%; text-align: center; }
+:global(.final-inspiration-image) { position: absolute; top: 0; right: 0; display: block; width: 65%; height: 100%; object-fit: cover; object-position: 62% center; mask-image: linear-gradient(to right, transparent 0%, #000 65%); -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 65%); }
+:global(.final-inspiration .final-inspiration-caption) { margin-top: 28px; font-size: 21px; }
+:global(.final-authoring-proposal h1), :global(.final-capabilities h1), :global(.final-effects h1) { margin: 0; font-size: 40px; }
+:global(.final-authoring-comparison) { display: grid; grid-template-columns: 1fr 1.1fr; gap: 42px; margin-top: 48px; }
+:global(.final-authoring-comparison section), :global(.final-effect-grid section) { border-top: 2px solid #b4b3ce; padding-top: 20px; }
+:global(.final-authoring-comparison h2) { margin: 0 0 18px; font-size: 25px; font-weight: 450; }
+:global(.final-authoring-comparison p) { font-size: 20px; }
+:global(.final-authoring-comparison blockquote) { margin: 0 0 20px; padding: 0; border: 0; font-size: 27px; line-height: 1.65; color: #252733; }
+:global(.final-authoring-proposal .final-authoring-purpose) { margin-top: 34px; font-size: 19px; }
+:global(.final-effect-grid) { display: grid; grid-template-columns: 1fr 1fr; gap: 32px 40px; margin-top: 40px; }
+:global(.final-effect-grid h2) { margin: 0 0 12px; font-size: 28px; font-weight: 450; }
+:global(.final-effect-grid h2 span:not(.final-accent)) { margin-left: 10px; color: #747780; font-size: 16px; }
+:global(.final-effect-grid p) { font-size: 20px; }
+
+:global(.final-prelude .profile-shell) { align-items: start; padding-top: 64px; }
+
+:global(.slidev-layout.final-spatial-motive) { position: relative; overflow: hidden; background: radial-gradient(ellipse at 91% 49%, #eeebf5 0%, #f7f7f5 59%); }
+:global(.final-spatial-art) { position: absolute; top: 12px; right: -34px; width: 450px; height: 520px; pointer-events: none; mask-image: linear-gradient(to right, transparent, #000 48%); }
+:global(.final-spatial-motive h1), :global(.final-spatial-motive .final-statement-note) { position: relative; z-index: 1; }
+
+
+:global(.final-proposal-claim) { align-items: center; text-align: center; }
+:global(.final-proposal-claim h1) { margin: 0; font-size: 64px; line-height: 1.6; }
+
+:global(.final-authoring-proposal .final-authoring-comparison) { position: relative; gap: 64px; margin-top: 34px; }
+:global(.final-authoring-proposal .final-authoring-comparison section) { border: 0; padding-top: 0; }
+:global(.final-authoring-tool-icon) { display: block; width: 36px; height: 36px; margin-bottom: 18px; color: #858997; }
+:global(.final-authoring-logos) { display: flex; align-items: center; gap: 12px; height: 36px; margin-bottom: 18px; }
+:global(.final-authoring-logos img) { width: 36px; height: 36px; border-radius: 8px; object-fit: contain; }
+:global(.final-authoring-proposal .final-authoring-comparison h2) { font-size: 24px; }
+:global(.final-authoring-comparison::after) { content: "→"; position: absolute; left: 44%; top: 140px; color: #9a80d0; font-size: 30px; }
+:global(.final-authoring-proposal .final-authoring-ai blockquote) { position: relative; padding: 18px 16px; margin: 24px 0 18px; border: 1.5px solid #b4a3cd; border-radius: 16px; background: #fff; font-size: 24px; color: #5e5088; }
+:global(.final-authoring-ai blockquote::before) { content: ""; position: absolute; top: -9px; left: 28px; width: 16px; height: 16px; border-top: 1.5px solid #b4a3cd; border-left: 1.5px solid #b4a3cd; background: #fff; transform: rotate(45deg); }
+:global(.final-authoring-proposal .final-authoring-ai p) { font-size: 18px; }
+:global(.final-authoring-proposal .final-authoring-purpose) { margin-top: 24px; }
+
+:global(.final-capabilities .final-capability-list) { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 24px; }
+:global(.final-capabilities .final-capability-list li) { display: grid; grid-template-columns: 12px 92px 1fr; align-items: start; gap: 22px; margin: 0; padding: 12px 0; }
+:global(.final-capability-list li::before) { content: "•"; color: #9a80d0; font-size: 24px; line-height: 1.5; }
+:global(.final-capability-list strong) { background: linear-gradient(105deg, #7187f5, #9a80d0 52%, #df7b80); background-clip: text; -webkit-background-clip: text; color: transparent !important; font-size: 27px; font-weight: 500; line-height: 1.4; }
+:global(.final-capabilities .final-capability-list p) { color: #252733 !important; font-size: 22px; line-height: 1.5; }
+
+:global(.slidev-layout.final-capabilities) { padding-bottom: 16px !important; }
+
+:global(.final-system-overview h1) { margin: 0; font-size: 44px; }
+:global(.final-system-overview .final-system-flow) { display: grid; grid-template-columns: repeat(2, 1fr); gap: 100px; padding: 0 24px; margin: 64px 0 0; list-style: none; }
+:global(.final-system-overview .final-system-flow > li) { position: relative; margin: 0 !important; }
+:global(.final-system-flow li + li::before) { content: "→"; position: absolute; top: 100px; left: -70px; color: #a39bb5; font-size: 40px; }
+:global(.final-system-flow svg) { width: 72px; height: 72px; padding: 0; stroke: #8c79bd; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+:global(.final-system-flow li:first-child svg) { stroke: #7187f5; }
+:global(.final-system-flow li:last-child svg) { stroke: #df7b80; }
+:global(.final-system-flow h2) { margin: 24px 0 18px; font-size: 32px; font-weight: 500; letter-spacing: -.05em; }
+:global(.final-system-flow p) { font-size: 24px; line-height: 1.7; }

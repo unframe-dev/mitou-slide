@@ -104,7 +104,7 @@ class: final-prelude
     <h1>佐藤 和貴</h1>
     <dl class="profile-details">
       <div><dt>今回の担当</dt><dd>MR部分</dd></div>
-      <div><dt>技術スタック</dt><dd>Vulkan / Metal ・ HLSL / GLSL ・ C# / C++</dd></div>
+      <div><dt>好きな技術</dt><dd>Vulkan / Metal ・ HLSL / GLSL ・ C# / C++</dd></div>
       <div><dt>趣味</dt><dd>ゲーム ・ TRPG ・ 写真</dd></div>
       <div><dt>関心分野</dt><dd>グラフィックス・シェーダー</dd></div>
     </dl>
@@ -175,7 +175,33 @@ class: final-prelude
 <div class="chapter-number">02</div>
 <div class="final-section-copy">
   <div class="section-label">SECTION 02</div>
-  <h1>Unframeの概要</h1>
+  <h1>動機・提案</h1>
+</div>
+  </div>
+</div>
+
+
+---
+layout: none
+class: final-prelude final-inspiration-slide
+---
+
+<style src="./styles/final.css"></style>
+
+<div class="final-quest-rail">
+  <div class="final-quest-rail-title">Meta Quest</div>
+  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
+  <div class="final-quest-rail-caption">インストール用</div>
+</div>
+<img class="final-inspiration-image" src="/proposal/minority-reprot.png" alt="空間に広がる複数の映像を、手の動きで操作するSF的な表現の参考イメージ" />
+<div class="final-prelude-stage">
+  <div class="slidev-layout default final-deck final-inspiration">
+<div class="final-label">02 — 作りたかった表現</div>
+<div class="final-inspiration-layout">
+  <div class="final-inspiration-copy">
+    <h1><span class="final-accent">SF映画のような演出を、</span><br>プレゼンテーションで<br>やりたい</h1>
+    <p class="final-inspiration-caption">※参考画像<br>ref: Minory Report</p>
+  </div>
 </div>
   </div>
 </div>
@@ -194,14 +220,26 @@ class: final-prelude
   <div class="final-quest-rail-caption">インストール用</div>
 </div>
 <div class="final-prelude-stage">
-  <div class="slidev-layout default final-deck final-overview">
-<GradientWave id="final-overview" class="final-wave" />
-<div class="final-label">02 — Unframeの概要</div>
-<h1>身体を使う<br><span class="final-accent">MRプレゼンテーション</span></h1>
-<div class="final-overview-points">
-  <section><h2>身体に連動した操作</h2><p>移動・ジェスチャーによる<br>進行の制御</p></section>
-  <section><h2>空間的な表現</h2><p>従来通りのモニターの平面に限定せず、<br>文字・画像・3Dモデルを空間的に配置</p></section>
-</div>
+  <div class="slidev-layout default final-deck final-statement final-spatial-motive">
+<svg class="final-spatial-art" viewBox="0 0 480 520" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="motive-panel" x1="70" y1="100" x2="420" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7187f5" /><stop offset=".55" stop-color="#9a80d0" /><stop offset="1" stop-color="#df7b80" />
+    </linearGradient>
+  </defs>
+  <ellipse cx="282" cy="416" rx="185" ry="51" stroke="url(#motive-panel)" opacity=".25" />
+  <ellipse cx="282" cy="416" rx="132" ry="35" stroke="url(#motive-panel)" opacity=".18" />
+  <path d="M92 146 250 87 250 298 92 357Z" fill="url(#motive-panel)" fill-opacity=".06" stroke="url(#motive-panel)" stroke-opacity=".4" />
+  <path d="M191 131 377 166 377 377 191 342Z" fill="url(#motive-panel)" fill-opacity=".09" stroke="url(#motive-panel)" stroke-width="2" />
+  <path d="M294 82 449 143 449 293 294 232Z" fill="url(#motive-panel)" fill-opacity=".05" stroke="url(#motive-panel)" stroke-opacity=".5" />
+  <path d="M218 179 310 197M218 198 345 222M218 217 281 229" stroke="url(#motive-panel)" stroke-width="4" stroke-linecap="round" opacity=".45" />
+  <path d="m263 264 39-16 38 32-39 17Z M263 264v43l38 32 39-16v-43 M301 297v42" stroke="url(#motive-panel)" stroke-width="2" />
+  <path d="M191 342v74M377 377v39" stroke="url(#motive-panel)" stroke-dasharray="4 7" opacity=".3" />
+  <circle cx="191" cy="416" r="4" fill="#9a80d0" /><circle cx="377" cy="416" r="4" fill="#df7b80" />
+</svg>
+<div class="final-label">02 — 動機</div>
+<h1><span class="final-accent">MR空間</span>を活かした<br/>空間的なアプローチ</h1>
+<p class="final-statement-note">文字や画像、立体物を目の前の空間に配置し、<br>手の動きや立ち位置と組み合わせて発表したい。</p>
   </div>
 </div>
 
@@ -219,15 +257,42 @@ class: final-prelude
   <div class="final-quest-rail-caption">インストール用</div>
 </div>
 <div class="final-prelude-stage">
-  <div class="slidev-layout default final-deck final-shared">
-<div class="final-label">02 — Unframeの概要</div>
-<h1>MR空間の共有</h1>
-<div class="final-role-row">
-  <div class="final-role-block"><h2>プレゼンテイター</h2><p>MRヘッドセットで操作・表示</p></div>
-  <div class="final-role-orbit">同じ<br>MR空間</div>
-  <div class="final-role-block"><h2>オーディエンス</h2><p>MRヘッドセットや<br>スマートフォンで視聴</p></div>
+  <div class="slidev-layout default final-deck final-statement final-proposal-claim">
+<div class="final-label">02 — 提案</div>
+<h1>これらの要素を<br><span class="final-accent">普及させたかった</span></h1>
+  </div>
 </div>
-<p class="final-no-slides"><span class="final-accent">「スライド」というまとまりのない構成</span><small>空間内のコンテンツと演出を、連続した進行として定義</small></p>
+
+
+---
+layout: none
+class: final-prelude
+---
+
+<style src="./styles/final.css"></style>
+
+<div class="final-quest-rail">
+  <div class="final-quest-rail-title">Meta Quest</div>
+  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
+  <div class="final-quest-rail-caption">インストール用</div>
+</div>
+<div class="final-prelude-stage">
+  <div class="slidev-layout default final-deck final-authoring-proposal">
+<div class="final-label">02 — 制作を身近にするために</div>
+<h1><span class="final-accent">AIで、</span>表現を作るハードルを下げる</h1>
+<div class="final-authoring-comparison">
+  <section class="final-authoring-tools">
+    <svg class="final-authoring-tool-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M6 10h28M6 20h28M6 30h28" stroke="currentColor" stroke-width="1.5" /><rect x="12" y="6" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /><rect x="25" y="16" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /><rect x="9" y="26" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /></svg>
+    <h2>凝った表現を作るには</h2><p>素材や演出の制作には、<br>専門ツールの操作と手間がかかる。</p>
+  </section>
+  <section class="final-authoring-ai">
+    <div class="final-authoring-logos"><img src="/brand/codex-color.png" alt="Codex" /><img src="/brand/claude.jpg" alt="Claude" /></div>
+    <h2>AIに意図を伝えて編集する</h2>
+    <blockquote>「上にスワイプしたら、<br>文字が浮かび上がるように」</blockquote>
+    <p>生成した内容をプレビューし、調整する。</p>
+  </section>
+</div>
+<p class="final-authoring-purpose">作りやすくすることによる、使用するハードルの低下。</p>
   </div>
 </div>
 
@@ -250,7 +315,7 @@ class: final-prelude
 <div class="chapter-number">03</div>
 <div class="final-section-copy">
   <div class="section-label">SECTION 03</div>
-  <h1>目標</h1>
+  <h1>Unframeの機能</h1>
 </div>
   </div>
 </div>
@@ -269,10 +334,20 @@ class: final-prelude
   <div class="final-quest-rail-caption">インストール用</div>
 </div>
 <div class="final-prelude-stage">
-  <div class="slidev-layout default final-deck final-goal">
-<GradientWave id="final-goal-current" class="final-wave" />
-<h1>Unframeの目標</h1>
-<p class="final-goal-main">「MRならではの表現」と<br>「人が使いたいと思える理由」を両立する<br><span class="final-accent">手法の探求・提案</span></p>
+  <div class="slidev-layout default final-deck final-capabilities">
+<div class="final-label">03 — Unframeの機能</div>
+<h1>MRプレゼンテーションを<br>作成・発表・視聴する</h1>
+<ul class="final-capability-list">
+  <li>
+    <strong>作成</strong><p>空間に置くコンテンツと演出を記述し、<br>プレビューで確認する。</p>
+  </li>
+  <li>
+    <strong>発表</strong><p>MRヘッドセットを使い、<br>手の動きや立ち位置で演出を進める。</p>
+  </li>
+  <li>
+    <strong>視聴</strong><p>MRヘッドセットやスマートフォンで、<br>同じ空間の表現を見る。</p>
+  </li>
+</ul>
   </div>
 </div>
 
@@ -282,7 +357,7 @@ layout: none
 class: final-prelude
 ---
 
-<style src="./styles/final.css"></style>
+<style src="./styles/final.css"></style>章
 
 <div class="final-quest-rail">
   <div class="final-quest-rail-title">Meta Quest</div>
@@ -290,34 +365,15 @@ class: final-prelude
   <div class="final-quest-rail-caption">インストール用</div>
 </div>
 <div class="final-prelude-stage">
-  <div class="slidev-layout default final-deck final-goal">
-<GradientWave id="final-goal-origin" class="final-wave" />
-<h1>当初の目標と課題</h1>
-<div class="final-goal-origin">
-  <section><h2>当初の目標</h2><p>一つのプレゼンテーションアプリとしての完成</p></section>
-  <section><h2>開発を通じて明らかになった課題</h2><p>従来の手法で完結する場面の多さ<br>MRの特長を活かす表現設計の難しさ<br/>ユーザーがプレゼンを作りやすい体験の提供</p></section>
+  <div class="slidev-layout default final-deck final-effects">
+<div class="final-label">03 — 演出の要素</div>
+<h1>動きと空間を、演出に使う</h1>
+<div class="final-effect-grid">
+  <section><h2><span class="final-accent">Gesture</span> <span>ジェスチャー</span></h2><p>手の動きをきっかけに、演出を始める。</p></section>
+  <section><h2><span class="final-accent">Animation</span> <span>アニメーション</span></h2><p>文字や画像などに動きをつける。</p></section>
+  <section><h2><span class="final-accent">Zone</span> <span>空間の領域</span></h2><p>決めた領域への出入りを、演出のきっかけにする。</p></section>
+  <section><h2><span class="final-accent">3D Model</span> <span>3Dモデル表示</span></h2><p>立体物を、空間の中に配置して見せる。</p></section>
 </div>
-  </div>
-</div>
-
-
----
-layout: none
-class: final-prelude
----
-
-<style src="./styles/final.css"></style>
-
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
-<div class="final-prelude-stage">
-  <div class="slidev-layout default final-deck final-goal">
-<GradientWave id="final-goal-shift" class="final-wave" />
-<h1>方針転換</h1>
-<p class="final-goal-main">アプリとしての完成から<br><span class="final-accent">「MRでプレゼンテーションを行う意味」</span><br>そのものの探求へ</p>
   </div>
 </div>
 
@@ -359,11 +415,91 @@ class: final-deck final-demo-start
     <div>WebXR · デモ視聴</div>
   </div>
   <div>
-    <h1>デモプレゼンテーション</h1>
+    <h1>それでは、<br>やってみましょう。</h1>
     <p class="final-webxr-note">スマートフォンでQRコードを読み取り、<br>視聴ページに接続</p>
   </div>
 </div>
 
+
+---
+class: chapter-slide final-section
+---
+
+<style src="./styles/final.css"></style>
+
+<GradientWave id="final-chapter-05" class="chapter-wave" />
+<div class="chapter-number">05</div>
+<div class="final-section-copy">
+  <div class="section-label">SECTION 05</div>
+  <h1>プレゼンテイターの<br>視点</h1>
+</div>
+
+---
+class: final-deck final-video
+---
+
+<style src="./styles/final.css"></style>
+
+<h1>プレゼンテイターの視点</h1>
+<SlidevVideo class="final-presenter-video" controls autoreset="slide" playsinline preload="metadata" poster="/videos/presenter-view.jpg" aria-label="プレゼンテイターの視点">
+  <source src="/videos/presenter-view.mp4" type="video/mp4" />
+</SlidevVideo>
+
+
+---
+class: chapter-slide final-section
+---
+
+<style src="./styles/final.css"></style>
+
+<GradientWave id="final-chapter-06" class="chapter-wave" />
+<div class="chapter-number">06</div>
+<div class="final-section-copy">
+  <div class="section-label">SECTION 06</div>
+  <h1>全体の構成</h1>
+</div>
+
+---
+class: final-deck final-system-overview
+---
+
+<style src="./styles/final.css"></style>
+
+<div class="final-label">06 — 技術構成 / 仕組みの全体像</div>
+<h1><span class="final-accent">発表の準備</span></h1>
+<ol class="final-system-flow">
+  <li>
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="5" y="8" width="38" height="28" rx="3" /><path d="M17 43h14M24 36v7M12 16h12M12 22h8M29 20l7 5-7 5Z" /></svg>
+    <h2>資料を作る</h2>
+    <p>コンテンツと演出を記述し、<br>プレビューで確認</p>
+  </li>
+  <li>
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 30V6m-9 9 9-9 9 9M8 28v12h32V28" /><path d="M15 34h18" /></svg>
+    <h2>公開する</h2>
+    <p>資料をアップロードし、<br>発表・視聴に使える状態に</p>
+  </li>
+</ol>
+
+---
+class: final-deck final-system-overview
+---
+
+<style src="./styles/final.css"></style>
+
+<div class="final-label">06 — 技術構成 / 仕組みの全体像</div>
+<h1><span class="final-accent">会場での発表・視聴</span></h1>
+<ol class="final-system-flow">
+  <li>
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="10" r="5" /><path d="M24 16v17M14 44l10-11 10 11M9 26l15-7 13 5 7-9" /><path d="m38 8 5-3M44 10h3" /></svg>
+    <h2>発表者が操作する</h2>
+    <p>手の動きや立ち位置を<br>きっかけに、演出を進める</p>
+  </li>
+  <li>
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><rect x="7" y="5" width="34" height="24" rx="3" /><path d="m20 11 10 6-10 6Z" /><circle cx="13" cy="37" r="4" /><circle cx="35" cy="37" r="4" /><path d="M5 47c0-8 16-8 16 0M27 47c0-8 16-8 16 0" /></svg>
+    <h2>観客に反映する</h2>
+    <p>発表の進行に合わせて、<br>それぞれの端末で描画</p>
+  </li>
+</ol>
 
 ---
 class: final-deck final-tech
@@ -371,7 +507,7 @@ class: final-deck final-tech
 
 <style src="./styles/final.css"></style>
 
-<h1>05 技術構成 <span class="final-accent">全体図(簡略版)</span></h1>
+<h1>技術構成 <span class="final-accent">全体図</span></h1>
 
 <img class="final-tech-diagram" src="/diagrams/tech-overview.png" alt="編集・公開からCloudflare WorkersのControl Plane、D1・R2へ接続。MRとAudience WebはTailscale Funnel経由で自宅サーバーのRealtimeに接続し、Realtimeが進行状態を保存する全体構成。" />
 
@@ -434,7 +570,7 @@ class: final-deck final-tech final-tech-framework
 
 <style src="./styles/final.css"></style>
 
-<h1>技術構成 <span class="final-accent">記述・ビルド・配信</span></h1>
+<h1>技術構成 <span class="final-accent">Framework</span></h1>
 
 <img class="final-tech-diagram" src="/diagrams/tech-framework.png" alt="Authoring APIで記述したTSX DSLをBuild・CompilerがAST解析・意味検証し、Definition・RenderBundle・AssetSet・BuildManifestを生成。CompilerはPresentationの意味モデル・検証を利用。Dev buildをLocal Editor内のUnity WebGLでプレビューし、確認してTSXの修正に戻る。CLIで成果物を公開し、Unity・Webが共通成果物を描画・再生する。" />
 
@@ -448,89 +584,10 @@ class: chapter-slide final-section
 
 <style src="./styles/final.css"></style>
 
-<GradientWave id="final-chapter-06" class="chapter-wave" />
-<div class="chapter-number">06</div>
-<div class="final-section-copy">
-  <div class="section-label">SECTION 06</div>
-  <h1>プレゼンテーションの<br>作成方法</h1>
-</div>
-
----
-class: final-deck final-creation
----
-
-<style src="./styles/final.css"></style>
-
-<h1>AIと一緒に編集</h1>
-
-<div class="final-ai-edit">
-  <div class="final-ai-request">
-    <p class="final-ai-context">AIを通して編集</p>
-    <div class="final-ai-icons">
-      <img src="/brand/codex-color.png" alt="Codex" />
-      <img src="/brand/claude.jpg" alt="Claude" />
-    </div>
-    <blockquote>上にスワイプしたら、<br>文字が浮かび上がる<br>演出を再生して。</blockquote>
-  </div>
-  <div class="final-ai-arrow" aria-hidden="true">→</div>
-  <div class="final-ai-code">
-    <div class="final-ai-filename">reaction.flow.ts</div>
-    <pre v-pre aria-label="上スワイプをきっかけに浮かび上がる演出を再生するフローの抜粋"><span><span class="final-code-property">trigger</span>: {</span>
-<span>  <span class="final-code-property">kind</span>: <span class="final-code-string">"gesture"</span>, <span class="final-code-property">gesture</span>: <span class="final-code-string">"swipeUp"</span>,</span>
-<span>},</span>
-<span><span class="final-code-property">actions</span>: [{</span>
-<span>  <span class="final-code-property">kind</span>: <span class="final-code-string">"timeline.play"</span>,</span>
-<span>  <span class="final-code-property">timelineId</span>: <span class="final-code-string">"reaction-float-enter"</span>,</span>
-<span>}],</span></pre>
-  </div>
-</div>
-<p class="final-ai-next">編集した結果を、Local Editorで確認する</p>
-
----
-class: final-deck final-creation
----
-
-<style src="./styles/final.css"></style>
-
-<h1>Local Editorでプレビュー</h1>
-<p class="final-creation-caption">表示・動き・演出をプレビューで確認</p>
-<img class="final-creation-screenshot" src="/screenshots/local-editor-preview.png" alt="Local Editorの公開前確認。中央にUnity WebGLのプレビュー、左に進行、下にCue、右に詳細を表示。" />
-
----
-class: chapter-slide final-section
----
-
-<style src="./styles/final.css"></style>
-
-<GradientWave id="final-chapter-07" class="chapter-wave" />
+<GradientWave id="final-chapter-07" class="chapter-wave" flip />
 <div class="chapter-number">07</div>
 <div class="final-section-copy">
   <div class="section-label">SECTION 07</div>
-  <h1>プレゼンテイターの<br>視点</h1>
-</div>
-
----
-class: final-deck final-video
----
-
-<style src="./styles/final.css"></style>
-
-<h1>プレゼンテイターの視点</h1>
-<SlidevVideo class="final-presenter-video" controls autoreset="slide" playsinline preload="metadata" poster="/videos/presenter-view.jpg" aria-label="プレゼンテイターの視点">
-  <source src="/videos/presenter-view.mp4" type="video/mp4" />
-</SlidevVideo>
-
-
----
-class: chapter-slide final-section
----
-
-<style src="./styles/final.css"></style>
-
-<GradientWave id="final-chapter-08" class="chapter-wave" flip />
-<div class="chapter-number">08</div>
-<div class="final-section-copy">
-  <div class="section-label">SECTION 08</div>
   <h1>振り返り</h1>
 </div>
 
@@ -540,7 +597,7 @@ class: final-deck final-learning
 
 <style src="./styles/final.css"></style>
 
-<div class="final-label">08 — 振り返り</div>
+<div class="final-label">07 — 振り返り</div>
 <h1><span class="final-accent">プロダクトとマネジメントの学び</span></h1>
 <div class="final-learning-grid">
   <section><h2>プロダクト</h2><p>利用者と利用場面の明確化<br>体験全体の設計</p></section>
@@ -555,7 +612,7 @@ class: final-deck final-statement final-user
 <style src="./styles/final.css"></style>
 
 <GradientWave id="final-user-centered" class="final-wave" />
-<div class="final-label">08 — 振り返り</div>
+<div class="final-label">07 — 振り返り</div>
 <h1><span class="final-accent">ユーザー中心設計</span></h1>
 <p class="final-user-question">操作負荷の低減と、<br>発表内容に集中できる体験の設計</p>
 
@@ -566,10 +623,10 @@ class: chapter-slide final-section
 
 <style src="./styles/final.css"></style>
 
-<GradientWave id="final-chapter-09" class="chapter-wave" />
-<div class="chapter-number">09</div>
+<GradientWave id="final-chapter-08" class="chapter-wave" />
+<div class="chapter-number">08</div>
 <div class="final-section-copy">
-  <div class="section-label">SECTION 09</div>
+  <div class="section-label">SECTION 08</div>
   <h1>今後の展望</h1>
 </div>
 
@@ -580,7 +637,7 @@ class: final-deck final-statement final-future
 <style src="./styles/final.css"></style>
 
 <GradientWave id="final-future" class="final-wave" flip />
-<div class="final-label">09 — 今後の展望</div>
+<div class="final-label">08 — 今後の展望</div>
 <h1><span class="final-accent">空間編集エディターの設計</span></h1>
 <p class="final-future-note">空間編集の操作性と学習負荷の改善<br>未踏などの支援プログラムへの挑戦と継続開発</p>
 

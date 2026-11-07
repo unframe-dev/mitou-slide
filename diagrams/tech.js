@@ -45,7 +45,7 @@ const diagrams = {
     ]),
     card(50, 150, 300, 180, '<div class="eyebrow">Tracking</div><div class="title">頭・手・身体</div>' + desc('Poseの取得')),
     card(435, 150, 320, 180, '<div class="eyebrow">Recognition</div><div class="title">Gesture / Zone</div>' + desc('端末内で入力認識')),
-    card(1370, 150, 370, 210, '<div class="eyebrow">SERVER</div>' + title('go', 'Realtime') + desc('共有状態の確定'), 'blue'),
+    card(1370, 150, 370, 210, '<div class="eyebrow">SERVER</div>' + title('go', 'Realtime') + desc('共有状態の確定')),
     card(50, 425, 300, 155, '<div class="title">AprilTag</div>' + desc('会場座標の校正'), 'flat'),
     card(435, 425, 610, 155, title('unity', '空間描画') + desc('PNG・テキスト・GLB・動画')),
     label(1100, 211, 'gRPC / 操作入力', 'blue'),

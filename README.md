@@ -26,7 +26,7 @@ pnpm export slides-final.md
 
 `pnpm dev`・`pnpm build`・`pnpm export` の引数を省略すると、従来版の `slides.md` が対象になります。成果発表版を配信する場合は、`pnpm build slides-final.md` で `dist/` を生成してください。
 
-成果発表版は、概要・目標・デモ・技術構成・振り返りで構成しています。技術構成図の編集元は `diagrams/index.html`・`diagrams/tech.css`・`diagrams/tech.js` です。ロゴ付きHTML図をPNG化し、`slides-final.md` から `public/diagrams/tech-*.png` を参照しています。
+成果発表版は、動機・提案・Unframeの機能・デモ・発表者の視点・技術構成・振り返り・今後の展望で構成しています。技術構成は、仕組みの全体像、技術構成の全体図、各部分の説明の順に紹介します。技術構成図の編集元は `diagrams/index.html`・`diagrams/tech.css`・`diagrams/tech.js` です。ロゴ付きHTML図をPNG化し、`slides-final.md` から `public/diagrams/tech-*.png` を参照しています。
 
 図を編集した後は、Node.jsとGoogle Chromeがある環境で再生成してください。追加のJavaScript依存は不要です。ロゴの出典・実行環境の指定方法は [diagrams/README.md](diagrams/README.md) を参照してください。
 
