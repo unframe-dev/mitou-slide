@@ -35,14 +35,14 @@
 :global(.final-transfer h1) { font-size: 72px; font-weight: 350; }
 :global(.final-video h1) { font-size: 39px; }
 :global(.final-presenter-video) { display: block; width: 640px; height: 360px; margin: 26px auto 0; background: #000; object-fit: contain; }
-:global(.final-learning h1) { font-size: 43px; }
-:global(.final-learning .final-learning-grid) { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; margin-top: 44px; }
-:global(.final-learning-grid section) { border-top: 2px solid #b4b3ce; padding-top: 20px; }
-:global(.final-learning-grid h2) { margin: 0 0 15px; font-size: 28px; font-weight: 450; }
-:global(.final-learning-grid p) { font-size: 20px; }
-:global(.final-learning .final-learning-note) { margin-top: 28px; font-size: 17px; }
-:global(.final-user .final-user-question) { margin-top: 30px; max-width: 760px; padding-left: 22px; border-left: 2px solid #b4b3ce; font-size: 24px; line-height: 1.65; color: #15171d !important; }
-:global(.final-user .final-user-note) { margin-top: 28px; font-size: 19px; }
+:global(.final-summary h1) { margin: 0; font-size: 44px; }
+:global(.final-summary-content) { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 360px; text-align: center; }
+:global(.final-summary .final-summary-context) { margin-bottom: 28px; font-size: 22px; }
+:global(.final-summary .final-summary-question) { color: #15171d !important; font-size: 40px; line-height: 1.65; letter-spacing: -.045em; }
+:global(.final-summary-points) { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; padding: 0; margin: 68px 0 0; list-style: none; }
+:global(.final-summary-points li) { margin: 0 !important; border-top: 2px solid #b4b3ce; padding-top: 24px; }
+:global(.final-summary-number) { display: block; margin-bottom: 28px; color: #9a80d0; font-size: 30px; font-variant-numeric: tabular-nums; }
+:global(.final-summary .final-summary-points p) { color: #252733 !important; font-size: 25px; line-height: 1.85; letter-spacing: -.045em; }
 :global(.final-future h1) { font-size: 43px; line-height: 1.5; letter-spacing: -.055em; }
 :global(.final-future .final-future-note) { margin-top: 30px; font-size: 22px; max-width: 780px; }
 :global(.final-closing) { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #fff !important; }

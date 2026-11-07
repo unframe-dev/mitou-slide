@@ -588,33 +588,38 @@ class: chapter-slide final-section
 <div class="chapter-number">07</div>
 <div class="final-section-copy">
   <div class="section-label">SECTION 07</div>
-  <h1>振り返り</h1>
+  <h1>まとめ</h1>
 </div>
 
 ---
-class: final-deck final-learning
+class: final-deck final-summary final-summary-challenge
 ---
 
 <style src="./styles/final.css"></style>
 
-<div class="final-label">07 — 振り返り</div>
-<h1><span class="final-accent">プロダクトとマネジメントの学び</span></h1>
-<div class="final-learning-grid">
-  <section><h2>プロダクト</h2><p>利用者と利用場面の明確化<br>体験全体の設計</p></section>
-  <section><h2>マネジメント</h2><p>優先順位と開発範囲の決定<br>進行管理と提供方法の設計</p></section>
+<h1>まとめ</h1>
+<div class="final-summary-content">
+  <p class="final-summary-context">今回のプロジェクトで一番の挑戦</p>
+  <p class="final-summary-question">MRで<span class="final-accent">SF的な、目を引くプレゼン</span>を<br>行う方法を探ることだった。</p>
 </div>
 
-
 ---
-class: final-deck final-statement final-user
+class: final-deck final-summary final-summary-answer
 ---
 
 <style src="./styles/final.css"></style>
 
-<GradientWave id="final-user-centered" class="final-wave" />
-<div class="final-label">07 — 振り返り</div>
-<h1><span class="final-accent">ユーザー中心設計</span></h1>
-<p class="final-user-question">操作負荷の低減と、<br>発表内容に集中できる体験の設計</p>
+<h1>まとめ</h1>
+<ol class="final-summary-points">
+  <li>
+    <span class="final-summary-number">01</span>
+    <p>それぞれのPoCに意味があり、<br>最終的な形を作る上で、<br><span class="final-accent">どれも価値のあるものにできた。</span></p>
+  </li>
+  <li>
+    <span class="final-summary-number">02</span>
+    <p>MRで人の目を引くプレゼンとは<br>どのようなものか、<br><span class="final-accent">自分たちなりの答えが出せた。</span></p>
+  </li>
+</ol>
 
 
 ---
@@ -638,8 +643,8 @@ class: final-deck final-statement final-future
 
 <GradientWave id="final-future" class="final-wave" flip />
 <div class="final-label">08 — 今後の展望</div>
-<h1><span class="final-accent">空間編集エディターの設計</span></h1>
-<p class="final-future-note">空間編集の操作性と学習負荷の改善<br>未踏などの支援プログラムへの挑戦と継続開発</p>
+<h1><span class="final-accent">誰でも作りやすい<br>編集エディターの作成</span></h1>
+<p class="final-future-note">空間を伴うプレゼンの使いやすさと表現力を<br>どう両立させるか</p>
 
 
 ---
