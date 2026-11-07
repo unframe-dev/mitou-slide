@@ -34,9 +34,7 @@
 :global(.final-transfer) { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 :global(.final-transfer h1) { font-size: 72px; font-weight: 350; }
 :global(.final-video h1) { font-size: 39px; }
-:global(.final-video-slot) { width: 640px; height: 360px; margin: 26px auto 0; border: 1.5px dashed #b6b8c1; background: #fff; display: grid; place-content: center; gap: 12px; text-align: center; color: #9a9da7; }
-:global(.final-video-slot strong) { font-size: 21px; font-weight: 400; color: #989ca7; }
-:global(.final-video-slot span) { font-size: 14px; }
+:global(.final-presenter-video) { display: block; width: 640px; height: 360px; margin: 26px auto 0; background: #000; object-fit: contain; }
 :global(.final-learning h1) { font-size: 43px; }
 :global(.final-learning .final-learning-grid) { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; margin-top: 44px; }
 :global(.final-learning-grid section) { border-top: 2px solid #b4b3ce; padding-top: 20px; }

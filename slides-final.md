@@ -516,9 +516,9 @@ class: final-deck final-video
 <style src="./styles/final.css"></style>
 
 <h1>プレゼンテイターの視点</h1>
-<div class="final-video-slot" aria-label="プレゼンテイター視点動画の挿入場所">
-  <strong>視点動画</strong><span>16:9</span>
-</div>
+<SlidevVideo class="final-presenter-video" controls autoreset="slide" playsinline preload="metadata" poster="/videos/presenter-view.jpg" aria-label="プレゼンテイターの視点">
+  <source src="/videos/presenter-view.mp4" type="video/mp4" />
+</SlidevVideo>
 
 
 ---
