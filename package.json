@@ -5,7 +5,7 @@
   "description": "Slidev presentation scaffold",
   "scripts": {
     "dev": "slidev",
-    "build": "slidev build",
+    "build": "slidev build slides-final.md",
     "export": "slidev export"
   },
   "packageManager": "pnpm@10.32.1",
