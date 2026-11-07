@@ -44,6 +44,8 @@ class: final-deck final-install
       <li><span>01</span><div>スマートフォンで<br>QRコードを読み取る</div></li>
       <li><span>02</span><div>開いたページで認証する</div></li>
       <li><span>03</span><div>認証後、Meta Questを起動する</div></li>
+      <li><span>04</span><div>オーディエンスとして参加する</div></li>
+      <li><span>05</span><div>ルームコード XXXXX を入力する</div></li>
     </ol>
   </div>
 </div>
@@ -643,7 +645,7 @@ class: final-deck final-learning final-future
 
 <GradientWave id="final-future" class="final-wave" flip />
 <div class="final-label">08 — 今後の展望</div>
-<h1><span class="final-accent">より作りやすい環境へ</span></h1>
+<h1><span class="final-accent">より簡単に作れるように</span></h1>
 <div class="final-learning-grid">
   <section><h2>直感的に作る</h2><p>コードと画面、<br>どちらからでも編集できるように。</p></section>
   <section><h2>作成しやすい環境作成</h2><p>編集ツールや制作の流れを整え、<br>表現づくりに集中できるように。</p></section>

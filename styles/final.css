@@ -69,7 +69,7 @@
 :global(.final-install-code), :global(.final-webxr-code) { text-align: center; color: #565b66; font-size: 16px; }
 :global(.final-install-code img), :global(.final-webxr-code img) { display: block; width: 294px; height: 294px; padding: 14px; margin-bottom: 13px; background: #fff; object-fit: contain; }
 :global(.final-install-grid h2) { font-size: 26px; margin: 0 0 22px; }
-:global(.final-install-steps) { list-style: none; padding: 0; margin: 0 !important; }
+:global(.final-install-steps) { position: relative; top: -20px; list-style: none; padding: 0; margin: 0 !important; }
 :global(.final-install-steps li) { display: flex; gap: 18px; align-items: baseline; font-size: 20px; line-height: 1.55; color: #15171d !important; }
 :global(.final-install-steps li + li) { margin-top: 16px; }
 :global(.final-install-steps li > span) { color: #9a80d0; font-size: 16px; }
