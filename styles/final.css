@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("/brand/fonts/poppins/Poppins-Light.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
 :global(.slidev-layout.final-deck) {
   --final-blue: #7187f5;
   --final-purple: #9a80d0;
@@ -11,8 +19,8 @@
 :global(.final-deck .final-label) { color: #747780; font-size: 13px; letter-spacing: .13em; margin-bottom: 24px; }
 :global(.final-deck .final-accent) { background: linear-gradient(105deg, #7187f5, #9a80d0 52%, #df7b80); background-clip: text; -webkit-background-clip: text; color: transparent !important; }
 :global(.final-deck .final-wave) { position: absolute !important; inset: 0; width: 100%; height: 100%; z-index: 0 !important; opacity: .62; pointer-events: none; }
-:global(.final-brand) { display: flex; align-items: center; gap: 10px; font-size: 24px; letter-spacing: -.05em; font-weight: 400; }
-:global(.final-brand img) { width: 30px; height: 30px; object-fit: contain; }
+:global(.final-brand) { display: flex; align-items: center; gap: 0.17em; color: #2a2a2a; font-family: "Poppins", sans-serif; font-size: 24px; font-weight: 300; font-synthesis: none; letter-spacing: 0.098em; line-height: 1; white-space: nowrap; }
+:global(.final-brand img) { width: 0.78em; height: 0.78em; flex-shrink: 0; object-fit: contain; }
 :global(.slidev-layout.final-cover) { background: #fff; }
 :global(.final-cover .final-brand) { margin-top: 7px; }
 :global(.final-cover .final-cover-copy) { position: relative; z-index: 2; margin-top: 60px; width: 56%; }
@@ -46,8 +54,7 @@
 :global(.final-future h1) { font-size: 43px; line-height: 1.5; letter-spacing: -.055em; }
 :global(.final-future .final-future-note) { margin-top: 30px; font-size: 22px; max-width: 780px; }
 :global(.final-closing) { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #fff !important; }
-:global(.final-closing .final-brand) { margin-bottom: 43px; font-size: 34px; }
-:global(.final-closing .final-brand img) { width: 45px; height: 45px; }
+:global(.final-closing .final-brand) { margin-bottom: 43px; font-size: 64px; }
 :global(.final-closing h1) { font-size: 56px; font-weight: 350; }
 :global(.final-closing p) { margin-top: 26px; font-size: 21px; }
 

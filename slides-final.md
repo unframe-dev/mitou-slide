@@ -16,7 +16,7 @@ themeConfig:
 class: final-deck final-cover
 ---
 
-<div class="final-brand"><img src="/brand/icon.png" alt="" />Unframe</div>
+<div class="final-brand"><img src="/brand/icon.svg" alt="" />Unframe</div>
 <div class="final-cover-copy">
   <h1>Unframe</h1>
   <p class="final-cover-subtitle">身体を使う<br>MRプレゼンテーション</p>
@@ -524,8 +524,8 @@ class: final-deck final-learning final-future
 <div class="final-label">08 — 今後の展望</div>
 <h1><span class="final-accent">より簡単に作れるように</span></h1>
 <div class="final-learning-grid">
-  <section><h2>直感的に作る</h2><p>コードと画面、<br>どちらからでも編集できるように。</p></section>
-  <section><h2>作成しやすい環境作成</h2><p>編集ツールや制作の流れを整え、<br>表現づくりに集中できるように。</p></section>
+  <section><h2>直感的に作れる</h2><p>コードと画面、どちらからでも編集できるように。<br>複数人での同時作成を実現する</p></section>
+  <section><h2>作成しやすい環境作成</h2><p>DSL設計の筋が悪いため、プレビューが遅い<br>作成までの導線が複雑になっているので整える ...etc</p></section>
 </div>
 
 
@@ -536,5 +536,5 @@ class: final-deck final-closing
 <style src="./styles/final.css"></style>
 
 <GradientWave id="final-thanks" class="final-wave" />
-<div class="final-brand"><img src="/brand/icon.png" alt="" />Unframe</div>
-<h1>ご清聴ありがとうございました</h1>
+<div class="final-brand"><img src="/brand/icon.svg" alt="" />Unframe</div>
+<h1>ご清聴ありがとうございました!</h1>
