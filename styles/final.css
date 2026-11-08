@@ -184,3 +184,11 @@
 :global(.final-system-flow li:last-child svg) { stroke: #df7b80; }
 :global(.final-system-flow h2) { margin: 24px 0 18px; font-size: 32px; font-weight: 500; letter-spacing: -.05em; }
 :global(.final-system-flow p) { font-size: 24px; line-height: 1.7; }
+
+:global(.profile-website-icon) {
+  width: 0.82rem;
+  height: 0.82rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter: invert(48%) sepia(90%) saturate(1510%) hue-rotate(204deg) brightness(99%) contrast(94%);
+}

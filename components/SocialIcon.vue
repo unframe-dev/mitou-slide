@@ -7,7 +7,7 @@ defineProps<{
 <template>
   <svg
     v-if="platform === 'x'"
-    class="social-icon"
+    class="social-icon social-icon--x"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden="true"
@@ -16,7 +16,7 @@ defineProps<{
   </svg>
   <svg
     v-else
-    class="social-icon"
+    class="social-icon social-icon--github"
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden="true"
@@ -30,5 +30,13 @@ defineProps<{
   width: 0.82rem;
   height: 0.82rem;
   flex: 0 0 auto;
+}
+
+.social-icon--x {
+  color: #000;
+}
+
+.social-icon--github {
+  color: #181717;
 }
 </style>

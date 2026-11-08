@@ -103,13 +103,13 @@ class: final-prelude
     <div class="profile-links">
       <div class="profile-link"><SocialIcon platform="x" />@T4ko0522</div>
       <div class="profile-link"><SocialIcon platform="github" />@T4ko0522</div>
-      <div class="profile-link profile-link--url">https://t4ko.pet</div>
+      <div class="profile-link profile-link--url"><img class="profile-website-icon" src="/profile/website-icon.png" alt="" />https://t4ko.pet</div>
     </div>
   </div>
   <div class="profile-content">
     <h1>権代 颯士</h1>
     <dl class="profile-details">
-      <div><dt>今回の担当</dt><dd>Web / Infra / Backend</dd></div>
+      <div><dt>今回の担当</dt><dd>Infra / Frontend / Backend</dd></div>
       <div><dt>好きな技術</dt><dd>Nix / TypeScript | Hono / Cloudflare</dd></div>
       <div><dt>趣味</dt><dd>モータースポーツ観戦（F1, SF） / VRC / FPSゲーム</dd></div>
       <div><dt>関心分野</dt><dd>Nix, Architecture, Linux</dd></div>
@@ -132,28 +132,7 @@ class: final-prelude
 <div class="chapter-number">02</div>
 <div class="final-section-copy">
   <div class="section-label">SECTION 02</div>
-  <h1>動機・提案</h1>
-</div>
-  </div>
-</div>
-
-
----
-layout: none
-class: final-prelude final-inspiration-slide
----
-
-<style src="./styles/final.css"></style>
-
-<img class="final-inspiration-image" src="/proposal/minority-reprot.png" alt="空間に広がる複数の映像を、手の動きで操作するSF的な表現の参考イメージ" />
-<div class="final-prelude-stage">
-  <div class="slidev-layout default final-deck final-inspiration">
-<div class="final-label">02 — 作りたかった表現</div>
-<div class="final-inspiration-layout">
-  <div class="final-inspiration-copy">
-    <h1><span class="final-accent">SF映画のような演出を、</span><br>プレゼンテーションで<br>やりたい</h1>
-    <p class="final-inspiration-caption">※参考画像<br>ref: Minory Report</p>
-  </div>
+  <h1>提案</h1>
 </div>
   </div>
 </div>
@@ -193,15 +172,21 @@ class: final-prelude
 
 ---
 layout: none
-class: final-prelude
+class: final-prelude final-inspiration-slide
 ---
 
 <style src="./styles/final.css"></style>
 
+<img class="final-inspiration-image" src="/proposal/minority-reprot.png" alt="空間に広がる複数の映像を、手の動きで操作するSF的な表現の参考イメージ" />
 <div class="final-prelude-stage">
-  <div class="slidev-layout default final-deck final-statement final-proposal-claim">
-<div class="final-label">02 — 提案</div>
-<h1>これらの要素を<br><span class="final-accent">普及させたかった</span></h1>
+  <div class="slidev-layout default final-deck final-inspiration">
+<div class="final-label">02 — 作りたかった表現</div>
+<div class="final-inspiration-layout">
+  <div class="final-inspiration-copy">
+    <h1><span class="final-accent">SF映画のような演出を、</span><br>プレゼンテーションで<br>やりたい</h1>
+    <p class="final-inspiration-caption">※参考画像<br>ref: Minory Report</p>
+  </div>
+</div>
   </div>
 </div>
 
@@ -214,22 +199,9 @@ class: final-prelude
 <style src="./styles/final.css"></style>
 
 <div class="final-prelude-stage">
-  <div class="slidev-layout default final-deck final-authoring-proposal">
-<div class="final-label">02 — 制作を身近にするために</div>
-<h1><span class="final-accent">AIで、</span>表現を作るハードルを下げる</h1>
-<div class="final-authoring-comparison">
-  <section class="final-authoring-tools">
-    <svg class="final-authoring-tool-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M6 10h28M6 20h28M6 30h28" stroke="currentColor" stroke-width="1.5" /><rect x="12" y="6" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /><rect x="25" y="16" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /><rect x="9" y="26" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /></svg>
-    <h2>凝った表現を作るには</h2><p>素材や演出の制作には、<br>専門ツールの操作と手間がかかる。</p>
-  </section>
-  <section class="final-authoring-ai">
-    <div class="final-authoring-logos"><img src="/brand/codex-color.png" alt="Codex" /><img src="/brand/claude.jpg" alt="Claude" /></div>
-    <h2>AIに意図を伝えて編集する</h2>
-    <blockquote>「上にスワイプしたら、<br>文字が浮かび上がるように」</blockquote>
-    <p>生成した内容をプレビューし、調整する。</p>
-  </section>
-</div>
-<p class="final-authoring-purpose">作りやすくすることによる、使用するハードルの低下。</p>
+  <div class="slidev-layout default final-deck final-statement final-proposal-claim">
+<div class="final-label">02 — 提案</div>
+<h1>これらの要素を<br><span class="final-accent">普及させたかった</span></h1>
   </div>
 </div>
 
@@ -296,6 +268,34 @@ class: final-prelude
   <section><h2><span class="final-accent">Zone</span> <span>空間の領域</span></h2><p>決めた領域への出入りを、演出のきっかけにする。</p></section>
   <section><h2><span class="final-accent">3D Model</span> <span>3Dモデル表示</span></h2><p>立体物を、空間の中に配置して見せる。</p></section>
 </div>
+  </div>
+</div>
+
+
+---
+layout: none
+class: final-prelude
+---
+
+<style src="./styles/final.css"></style>
+
+<div class="final-prelude-stage">
+  <div class="slidev-layout default final-deck final-authoring-proposal">
+<div class="final-label">03 — 制作を身近にするために</div>
+<h1><span class="final-accent">AIで、</span>表現を作るハードルを下げる</h1>
+<div class="final-authoring-comparison">
+  <section class="final-authoring-tools">
+    <svg class="final-authoring-tool-icon" viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="M6 10h28M6 20h28M6 30h28" stroke="currentColor" stroke-width="1.5" /><rect x="12" y="6" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /><rect x="25" y="16" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /><rect x="9" y="26" width="5" height="8" rx="2" fill="#f7f7f5" stroke="currentColor" stroke-width="1.5" /></svg>
+    <h2>凝った表現を作るには</h2><p>素材や演出の制作には、<br>専門ツールの操作と手間がかかる。</p>
+  </section>
+  <section class="final-authoring-ai">
+    <div class="final-authoring-logos"><img src="/brand/codex-color.png" alt="Codex" /><img src="/brand/claude.jpg" alt="Claude" /></div>
+    <h2>AIに意図を伝えて編集する</h2>
+    <blockquote>「上にスワイプしたら、<br>文字が浮かび上がるように」</blockquote>
+    <p>生成した内容をプレビューし、調整する。</p>
+  </section>
+</div>
+<p class="final-authoring-purpose">作りやすくすることによる、使用するハードルの低下。</p>
   </div>
 </div>
 
