@@ -25,7 +25,7 @@ const diagrams = {
     card(20, 32, 400, 150, title('unframe', '編集・公開') + desc('Local Editor / CLI / Console')),
     card(20, 252, 400, 150, title('unity', 'MR') + desc('Unity / Meta Quest')),
     card(20, 474, 400, 150, title('react', 'Audience Web') + desc('React / Three.js')),
-    card(990, 32, 440, 150, title('cloudflareworkers', 'Control Plane') + desc('認証・管理・永続化')),
+    card(990, 32, 440, 150, title('cloudflareworkers', 'HTTP API Server') + desc('認証・管理・永続化')),
     label(790, 460, tech('tailscale', 'Tailscale Funnel')),
     card(990, 370, 440, 190, title('go', 'Realtime') + desc('進行の確定・共有状態の同期')),
     card(1490, 32, 260, 150, title('cloudflare', 'D1') + desc('資料・Session')),

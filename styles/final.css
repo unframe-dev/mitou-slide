@@ -192,3 +192,17 @@
   object-fit: contain;
   filter: invert(48%) sepia(90%) saturate(1510%) hue-rotate(204deg) brightness(99%) contrast(94%);
 }
+
+:global(.final-authoring-video-placeholder) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 640px;
+  height: 360px;
+  margin: 26px auto 0;
+  background: #ececf0;
+  color: #747780;
+  font-size: 20px;
+}

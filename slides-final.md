@@ -112,7 +112,7 @@ class: final-prelude
       <div><dt>今回の担当</dt><dd>Infra / Frontend / Backend</dd></div>
       <div><dt>好きな技術</dt><dd>Nix / TypeScript | Hono / Cloudflare</dd></div>
       <div><dt>趣味</dt><dd>モータースポーツ観戦（F1, SF） / VRC / FPSゲーム</dd></div>
-      <div><dt>関心分野</dt><dd>Nix, Architecture, Linux</dd></div>
+      <div><dt>関心分野</dt><dd>Nix, Architecture, Linux, Design</dd></div>
     </dl>
   </div>
 </div>
@@ -261,7 +261,7 @@ class: final-prelude
 <div class="final-prelude-stage">
   <div class="slidev-layout default final-deck final-effects">
 <div class="final-label">03 — 演出の要素</div>
-<h1>動きと空間を、演出に使う</h1>
+<h1>身体と空間を演出に使用する</h1>
 <div class="final-effect-grid">
   <section><h2><span class="final-accent">Gesture</span> <span>ジェスチャー</span></h2><p>手の動きをきっかけに、演出を始める。</p></section>
   <section><h2><span class="final-accent">Animation</span> <span>アニメーション</span></h2><p>文字や画像などに動きをつける。</p></section>
@@ -330,6 +330,18 @@ class: final-deck final-statement final-demo-start
 
 
 ---
+class: final-deck final-video
+---
+
+<style src="./styles/final.css"></style>
+
+<h1>デモ</h1>
+<SlidevVideo class="final-presenter-video" controls autoreset="slide" playsinline preload="metadata" poster="/videos/demo.jpg" aria-label="デモ動画">
+  <source src="/videos/demo.mp4" type="video/mp4" />
+</SlidevVideo>
+
+
+---
 class: chapter-slide final-section
 ---
 
@@ -352,18 +364,6 @@ class: final-deck final-video
 <SlidevVideo class="final-presenter-video" controls muted autoreset="slide" playsinline preload="metadata" poster="/videos/presenter-demo1.jpg" aria-label="プレゼンテイターの視点 1">
   <source src="/videos/presenter-demo1.mp4" type="video/mp4" />
 </SlidevVideo>
-
----
-class: final-deck final-video
----
-
-<style src="./styles/final.css"></style>
-
-<h1>プレゼンテイターの視点 2</h1>
-<SlidevVideo class="final-presenter-video" controls muted autoreset="slide" playsinline preload="metadata" poster="/videos/presenter-view.jpg" aria-label="プレゼンテイターの視点 2">
-  <source src="/videos/presenter-view.mp4" type="video/mp4" />
-</SlidevVideo>
-
 
 ---
 class: chapter-slide final-section
@@ -426,7 +426,7 @@ class: final-deck final-tech
 
 <style src="./styles/final.css"></style>
 
-<h1>技術構成 <span class="final-accent">全体図</span></h1>
+<h1>技術構成 <span class="final-accent">全体図(簡略版)</span></h1>
 
 <img class="final-tech-diagram" src="/diagrams/tech-overview.png" alt="編集・公開からCloudflare WorkersのControl Plane、D1・R2へ接続。MRとAudience WebはTailscale Funnel経由で自宅サーバーのRealtimeに接続し、Realtimeが進行状態を保存する全体構成。" />
 
