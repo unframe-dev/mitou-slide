@@ -348,8 +348,19 @@ class: final-deck final-video
 
 <style src="./styles/final.css"></style>
 
-<h1>プレゼンテイターの視点</h1>
-<SlidevVideo class="final-presenter-video" controls autoreset="slide" playsinline preload="metadata" poster="/videos/presenter-view.jpg" aria-label="プレゼンテイターの視点">
+<h1>プレゼンテイターの視点 1</h1>
+<SlidevVideo class="final-presenter-video" controls muted autoreset="slide" playsinline preload="metadata" poster="/videos/presenter-demo1.jpg" aria-label="プレゼンテイターの視点 1">
+  <source src="/videos/presenter-demo1.mp4" type="video/mp4" />
+</SlidevVideo>
+
+---
+class: final-deck final-video
+---
+
+<style src="./styles/final.css"></style>
+
+<h1>プレゼンテイターの視点 2</h1>
+<SlidevVideo class="final-presenter-video" controls muted autoreset="slide" playsinline preload="metadata" poster="/videos/presenter-view.jpg" aria-label="プレゼンテイターの視点 2">
   <source src="/videos/presenter-view.mp4" type="video/mp4" />
 </SlidevVideo>
 
