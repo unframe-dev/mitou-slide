@@ -37,8 +37,6 @@ node scripts/render-tech-diagrams.mjs
 発表前の確認事項：
 
 - プレゼンテイター視点の動画は `public/videos/presenter-view.mp4`（表紙画像は同名の `.jpg`）です。再生ボタンで開始し、スライドを離れると停止・先頭に戻ります。
-- Questインストール用QR（`public/qr/quest-install.png`）: `https://qr.link/6vqlYK`
-- WebXR視聴用QR（`public/qr/webxr-viewer.png`）: `https://qr.link/7DROyc`
 
 ## アセット
 

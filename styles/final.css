@@ -58,25 +58,9 @@
 :global(.final-section .final-section-copy h1) { max-width: 100%; margin: 0; font-size: 52px; line-height: 1.35; font-weight: 350; }
 
 :global(.final-prelude) { position: relative; width: 980px; height: 552px; overflow: hidden; background: #f7f7f5; }
-:global(.final-prelude-stage) { position: absolute; left: 176px; top: 49.68px; width: 980px; height: 552px; transform: scale(.82); transform-origin: top left; }
+:global(.final-prelude-stage) { position: absolute; inset: 0; width: 100%; height: 100%; }
 :global(.final-prelude-stage > .slidev-layout) { width: 100%; height: 100%; }
-:global(.final-quest-rail) { position: absolute; left: 12px; top: 166px; width: 152px; text-align: center; font-family: Inter, "Noto Sans JP", sans-serif; }
-:global(.final-quest-rail-title) { margin-bottom: 12px; color: #15171d; font-size: 16px; font-weight: 500; }
-:global(.final-quest-rail img) { display: block; width: 152px; height: 152px; padding: 9px; background: #fff; object-fit: contain; }
-:global(.final-quest-rail-caption) { margin-top: 12px; color: #565b66; font-size: 13px; }
-:global(.final-install h1) { font-size: 40px; }
-:global(.final-install-grid) { display: grid; grid-template-columns: 294px 1fr; gap: 48px; align-items: center; margin-top: 32px; }
-:global(.final-install-code), :global(.final-webxr-code) { text-align: center; color: #565b66; font-size: 16px; }
-:global(.final-install-code img), :global(.final-webxr-code img) { display: block; width: 294px; height: 294px; padding: 14px; margin-bottom: 13px; background: #fff; object-fit: contain; }
-:global(.final-install-grid h2) { font-size: 26px; margin: 0 0 22px; }
-:global(.final-install-steps) { position: relative; top: -20px; list-style: none; padding: 0; margin: 0 !important; }
-:global(.final-install-steps li) { display: flex; gap: 18px; align-items: baseline; font-size: 20px; line-height: 1.55; color: #15171d !important; }
-:global(.final-install-steps li + li) { margin-top: 16px; }
-:global(.final-install-steps li > span) { color: #9a80d0; font-size: 16px; }
-:global(.final-install .final-install-note) { margin-top: 20px; font-size: 17px; }
-:global(.final-webxr-grid) { display: grid; grid-template-columns: 294px 1fr; gap: 40px; align-items: center; margin-top: 38px; }
 :global(.final-demo-start h1) { font-size: 44px; line-height: 1.55; }
-:global(.final-demo-start .final-webxr-note) { margin-top: 28px; font-size: 21px; line-height: 1.8; }
 :global(.final-demo-end h1) { font-size: 48px; line-height: 1.55; }
 :global(.final-demo-end .final-label) { margin-bottom: 34px; font-size: 17px; }
 

@@ -27,42 +27,12 @@ class: final-deck final-cover
 
 
 ---
-class: final-deck final-install
----
-
-<style src="./styles/final.css"></style>
-
-<div class="final-label">デモの事前準備</div>
-<h1>Meta Questへのインストール</h1>
-<div class="final-install-grid">
-  <div class="final-install-code">
-    <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-    <div>Meta Quest用 · インストール</div>
-  </div>
-  <div>
-    <ol class="final-install-steps">
-      <li><span>01</span><div>スマートフォンで<br>QRコードを読み取る</div></li>
-      <li><span>02</span><div>開いたページで認証する</div></li>
-      <li><span>03</span><div>認証後、Meta Questを起動する</div></li>
-      <li><span>04</span><div>オーディエンスとして参加する</div></li>
-      <li><span>05</span><div>ルームコード XXXXX を入力する</div></li>
-    </ol>
-  </div>
-</div>
-
-
----
 layout: none
 class: final-prelude
 ---
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default chapter-slide final-section">
 <GradientWave id="final-chapter-01" class="chapter-wave" />
@@ -82,11 +52,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default profile-slide">
 <GradientWave id="profile-wave-sato" class="profile-wave" />
@@ -125,11 +90,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default profile-slide">
 <GradientWave id="profile-wave-gondai" class="profile-wave" flip />
@@ -166,11 +126,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default chapter-slide final-section">
 <GradientWave id="final-chapter-02" class="chapter-wave" />
@@ -190,11 +145,6 @@ class: final-prelude final-inspiration-slide
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <img class="final-inspiration-image" src="/proposal/minority-reprot.png" alt="空間に広がる複数の映像を、手の動きで操作するSF的な表現の参考イメージ" />
 <div class="final-prelude-stage">
   <div class="slidev-layout default final-deck final-inspiration">
@@ -216,11 +166,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default final-deck final-statement final-spatial-motive">
 <svg class="final-spatial-art" viewBox="0 0 480 520" fill="none" aria-hidden="true">
@@ -253,11 +198,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default final-deck final-statement final-proposal-claim">
 <div class="final-label">02 — 提案</div>
@@ -273,11 +213,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default final-deck final-authoring-proposal">
 <div class="final-label">02 — 制作を身近にするために</div>
@@ -306,11 +241,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default chapter-slide final-section">
 <GradientWave id="final-chapter-03" class="chapter-wave" />
@@ -330,11 +260,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default final-deck final-capabilities">
 <div class="final-label">03 — Unframeの機能</div>
@@ -361,11 +286,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>章
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default final-deck final-effects">
 <div class="final-label">03 — 演出の要素</div>
@@ -387,11 +307,6 @@ class: final-prelude
 
 <style src="./styles/final.css"></style>
 
-<div class="final-quest-rail">
-  <div class="final-quest-rail-title">Meta Quest</div>
-  <img src="/qr/quest-install.png" alt="Meta Quest用Unframeのインストール案内QRコード" />
-  <div class="final-quest-rail-caption">インストール用</div>
-</div>
 <div class="final-prelude-stage">
   <div class="slidev-layout default chapter-slide final-section">
 <GradientWave id="final-chapter-04" class="chapter-wave" flip />
@@ -405,22 +320,13 @@ class: final-prelude
 
 
 ---
-class: final-deck final-demo-start
+class: final-deck final-statement final-demo-start
 ---
 
 <style src="./styles/final.css"></style>
 
 <div class="final-label">04 — デモプレゼン</div>
-<div class="final-webxr-grid">
-  <div class="final-webxr-code">
-    <img src="/qr/webxr-viewer.png" alt="WebXRデモ視聴ページのQRコード" />
-    <div>WebXR · デモ視聴</div>
-  </div>
-  <div>
-    <h1>それでは、<br>やってみましょう。</h1>
-    <p class="final-webxr-note">スマートフォンでQRコードを読み取り、<br>視聴ページに接続</p>
-  </div>
-</div>
+<h1>それでは、<br>デモをご覧ください。</h1>
 
 
 ---
