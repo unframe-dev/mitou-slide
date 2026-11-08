@@ -444,35 +444,6 @@ AprilTag検出には任意導入のOpenCV for Unityを使用。共有状態か�
 -->
 
 ---
-class: final-deck final-tech final-tech-web
----
-
-<style src="./styles/final.css"></style>
-
-<h1>技術構成 <span class="final-accent">Web</span></h1>
-
-<img class="final-tech-diagram" src="/diagrams/tech-web.png" alt="ConsoleはControl Planeで資料とSessionを管理。Audienceは参加コードで参加し、配信情報・接続URL・認証情報を取得。素材読み込みとRealtimeから受信した共有状態をThree.jsに反映し、AprilTagによる会場との位置合わせと8th Wall SLAMによる端末位置追跡を使って空間描画する。" />
-
-<!--
-根拠: app/web/audience/src/connection/join-controller.ts、connection/realtime-client.ts、experience/viewing-session.ts、experience/presentation-session.ts、tracking/adapter.ts、experience/anchor-session.ts。
--->
-
----
-class: final-deck final-tech final-tech-server
----
-
-<style src="./styles/final.css"></style>
-
-<h1>技術構成 <span class="final-accent">Server</span></h1>
-
-<img class="final-tech-diagram" src="/diagrams/tech-backend.png" alt="Cloudflare Workers上のControl PlaneはTypeScript・Honoで実装。Better Authでメール・Google認証と二要素認証を扱い、Resendで確認・再設定メールを送信。D1に管理情報と進行状態、R2に公開資料と素材を保存。参加権限を確認してRealtimeの接続URL・認証情報と素材取得用URLを発行。自宅サーバー上のGo製Realtimeは演出評価・状態配信・再接続時の復元を行い、進行状態と終了通知をControl Planeへ送信。" />
-
-<!--
-根拠: app/server/control-plane/src/app.ts、auth/identity.ts、auth/options.ts、auth/mail.ts、modules/sessions/routes.ts、modules/publications/service.ts、app/server/realtime/cmd/server/main.go。
-Realtimeの自宅サーバー配置は現行の運用構成。
--->
-
----
 class: final-deck final-tech final-tech-framework
 ---
 

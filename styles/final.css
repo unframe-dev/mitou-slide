@@ -160,8 +160,8 @@
 :global(.final-authoring-proposal .final-authoring-ai p) { font-size: 18px; }
 :global(.final-authoring-proposal .final-authoring-purpose) { margin-top: 24px; }
 
-:global(.final-capabilities .final-capability-list) { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 24px; }
-:global(.final-capabilities .final-capability-list li) { display: grid; grid-template-columns: 12px 92px 1fr; align-items: start; gap: 22px; margin: 0; padding: 12px 0; }
+:global(.final-capabilities .final-capability-list) { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 12px; }
+:global(.final-capabilities .final-capability-list li) { display: grid; grid-template-columns: 12px 92px 1fr; align-items: start; gap: 22px; margin: 0; padding: 4px 0; }
 :global(.final-capability-list li::before) { content: "•"; color: #9a80d0; font-size: 24px; line-height: 1.5; }
 :global(.final-capability-list strong) { background: linear-gradient(105deg, #7187f5, #9a80d0 52%, #df7b80); background-clip: text; -webkit-background-clip: text; color: transparent !important; font-size: 27px; font-weight: 500; line-height: 1.4; }
 :global(.final-capabilities .final-capability-list p) { color: #252733 !important; font-size: 22px; line-height: 1.5; }
