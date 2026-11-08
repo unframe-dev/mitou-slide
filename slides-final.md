@@ -549,3 +549,8 @@ class: final-deck final-closing
 <GradientWave id="final-thanks" class="final-wave" />
 <div class="final-brand"><img src="/brand/icon.svg" alt="" />Unframe</div>
 <h1>ご清聴ありがとうございました!</h1>
+
+<div class="final-closing-links">
+  <a href="https://github.com/unframe-dev/unframe" target="_blank" rel="noopener noreferrer"><SocialIcon platform="github" /><span>https://github.com/unframe-dev/unframe</span></a>
+  <a href="https://un-fra.me" target="_blank" rel="noopener noreferrer"><img class="profile-website-icon" src="/profile/website-icon.png" alt="" /><span>https://un-fra.me</span></a>
+</div>

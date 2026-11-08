@@ -206,3 +206,31 @@
   color: #747780;
   font-size: 20px;
 }
+
+:global(.slidev-layout.final-closing .final-closing-links) {
+  position: absolute;
+  left: 56px;
+  bottom: 40px;
+  align-self: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+  font-size: 20px;
+}
+:global(.final-closing-links a) {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #299bd6;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+:global(.final-closing-links .social-icon),
+:global(.final-closing-links .profile-website-icon) {
+  width: 20px;
+  height: 20px;
+}
